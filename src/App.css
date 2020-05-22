@@ -8,6 +8,7 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 label {
@@ -105,7 +106,8 @@ button {
   color: black;
 }
 
-.restText, .workText {
+.countdownTitle {
+  margin-top: 0;
   font-size: 3rem;
   padding: 1rem;
   border-radius: 0.5em;
@@ -123,6 +125,7 @@ button {
 .countdown {
   font-size: 5rem;
   font-weight: bold;
+  margin: 0;
 }
 
 .mainRow {
@@ -159,4 +162,10 @@ button {
 
 .progressRow {
   width: 100%;
+}
+
+.centerize {
+  align-items: center;
+  border-radius: 1rem;
+  padding: 2rem;
 }

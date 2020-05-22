@@ -156,10 +156,6 @@ const formatTime = (seconds) => {
 }
 
 function App() {
-  // const muscleGroups = ['arms', 'legs', 'butt']
-  // const workTime = 5;
-  // const restTime = 3;
-  // const totalTime = 38; //testing with 60 seconds
   const timer = useRef(null);
   const [currentRound, setCurrentRound] = useState(0);
   const [resting, setResting] = useState(true);
@@ -174,7 +170,6 @@ function App() {
   const [totalTime, setTotalTime] = useState(38)
   const [selectedMuscleGroups, setSelectedMuscleGroups] = useState(['arms', 'legs', 'butt', 'back'])
   const [currentIntervalCount, setCurrentIntervalCount] = useState(3);
-  // const rounds = Math.floor(totalTime / (workTime + restTime))
   const [rounds, setRounds] = useState(null);
   const [showPreview, setShowPreview] = useState(false);
 
@@ -288,7 +283,6 @@ function App() {
       </div>
       }
 
-
       {currentExercise && (
         <div>
           <div className="row progressRow">
@@ -301,8 +295,10 @@ function App() {
               <p>[work your {selectedMuscleGroups[exerciseIndex]}]</p>
             </div>
             <div className="column">
-              <p className={resting ? 'restText' : 'workText'}>{resting ? "REST" : "WORK"}</p>
-              <p className="countdown">{currentIntervalCount >= 0 ? currentIntervalCount : ""}</p>
+              <div className={resting ? 'restText centerize' : 'workText centerize'}>
+                <p className='countdownTitle'>{resting ? "REST" : "WORK"}</p>
+                <p className="countdown">{currentIntervalCount >= 0 ? currentIntervalCount : ""}</p>
+              </div>
           </div>
         </div>
           <div className="row">
@@ -327,12 +323,11 @@ function App() {
             setStartedWorkout(true);
           }
         }} className={startedWorkout && !paused ? 'unpausedButton' : ''}>{!startedWorkout ? ("START") : (paused ? "UNPAUSE" : "PAUSE")}</button>
-        <button className="previewButton" onClick={() => {
+        {!startedWorkout && <button className="previewButton" onClick={() => {
           setShowPreview(!showPreview)
-        }}>{showPreview ? 'Hide the exercises' : 'Preview the exercises'}</button>
+        }}>{showPreview ? 'Hide the exercises' : 'Preview the exercises'}</button>}
       </div>
       }
-
       
       {showPreview && !startedWorkout &&
         <div className="row">
@@ -348,14 +343,6 @@ function App() {
           })}
         </div>
       }
-
-      {/* <p>rounds: {rounds}</p>
-      <p>current round: {currentRound + 1}</p>
-      <p>paused: {paused ? "true" : "false"}</p>
-      <p>resting: {resting ? "resting" : "working"}</p>
-      <p>finished? {finished ? "finished!" : "not yet"}</p>
-      <p>exercise index: {exerciseIndex}</p> */}
-      
     </div>
   )
 };
