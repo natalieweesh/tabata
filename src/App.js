@@ -107,52 +107,73 @@ function App() {
         setCurrentExercise(exercises[newMuscleGroup][Math.floor(Math.random() * muscleGroups[newIndex].length)])
       }
     }, 1000)
-  }, [finished, paused, theTime, currentRound, rounds, currentExercise, exerciseIndex, muscleGroups])
+  }, [finished, paused, theTime, currentRound, rounds, currentExercise, exerciseIndex, muscleGroups, restTime, totalTime, workTime])
   return (
     <div className="App">
       <p>It's workout time!</p>
-      <label>Choose your work time:</label>
-      <select onChange={e => {
-        console.log('hello')
-        console.log(e.target.value)
-        setWorkTime(parseInt(e.target.value))
-      }}>
-        <option value="5">5 seconds</option>
-        <option value="20">20 seconds</option>
-        <option value="30">30 seconds</option>
-        <option value="45">45 seconds</option>
-        <option value="50">50 seoncds</option>
-        <option value="60">60 seconds</option>
-      </select>
-      <br/>
-      <label>Choose your rest time:</label>
-      <select onChange={e => setRestTime(parseInt(e.target.value))}>
-        <option value="3">3 seconds</option>
-        <option value="10">10 seconds</option>
-        <option value="15">15 seconds</option>
-        <option value="20">20 seconds</option>
-        <option value="25">25 seconds</option>
-        <option value="30">30 seconds</option>
-      </select>
-      <br/>
-      <label>Choose your total workout duration:</label>
-      <select onChange={e => setTotalTime(parseInt(e.target.value))}>
-        <option value="30">30 seconds</option>
-        <option value="60">1 minute</option>
-        <option value="300">5 minutes</option>
-        <option value="600">10 minutes</option>
-        <option value="900">15 minutes</option>
-        <option value="1200">20 minutes</option>
-        <option value="1500">25 minutes</option>
-        <option value="1800">30 minutes</option>
-      </select>
-      <br/>
-      <button onClick={() => {
-        setPaused(!paused)
-        if (!startedWorkout) {
-          setStartedWorkout(true);
-        }
-      }}>{!startedWorkout ? ("START") : (paused ? "UNPAUSE" : "PAUSE")}</button>
+      {!startedWorkout &&
+      <div className="row">
+        <div className="column">
+          <label>Choose your work time:</label>
+          <select className="select-css" onChange={e => {
+            console.log('hello')
+            console.log(e.target.value)
+            setWorkTime(parseInt(e.target.value))
+          }}>
+            <option value="5">5 seconds</option>
+            <option value="20">20 seconds</option>
+            <option value="30">30 seconds</option>
+            <option value="45">45 seconds</option>
+            <option value="50">50 seoncds</option>
+            <option value="60">60 seconds</option>
+          </select>
+        </div>
+        <div className="column">
+          <label>Choose your rest time:</label>
+          <select className="select-css" onChange={e => setRestTime(parseInt(e.target.value))}>
+            <option value="3">3 seconds</option>
+            <option value="10">10 seconds</option>
+            <option value="15">15 seconds</option>
+            <option value="20">20 seconds</option>
+            <option value="25">25 seconds</option>
+            <option value="30">30 seconds</option>
+          </select>
+        </div>
+        <div className="column">
+          <label>Choose your total workout duration:</label>
+          <select className="select-css" onChange={e => setTotalTime(parseInt(e.target.value))}>
+            <option value="30">30 seconds</option>
+            <option value="60">1 minute</option>
+            <option value="300">5 minutes</option>
+            <option value="600">10 minutes</option>
+            <option value="900">15 minutes</option>
+            <option value="1200">20 minutes</option>
+            <option value="1500">25 minutes</option>
+            <option value="1800">30 minutes</option>
+          </select>
+        </div>
+      </div>
+      }
+
+      {currentExercise && (
+        <div>
+        <p>current exercise: {currentExercise && currentExercise['title']} [{muscleGroups[exerciseIndex]}]</p>
+        <img src={currentExercise && currentExercise['img']} alt="hello" />
+        </div>
+      )}
+
+      {finished && "YOU FINISHED!"}
+
+        {!finished &&
+      <div className="row">
+        <button onClick={() => {
+          setPaused(!paused)
+          if (!startedWorkout) {
+            setStartedWorkout(true);
+          }
+        }}>{!startedWorkout ? ("START") : (paused ? "UNPAUSE" : "PAUSE")}</button>
+      </div>
+      }
       <p>time: {theTime}</p>
       <p>rounds: {rounds}</p>
       <p>current round: {currentRound + 1}</p>
@@ -160,13 +181,7 @@ function App() {
       <p>resting: {resting ? "resting" : "working"}</p>
       <p>finished? {finished ? "finished!" : "not yet"}</p>
       <p>exercise index: {exerciseIndex}</p>
-      {currentExercise && (
-        <div>
-        <p>current exercise: {currentExercise && currentExercise['title']}</p>
-        <img src={currentExercise && currentExercise['img']} alt="hello" />
-        </div>
-      )}
-      {finished && "YOU FINISHED!"}
+      
     </div>
   );
 }
