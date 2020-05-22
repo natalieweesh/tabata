@@ -83,6 +83,12 @@ const exercises = {
   ]
 }
 
+const formatTime = (seconds) => {
+  const mins = Math.floor(seconds / 60);
+  const secs = seconds % 60;
+  return `${mins < 10 ? "0" : ""}${mins}:${secs < 10 ? "0" : ""}${secs}`
+}
+
 function App() {
   // const muscleGroups = ['arms', 'legs', 'butt']
   // const workTime = 5;
@@ -127,7 +133,7 @@ function App() {
     }
     timer.current = setTimeout(() => {
       setTheTime(theTime + 1)
-      if (currentRound * (workTime + restTime) + restTime === theTime) { // start work (after rest is done)
+      if (currentRound * (workTime + restTime) + restTime === theTime + 1) { // start work (after rest is done)
         setResting(false)
         setCurrentIntervalCount(workTime)
       } else if (theTime+1 === (rounds) * (workTime + restTime)) { // finished with whole workout
@@ -148,9 +154,9 @@ function App() {
   }, [finished, paused, theTime, currentRound, rounds, currentExercise, exerciseIndex, selectedMuscleGroups, restTime, totalTime, workTime, currentIntervalCount])
   return (
     <div className="App">
-      {!startedWorkout && <p>It's workout time!</p>}
+      {!startedWorkout && <p className="exerciseTitle">It's workout time!</p>}
       {!startedWorkout &&
-      <div>
+      <div className="settingsRow">
         <div className="row">
           <div className="column">
             <label>Choose your work time:</label>
@@ -243,22 +249,27 @@ function App() {
 
 
       {currentExercise && (
-        <div className="row">
+        <div className="row mainRow">
           <div className="column">
-            <p>{currentExercise && currentExercise['title']} [{selectedMuscleGroups[exerciseIndex]}]</p>
+            <p className="exerciseTitle">{currentExercise && currentExercise['title']}</p>
             <img src={currentExercise && currentExercise['img']} alt="hello" />
+            <p>[work your {selectedMuscleGroups[exerciseIndex]}]</p>
           </div>
           <div className="column">
-            <p>{resting ? "REST" : "WORK"}</p>
-            <p>{currentIntervalCount}</p>
+            <p className={resting ? 'restText' : 'workText'}>{resting ? "REST" : "WORK"}</p>
+            <p className="countdown">{currentIntervalCount}</p>
           </div>
           <div className="column">
-            <p>Time elapsed: {theTime}</p>
+            <p>Time elapsed: {formatTime(theTime)}</p>
           </div>
         </div>
       )}
 
-      {finished && "YOU FINISHED!"}
+      {finished && <div>
+        <p>YOU FINISHED!</p>
+        <p>Total workout time: {formatTime(theTime)}</p>
+        <p>Total rounds finished: {currentRound + 1}</p>
+      </div>}
 
       {!finished &&
       <div className="row">
@@ -270,12 +281,13 @@ function App() {
         }} className={startedWorkout && !paused ? 'unpausedButton' : ''}>{!startedWorkout ? ("START") : (paused ? "UNPAUSE" : "PAUSE")}</button>
       </div>
       }
-      <p>rounds: {rounds}</p>
+
+      {/* <p>rounds: {rounds}</p>
       <p>current round: {currentRound + 1}</p>
       <p>paused: {paused ? "true" : "false"}</p>
       <p>resting: {resting ? "resting" : "working"}</p>
       <p>finished? {finished ? "finished!" : "not yet"}</p>
-      <p>exercise index: {exerciseIndex}</p>
+      <p>exercise index: {exerciseIndex}</p> */}
       
     </div>
   );
