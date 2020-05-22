@@ -64,3 +64,26 @@ button {
 .select-css option {
 	font-weight:normal;
 }
+
+.checkboxWrapper {
+  position: relative;
+}
+
+.checkboxLabel, .checkboxWrapper input {
+  opacity: 0;
+}
+
+.checkboxLabel {
+  padding: 2rem;
+}
+
+.fakeCheckbox {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  padding: 2rem;
+  border-radius: 0.5em;
+}
+.checkboxWrapper input:checked ~ .fakeCheckbox {
+  background: #b9f78a;
+}
