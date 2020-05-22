@@ -57,10 +57,9 @@ const exercises = {
 
 function App() {
   const muscleGroups = ['arms', 'legs', 'butt']
-  const workTime = 5;
-  const restTime = 3;
-  const totalTime = 38; //testing with 60 seconds
-  const rounds = Math.floor(totalTime / (workTime + restTime))
+  // const workTime = 5;
+  // const restTime = 3;
+  // const totalTime = 38; //testing with 60 seconds
   const timer = useRef(null);
   const [currentRound, setCurrentRound] = useState(0);
   const [resting, setResting] = useState(true);
@@ -69,6 +68,12 @@ function App() {
   const [theTime, setTheTime] = useState(0);
   const [exerciseIndex, setExerciseIndex] = useState(0);
   const [currentExercise, setCurrentExercise] = useState(null);
+  const [startedWorkout, setStartedWorkout] = useState(false);
+  const [workTime, setWorkTime] = useState(5)
+  const [restTime, setRestTime] = useState(3)
+  const [totalTime, setTotalTime] = useState(38)
+  // const rounds = Math.floor(totalTime / (workTime + restTime))
+  const [rounds, setRounds] = useState(null);
 
   useEffect(() => {
     if (paused || finished) {
@@ -78,9 +83,13 @@ function App() {
       }
       return;
     }
-    if (!currentExercise) {
+    if (!rounds) {
+      console.log("Setting rounds", Math.floor(totalTime / (workTime + restTime)))
+      setRounds(Math.floor(totalTime / (workTime + restTime)))
+    }
+    if (!currentExercise) { // starting the first exercise of the workout
       const currentMuscleGroup = muscleGroups[exerciseIndex];
-      setCurrentExercise(exercises[currentMuscleGroup][0])
+      setCurrentExercise(exercises[currentMuscleGroup][Math.floor(Math.random() * muscleGroups[exerciseIndex].length)])
     }
     timer.current = setTimeout(() => {
       setTheTime(theTime + 1)
@@ -95,14 +104,55 @@ function App() {
         const newIndex = ((exerciseIndex + 1) % (muscleGroups.length))
         setExerciseIndex(newIndex)
         const newMuscleGroup = muscleGroups[newIndex]
-        setCurrentExercise(exercises[newMuscleGroup][0])
+        setCurrentExercise(exercises[newMuscleGroup][Math.floor(Math.random() * muscleGroups[newIndex].length)])
       }
     }, 1000)
   }, [finished, paused, theTime, currentRound, rounds, currentExercise, exerciseIndex, muscleGroups])
   return (
     <div className="App">
-      <p>hello</p>
-      <button onClick={() => setPaused(!paused)}>{paused ? "UN" : ""}PAUSE</button>
+      <p>It's workout time!</p>
+      <label>Choose your work time:</label>
+      <select onChange={e => {
+        console.log('hello')
+        console.log(e.target.value)
+        setWorkTime(parseInt(e.target.value))
+      }}>
+        <option value="5">5 seconds</option>
+        <option value="20">20 seconds</option>
+        <option value="30">30 seconds</option>
+        <option value="45">45 seconds</option>
+        <option value="50">50 seoncds</option>
+        <option value="60">60 seconds</option>
+      </select>
+      <br/>
+      <label>Choose your rest time:</label>
+      <select onChange={e => setRestTime(parseInt(e.target.value))}>
+        <option value="3">3 seconds</option>
+        <option value="10">10 seconds</option>
+        <option value="15">15 seconds</option>
+        <option value="20">20 seconds</option>
+        <option value="25">25 seconds</option>
+        <option value="30">30 seconds</option>
+      </select>
+      <br/>
+      <label>Choose your total workout duration:</label>
+      <select onChange={e => setTotalTime(parseInt(e.target.value))}>
+        <option value="30">30 seconds</option>
+        <option value="60">1 minute</option>
+        <option value="300">5 minutes</option>
+        <option value="600">10 minutes</option>
+        <option value="900">15 minutes</option>
+        <option value="1200">20 minutes</option>
+        <option value="1500">25 minutes</option>
+        <option value="1800">30 minutes</option>
+      </select>
+      <br/>
+      <button onClick={() => {
+        setPaused(!paused)
+        if (!startedWorkout) {
+          setStartedWorkout(true);
+        }
+      }}>{!startedWorkout ? ("START") : (paused ? "UNPAUSE" : "PAUSE")}</button>
       <p>time: {theTime}</p>
       <p>rounds: {rounds}</p>
       <p>current round: {currentRound + 1}</p>
@@ -116,6 +166,7 @@ function App() {
         <img src={currentExercise && currentExercise['img']} alt="hello" />
         </div>
       )}
+      {finished && "YOU FINISHED!"}
     </div>
   );
 }
