@@ -54,7 +54,11 @@ button {
 .muscleRow {
   max-width: 1175px;
   flex-wrap: wrap;
-  margin: 6rem auto;
+  margin: 0 auto;
+}
+
+.muscleRowTitle {
+  margin-top: 3rem;
 }
 
 .select-css::-ms-expand {

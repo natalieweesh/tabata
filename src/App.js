@@ -23,6 +23,22 @@ const exercises = {
     {
       title: 'hammer curl',
       img: gif3
+    },
+    {
+      title: 'skull crusher',
+      img: gif3
+    },
+    {
+      title: 'tricep pushup',
+      img: gif3
+    },
+    {
+      title: 'tricep extension',
+      img: gif3
+    },
+    {
+      title: 'pike pushup',
+      img: gif3
     }
   ],
   legs: [
@@ -37,11 +53,19 @@ const exercises = {
     {
       title: 'reverse lunge',
       img: gif6
+    },
+    {
+      title: 'squat jump',
+      img: gif6
+    },
+    {
+      title: 'jumping jack',
+      img: gif6
     }
   ],
   butt: [
     {
-      title: 'bridge',
+      title: 'glute bridge',
       img: gif7
     },
     {
@@ -52,6 +76,18 @@ const exercises = {
       title: 'sumo squat',
       img: gif9
     },
+    {
+      title: 'fire hydrant',
+      img: gif9
+    },
+    {
+      title: 'tabletop kick back',
+      img: gif9
+    },
+    {
+      title: 'glute bridge walk out',
+      img: gif9
+    }
   ],
   chest: [
     {
@@ -64,6 +100,10 @@ const exercises = {
     },
     {
       title: 'reverse fly',
+      img: gif6
+    },
+    {
+      title: 'wide grip pushup',
       img: gif6
     }
   ],
@@ -79,6 +119,32 @@ const exercises = {
     {
       title: 'pull up',
       img: gif9
+    },
+    {
+      title: 'i-t-y',
+      img: gif9
+    },
+    {
+      title: 'row',
+      img: gif9
+    }
+  ],
+  core: [
+    {
+      title: 'plank jack',
+      img: gif8
+    },
+    {
+      title: 'mountain climber',
+      img: gif8
+    },
+    {
+      title: 'bear plank',
+      img: gif8
+    },
+    {
+      title: 'standing side crunch',
+      img: gif8
     }
   ]
 }
@@ -106,7 +172,7 @@ function App() {
   const [workTime, setWorkTime] = useState(5)
   const [restTime, setRestTime] = useState(3)
   const [totalTime, setTotalTime] = useState(38)
-  const [selectedMuscleGroups, setSelectedMuscleGroups] = useState(['arms', 'legs', 'butt'])
+  const [selectedMuscleGroups, setSelectedMuscleGroups] = useState(['arms', 'legs', 'butt', 'back'])
   const [currentIntervalCount, setCurrentIntervalCount] = useState(3);
   // const rounds = Math.floor(totalTime / (workTime + restTime))
   const [rounds, setRounds] = useState(null);
@@ -201,52 +267,22 @@ function App() {
             </select>
           </div>
         </div>
-        <div className="row muscleRow">
-          <label>Select the muscle groups to focus on:</label>
-          <div className="checkboxWrapper">
-            <label className="checkboxLabel" htmlFor="arms">Arms</label><input onChange={() => {
-              if (selectedMuscleGroups.includes('arms')) {
-                setSelectedMuscleGroups(selectedMuscleGroups.filter(x => x !== 'arms'))
-              } else {
-                setSelectedMuscleGroups(selectedMuscleGroups.concat(['arms']))
-              }
-            }} checked={selectedMuscleGroups.includes('arms')} id="arms" value="arms" type="checkbox"/><div className="fakeCheckbox">Arms</div>
+        <div>
+          <div className="row muscleRowTitle">
+            <label>Select the muscle groups to focus on:</label>
           </div>
-          <div className="checkboxWrapper">
-            <label className="checkboxLabel" htmlFor="legs">Legs</label><input onChange={() => {
-              if (selectedMuscleGroups.includes('legs')) {
-                setSelectedMuscleGroups(selectedMuscleGroups.filter(x => x !== 'legs'))
-              } else {
-                setSelectedMuscleGroups(selectedMuscleGroups.concat(['legs']))
-              }
-            }} checked={selectedMuscleGroups.includes('legs')} id="legs" value="legs" type="checkbox"/><div className="fakeCheckbox">Legs</div>
-          </div>
-          <div className="checkboxWrapper">
-            <label className="checkboxLabel" htmlFor="chest">Chest</label><input onChange={() => {
-              if (selectedMuscleGroups.includes('chest')) {
-                setSelectedMuscleGroups(selectedMuscleGroups.filter(x => x !== 'chest'))
-              } else {
-                setSelectedMuscleGroups(selectedMuscleGroups.concat(['chest']))
-              }
-            }} checked={selectedMuscleGroups.includes('chest')} id="chest" value="chest" type="checkbox"/><div className="fakeCheckbox">Chest</div>
-          </div>
-          <div className="checkboxWrapper">
-            <label className="checkboxLabel" htmlFor="butt">Butt</label><input onChange={() => {
-              if (selectedMuscleGroups.includes('butt')) {
-                setSelectedMuscleGroups(selectedMuscleGroups.filter(x => x !== 'butt'))
-              } else {
-                setSelectedMuscleGroups(selectedMuscleGroups.concat(['butt']))
-              }
-            }} checked={selectedMuscleGroups.includes('butt')} id="butt" value="butt" type="checkbox"/><div className="fakeCheckbox">Butt</div>
-          </div>
-          <div className="checkboxWrapper">
-            <label className="checkboxLabel" htmlFor="back">Back</label><input onChange={() => {
-              if (selectedMuscleGroups.includes('back')) {
-                setSelectedMuscleGroups(selectedMuscleGroups.filter(x => x !== 'back'))
-              } else {
-                setSelectedMuscleGroups(selectedMuscleGroups.concat(['back']))
-              }
-            }} checked={selectedMuscleGroups.includes('back')} id="back" value="back" type="checkbox"/><div className="fakeCheckbox">Back</div>
+          <div className="row muscleRow">
+              {Object.keys(exercises).map(muscle => {
+                return <div className="checkboxWrapper">
+                  <label className="checkboxLabel" htmlFor={muscle}>{muscle}</label><input onChange={() => {
+                    if (selectedMuscleGroups.includes(muscle)) {
+                      setSelectedMuscleGroups(selectedMuscleGroups.filter(x => x !== muscle))
+                    } else {
+                      setSelectedMuscleGroups(selectedMuscleGroups.concat([muscle]))
+                    }
+                  }} checked={selectedMuscleGroups.includes(muscle)} id={muscle} value={muscle} type="checkbox"/><div className="fakeCheckbox">{muscle.toUpperCase()}</div>
+                </div>
+              })}
           </div>
         </div>
       </div>
@@ -263,7 +299,7 @@ function App() {
             </div>
             <div className="column">
               <p className={resting ? 'restText' : 'workText'}>{resting ? "REST" : "WORK"}</p>
-              <p className="countdown">{currentIntervalCount}</p>
+              <p className="countdown">{currentIntervalCount >= 0 ? currentIntervalCount : ""}</p>
           </div>
         </div>
           <div className="row">
@@ -299,7 +335,7 @@ function App() {
         <div className="row">
           {Object.keys(exercises).map(muscle => {
             return <div>
-              <p className="exerciseTitle">{muscle} exercises</p>
+              <p className="exerciseTitle">exercises for your {muscle}:</p>
               <div className="row">
               {exercises[muscle].map(exercise => {
                 return <div className="column"><p>{exercise['title']}</p><img src={exercise['img']} alt={exercise['title']}/></div>
