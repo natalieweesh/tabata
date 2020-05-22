@@ -14,7 +14,7 @@ const exercises = {
   arms: [
     {
       title: 'bicep curl',
-      img: gif1
+      img: 'https://media.giphy.com/media/UV4Yi70OhwQ6JwJo7m/giphy.gif'
     },
     {
       title: 'tricep dip',
@@ -22,7 +22,7 @@ const exercises = {
     },
     {
       title: 'hammer curl',
-      img: gif3
+      img: 'https://media.giphy.com/media/izaYkYoJMnY07WYFzj/giphy.gif'
     },
     {
       title: 'skull crusher',
@@ -33,12 +33,16 @@ const exercises = {
       img: gif3
     },
     {
-      title: 'tricep extension',
-      img: gif3
+      title: 'tricep kickback',
+      img: 'https://media.giphy.com/media/fvfoHSsvAeUVrrNc33/giphy.gif'
     },
     {
       title: 'pike pushup',
       img: gif3
+    },
+    {
+      title: 'shoulder press',
+      img: gif9
     }
   ],
   legs: [
@@ -60,13 +64,13 @@ const exercises = {
     },
     {
       title: 'jumping jack',
-      img: gif6
+      img: 'https://media.giphy.com/media/lNWbCKbffqCIzY8RR1/giphy.gif'
     }
   ],
   butt: [
     {
       title: 'glute bridge',
-      img: gif7
+      img: 'https://media.giphy.com/media/cKKAg0wrGRYENJiUei/giphy.gif'
     },
     {
       title: 'deadlift',
@@ -114,7 +118,7 @@ const exercises = {
     },
     {
       title: 'superman',
-      img: gif8
+      img: 'https://media.giphy.com/media/lTArkNAXA1Dk9b4PsX/giphy.gif'
     },
     {
       title: 'pull up',
@@ -122,7 +126,7 @@ const exercises = {
     },
     {
       title: 'i-t-y',
-      img: gif9
+      img: 'https://media.giphy.com/media/Wp0gT1ibDsmUU5KmHm/giphy.gif'
     },
     {
       title: 'row',
@@ -175,6 +179,7 @@ function App() {
 
   useEffect(() => {
     if (paused || finished) {
+      console.log("CLEAR TIMEOUT", currentIntervalCount)
       clearTimeout(timer.current);
       if (finished) {
         setCurrentExercise(null)
@@ -194,17 +199,14 @@ function App() {
       setCurrentIntervalCount(restTime);
     }
     timer.current = setTimeout(() => {
-      // setTheTime(theTime + 1)
+      setTheTime(theTime + 1)
       if (currentRound * (workTime + restTime) + restTime === theTime + 1) { // start work (after rest is done)
-        setTheTime(theTime + 1)
         setResting(false)
         setCurrentIntervalCount(workTime)
       } else if (theTime+1 === (rounds) * (workTime + restTime)) { // finished with whole workout
-        setTheTime(theTime + 1)
         setFinished(true);
         return;
       } else if ((currentRound + 1) * (workTime + restTime) === theTime+1) { // start next round, start new exercise
-        setTheTime(theTime + 1)
         setResting(true)
         setCurrentRound(currentRound + 1)
         const newIndex = ((exerciseIndex + 1) % (selectedMuscleGroups.length))
@@ -213,8 +215,9 @@ function App() {
         setCurrentExercise(exercises[newMuscleGroup][Math.floor(Math.random() * selectedMuscleGroups[newIndex].length)])
         setCurrentIntervalCount(restTime)
       } else {
-        setTheTime(theTime + 1)
-        setCurrentIntervalCount(currentIntervalCount - 1)
+        if (currentIntervalCount - 1 >= 0) {
+          setCurrentIntervalCount(currentIntervalCount - 1)
+        }
       }
     }, 1000)
   }, [finished, paused, theTime, currentRound, rounds, currentExercise, exerciseIndex, selectedMuscleGroups, restTime, totalTime, workTime, currentIntervalCount])
@@ -291,7 +294,8 @@ function App() {
           <div className="row mainRow">
             <div className="column">
               <p className="exerciseTitle">{currentExercise && currentExercise['title']}</p>
-              <img src={currentExercise && currentExercise['img']} alt="hello" />
+              {/* <img src={currentExercise && currentExercise['img']} alt="hello" /> */}
+              <img src="https://media.giphy.com/media/fvfoHSsvAeUVrrNc33/giphy.gif" alt="hello" />
               <p>[work your {selectedMuscleGroups[exerciseIndex]}]</p>
             </div>
             <div className="column">
