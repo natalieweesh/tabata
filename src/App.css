@@ -137,3 +137,26 @@ button {
   font-weight: normal;
   background: #ffff00a1;
 }
+
+.progressBar {
+  height: 1rem;
+  border: 1px solid lightgray;
+  border-radius: 15px;
+  position: relative;
+  width: 100%;
+}
+
+.fill {
+  width: 0%;
+  background: #b9f78a;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 15px 0 0 15px;
+  transition: width 0.25s;
+}
+
+.progressRow {
+  width: 100%;
+}

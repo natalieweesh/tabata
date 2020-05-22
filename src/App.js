@@ -291,6 +291,9 @@ function App() {
 
       {currentExercise && (
         <div>
+          <div className="row progressRow">
+            <div className="progressBar"><div className="fill" style={{width: `${parseInt(theTime / ((restTime + workTime) * rounds) * 100)}%`}}></div></div>
+          </div>
           <div className="row mainRow">
             <div className="column">
               <p className="exerciseTitle">{currentExercise && currentExercise['title']}</p>
