@@ -110,6 +110,7 @@ function App() {
   const [currentIntervalCount, setCurrentIntervalCount] = useState(3);
   // const rounds = Math.floor(totalTime / (workTime + restTime))
   const [rounds, setRounds] = useState(null);
+  const [showPreview, setShowPreview] = useState(false);
 
   useEffect(() => {
     if (paused || finished) {
@@ -132,14 +133,17 @@ function App() {
       setCurrentIntervalCount(restTime);
     }
     timer.current = setTimeout(() => {
-      setTheTime(theTime + 1)
+      // setTheTime(theTime + 1)
       if (currentRound * (workTime + restTime) + restTime === theTime + 1) { // start work (after rest is done)
+        setTheTime(theTime + 1)
         setResting(false)
         setCurrentIntervalCount(workTime)
       } else if (theTime+1 === (rounds) * (workTime + restTime)) { // finished with whole workout
+        setTheTime(theTime + 1)
         setFinished(true);
         return;
-      } else if ((currentRound + 1) * (workTime + restTime) === theTime) { // start next round, start new exercise
+      } else if ((currentRound + 1) * (workTime + restTime) === theTime+1) { // start next round, start new exercise
+        setTheTime(theTime + 1)
         setResting(true)
         setCurrentRound(currentRound + 1)
         const newIndex = ((exerciseIndex + 1) % (selectedMuscleGroups.length))
@@ -148,13 +152,14 @@ function App() {
         setCurrentExercise(exercises[newMuscleGroup][Math.floor(Math.random() * selectedMuscleGroups[newIndex].length)])
         setCurrentIntervalCount(restTime)
       } else {
+        setTheTime(theTime + 1)
         setCurrentIntervalCount(currentIntervalCount - 1)
       }
     }, 1000)
   }, [finished, paused, theTime, currentRound, rounds, currentExercise, exerciseIndex, selectedMuscleGroups, restTime, totalTime, workTime, currentIntervalCount])
   return (
     <div className="App">
-      {!startedWorkout && <p className="exerciseTitle">It's workout time!</p>}
+      {!startedWorkout && <p className="exerciseTitle">It's tabata time!</p>}
       {!startedWorkout &&
       <div className="settingsRow">
         <div className="row">
@@ -249,24 +254,28 @@ function App() {
 
 
       {currentExercise && (
-        <div className="row mainRow">
-          <div className="column">
-            <p className="exerciseTitle">{currentExercise && currentExercise['title']}</p>
-            <img src={currentExercise && currentExercise['img']} alt="hello" />
-            <p>[work your {selectedMuscleGroups[exerciseIndex]}]</p>
+        <div>
+          <div className="row mainRow">
+            <div className="column">
+              <p className="exerciseTitle">{currentExercise && currentExercise['title']}</p>
+              <img src={currentExercise && currentExercise['img']} alt="hello" />
+              <p>[work your {selectedMuscleGroups[exerciseIndex]}]</p>
+            </div>
+            <div className="column">
+              <p className={resting ? 'restText' : 'workText'}>{resting ? "REST" : "WORK"}</p>
+              <p className="countdown">{currentIntervalCount}</p>
           </div>
-          <div className="column">
-            <p className={resting ? 'restText' : 'workText'}>{resting ? "REST" : "WORK"}</p>
-            <p className="countdown">{currentIntervalCount}</p>
-          </div>
-          <div className="column">
-            <p>Time elapsed: {formatTime(theTime)}</p>
+        </div>
+          <div className="row">
+            <div className="column">
+              <p>Time elapsed: {formatTime(theTime)}</p>
+            </div>
           </div>
         </div>
       )}
 
       {finished && <div>
-        <p>YOU FINISHED!</p>
+        <p className="exerciseTitle">YOU FINISHED!</p>
         <p>Total workout time: {formatTime(theTime)}</p>
         <p>Total rounds finished: {currentRound + 1}</p>
       </div>}
@@ -279,7 +288,26 @@ function App() {
             setStartedWorkout(true);
           }
         }} className={startedWorkout && !paused ? 'unpausedButton' : ''}>{!startedWorkout ? ("START") : (paused ? "UNPAUSE" : "PAUSE")}</button>
+        <button className="previewButton" onClick={() => {
+          setShowPreview(!showPreview)
+        }}>{showPreview ? 'Hide the exercises' : 'Preview the exercises'}</button>
       </div>
+      }
+
+      
+      {showPreview && !startedWorkout &&
+        <div className="row">
+          {Object.keys(exercises).map(muscle => {
+            return <div>
+              <p className="exerciseTitle">{muscle} exercises</p>
+              <div className="row">
+              {exercises[muscle].map(exercise => {
+                return <div className="column"><p>{exercise['title']}</p><img src={exercise['img']} alt={exercise['title']}/></div>
+              })}
+              </div>
+            </div>
+          })}
+        </div>
       }
 
       {/* <p>rounds: {rounds}</p>
@@ -290,7 +318,7 @@ function App() {
       <p>exercise index: {exerciseIndex}</p> */}
       
     </div>
-  );
-}
+  )
+};
 
 export default App;

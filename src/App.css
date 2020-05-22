@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  padding: 3rem;
+  padding: 2rem 3rem 3rem;
   background:#fff;
 }
 
@@ -122,9 +122,14 @@ button {
 }
 
 .mainRow {
-  height: 80vh;
+  min-height: 80vh;
 }
 
 .settingsRow {
-  height: 50vh;
+  min-height: 50vh;
+}
+
+.previewButton {
+  font-weight: normal;
+  background: #ffff00a1;
 }
