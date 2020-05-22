@@ -54,7 +54,7 @@ button {
 .muscleRow {
   max-width: 1175px;
   flex-wrap: wrap;
-  margin: 2rem auto;
+  margin: 6rem auto;
 }
 
 .select-css::-ms-expand {
@@ -99,4 +99,32 @@ button {
   background: #b9f78a;
   border: none;
   color: black;
+}
+
+.restText, .workText {
+  font-size: 3rem;
+  padding: 1rem;
+  border-radius: 0.5em;
+}
+.restText {
+  background-color: #ffff00a1;
+}
+.workText {
+  background-color: #b9f78a;
+}
+
+.exerciseTitle {
+  font-size: 3rem;
+}
+.countdown {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.mainRow {
+  height: 80vh;
+}
+
+.settingsRow {
+  height: 50vh;
 }
