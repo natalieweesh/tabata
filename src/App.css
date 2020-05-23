@@ -125,7 +125,7 @@ button {
   font-size: 3rem;
 }
 .countdown {
-  font-size: 5rem;
+  font-size: 10rem;
   font-weight: bold;
   margin: 0;
 }
@@ -190,7 +190,7 @@ button {
     font-size: 1.75rem;
   }
   .countdown {
-    font-size: 2rem;
+    font-size: 5rem;
   }
   .countdownTitle {
     padding: 0;

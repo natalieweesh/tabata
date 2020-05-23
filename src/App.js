@@ -172,13 +172,10 @@ const speak = (words, timeout = 0) => {
   }, timeout)
 }
 
-const randomWorkPhrase = () => {
-  const phrases = ['time to work', 'get to it', 'go go go', "let's get it done", 'begin'];
-  return phrases[Math.floor(Math.random() * phrases.length)]
-}
-
-const randomRestPhrase = () => {
-  const phrases = ['take a break', 'and rest', 'break time', 'take a breather'];
+const randomPhrase = (work = false) => {
+  const workPhrases = ['time to work', 'get to it', 'go go go', "let's get it done", 'begin', "ok go", 'go for it'];
+  const restPhrases = ['take a break', 'and rest', 'break time', 'take a breather', 'and stop', 'and break'];
+  const phrases = work ? workPhrases : restPhrases;
   return phrases[Math.floor(Math.random() * phrases.length)]
 }
 
@@ -247,7 +244,7 @@ function App() {
       if (currentRound.current * (workTime + restTime) + restTime === theTime + 1) { // start work (after rest is done)
         resting.current = false;
         currentIntervalCount.current = workTime
-        speak(randomWorkPhrase(), 1000)
+        speak(randomPhrase(true), 1000)
       } else if (theTime + 1 === (rounds.current) * (workTime + restTime)) { // finished with whole workout
         setFinished(true);
         speak("good job! workout complete! it's peanut butter jelly time")
@@ -269,7 +266,7 @@ function App() {
           exerciseRandomizer.current[newMuscleGroup]['selector'] = exerciseRandomizer.current[newMuscleGroup]['selector'].slice(0, randomi).concat(exerciseRandomizer.current[newMuscleGroup]['selector'].slice(randomi+1))
         }
         currentIntervalCount.current = restTime
-        speak(`${randomRestPhrase()}. ${currentExercise.current['title']} is next`, 1000)
+        speak(`${randomPhrase()}. ${currentExercise.current['title']} is next`, 1000)
       } else {
         if (currentIntervalCount.current - 1 >= 0) {
           currentIntervalCount.current = currentIntervalCount.current - 1
