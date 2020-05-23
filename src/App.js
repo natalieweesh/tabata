@@ -173,7 +173,7 @@ function App() {
       return;
     }
     if (!selectedMuscleGroups || selectedMuscleGroups.length === 0) {
-      setSelectedMuscleGroups(['arms', 'legs', 'chest', 'butt', 'back']) // if they selected no muscle groups use them all
+      setSelectedMuscleGroups(['arms', 'legs', 'chest', 'butt', 'back', 'core']) // if they selected no muscle groups use them all
       return;
     }
     if (!rounds) {
@@ -217,7 +217,7 @@ function App() {
             <label>Choose your work time:</label>
             <select className="select-css" onChange={e => {
               setWorkTime(parseInt(e.target.value))
-            }} value="20">
+            }} value={workTime}>
               <option value="5">5 seconds</option>
               <option value="20">20 seconds</option>
               <option value="30">30 seconds</option>
@@ -228,7 +228,7 @@ function App() {
           </div>
           <div className="column">
             <label>Choose your rest time:</label>
-            <select className="select-css" onChange={e => setRestTime(parseInt(e.target.value))} value="10">
+            <select className="select-css" onChange={e => setRestTime(parseInt(e.target.value))} value={restTime}>
               <option value="3">3 seconds</option>
               <option value="10">10 seconds</option>
               <option value="15">15 seconds</option>
@@ -239,7 +239,7 @@ function App() {
           </div>
           <div className="column">
             <label>Choose your total workout duration:</label>
-            <select className="select-css" onChange={e => setTotalTime(parseInt(e.target.value))} value="1200">
+            <select className="select-css" onChange={e => setTotalTime(parseInt(e.target.value))} value={totalTime}>
               <option value="30">30 seconds</option>
               <option value="60">1 minute</option>
               <option value="300">5 minutes</option>
