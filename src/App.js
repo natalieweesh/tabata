@@ -325,7 +325,7 @@ function App() {
           {Object.keys(exercises).map(muscle => {
             return <div>
               <p className="exerciseTitle">exercises for your {muscle}:</p>
-              <div className="row">
+              <div className="row previewRow">
               {exercises[muscle].map(exercise => {
                 return <div className="column"><p>{exercise['title']}</p><img src={exercise['img']} alt={exercise['title']}/></div>
               })}

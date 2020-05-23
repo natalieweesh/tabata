@@ -177,6 +177,10 @@ button {
   padding: 2rem;
 }
 
+.previewRow p {
+  font-size: 1.5rem;
+}
+
 @media only screen and (max-width: 888px) {
   .exerciseTitle, .countdownTitle, button {
     font-size: 1.75rem;
@@ -189,5 +193,8 @@ button {
   }
   .checkboxLabel, .fakeCheckbox {
     padding: 1rem;
+  }
+  .previewRow img {
+    max-width: 90%;
   }
 }
