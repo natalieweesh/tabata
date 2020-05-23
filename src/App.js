@@ -30,7 +30,7 @@ const exercises = {
     },
     {
       title: 'tricep pushup',
-      img: gif3
+      img: 'https://media.giphy.com/media/KehD7SA2RF4gqHQP8r/giphy.gif'
     },
     {
       title: 'tricep kickback',
@@ -56,11 +56,11 @@ const exercises = {
     },
     {
       title: 'reverse lunge',
-      img: gif6
+      img: 'https://media.giphy.com/media/QWR3SDoEL6ggzL9rub/giphy.gif'
     },
     {
       title: 'squat jump',
-      img: gif6
+      img: 'https://media.giphy.com/media/dWsKZW6A3PdJnKROMl/giphy.gif'
     },
     {
       title: 'jumping jack',
@@ -74,11 +74,11 @@ const exercises = {
     },
     {
       title: 'deadlift',
-      img: gif8
+      img: 'https://media.giphy.com/media/Yqz7ZokQ0kCs8uaN9E/giphy.gif'
     },
     {
       title: 'sumo squat',
-      img: gif9
+      img: 'https://media.giphy.com/media/emGfboB1RYoSodN7XG/giphy.gif'
     },
     {
       title: 'fire hydrant',
@@ -136,11 +136,11 @@ const exercises = {
   core: [
     {
       title: 'plank jack',
-      img: gif8
+      img: 'https://media.giphy.com/media/kegbiTdPMMqUzWb4ub/giphy.gif'
     },
     {
       title: 'mountain climber',
-      img: gif8
+      img: 'https://media.giphy.com/media/W35qtGrrpweU00eLwI/giphy.gif'
     },
     {
       title: 'bear plank',
@@ -295,7 +295,7 @@ function App() {
             <div className="column">
               <p className="exerciseTitle">{currentExercise && currentExercise['title']}</p>
               {/* <img src={currentExercise && currentExercise['img']} alt="hello" /> */}
-              <img src="https://media.giphy.com/media/fvfoHSsvAeUVrrNc33/giphy.gif" alt="hello" />
+              <img src="https://media.giphy.com/media/Yqz7ZokQ0kCs8uaN9E/giphy.gif" alt="hello" />
               <p>[work your {selectedMuscleGroups[exerciseIndex]}]</p>
             </div>
             <div className="column">
