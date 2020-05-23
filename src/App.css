@@ -49,7 +49,7 @@ button {
 }
 
 .unpausedButton {
-  background-color: #ffff00a1;
+  background-color: #feff81;
 }
 
 .muscleRow {
@@ -115,7 +115,7 @@ button {
   border-radius: 0.5em;
 }
 .restText {
-  background-color: #ffff00a1;
+  background-color: #feff81;
 }
 .workText {
   background-color: #b9f78a;
@@ -146,7 +146,7 @@ button {
 
 .previewButton {
   font-weight: normal;
-  background: #ffff00a1;
+  background: #feff81;
 }
 
 .progressBar {
@@ -200,5 +200,8 @@ button {
   }
   .previewRow img {
     max-width: 90%;
+  }
+  .mainRow {
+    min-height: 70vh;
   }
 }
