@@ -81,6 +81,8 @@ button {
 
 .checkboxWrapper {
   position: relative;
+  display: flex;
+  margin: 1rem 0;
 }
 
 .checkboxLabel, .checkboxWrapper input {
@@ -131,7 +133,12 @@ button {
 .mainRow {
   min-height: 80vh;
 }
-
+.mainRow .column {
+  width: 45%;
+}
+.mainRow img {
+  width: 100%;
+}
 .settingsRow {
   min-height: 50vh;
 }
@@ -168,4 +175,16 @@ button {
   align-items: center;
   border-radius: 1rem;
   padding: 2rem;
+}
+
+@media only screen and (max-width: 888px) {
+  .exerciseTitle, .countdownTitle, button {
+    font-size: 1.75rem;
+  }
+  .countdown {
+    font-size: 2rem;
+  }
+  .checkboxLabel, .fakeCheckbox {
+    padding: 1rem;
+  }
 }

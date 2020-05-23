@@ -142,6 +142,10 @@ const formatTime = (seconds) => {
   return `${mins < 10 ? "0" : ""}${mins}:${secs < 10 ? "0" : ""}${secs}`
 }
 
+const scrollDown = () => {
+  window.scroll(0, window.scrollY + 300);
+}
+
 function App() {
   const timer = useRef(null);
   const [currentRound, setCurrentRound] = useState(0);
@@ -152,9 +156,9 @@ function App() {
   const [exerciseIndex, setExerciseIndex] = useState(0);
   const [currentExercise, setCurrentExercise] = useState(null);
   const [startedWorkout, setStartedWorkout] = useState(false);
-  const [workTime, setWorkTime] = useState(5)
-  const [restTime, setRestTime] = useState(3)
-  const [totalTime, setTotalTime] = useState(38)
+  const [workTime, setWorkTime] = useState(20)
+  const [restTime, setRestTime] = useState(10)
+  const [totalTime, setTotalTime] = useState(1200)
   const [selectedMuscleGroups, setSelectedMuscleGroups] = useState(['arms', 'legs', 'butt', 'back'])
   const [currentIntervalCount, setCurrentIntervalCount] = useState(3);
   const [rounds, setRounds] = useState(null);
@@ -216,7 +220,7 @@ function App() {
               setWorkTime(parseInt(e.target.value))
             }}>
               <option value="5">5 seconds</option>
-              <option value="20">20 seconds</option>
+              <option value="20" selected>20 seconds</option>
               <option value="30">30 seconds</option>
               <option value="45">45 seconds</option>
               <option value="50">50 seoncds</option>
@@ -227,7 +231,7 @@ function App() {
             <label>Choose your rest time:</label>
             <select className="select-css" onChange={e => setRestTime(parseInt(e.target.value))}>
               <option value="3">3 seconds</option>
-              <option value="10">10 seconds</option>
+              <option value="10" selected>10 seconds</option>
               <option value="15">15 seconds</option>
               <option value="20">20 seconds</option>
               <option value="25">25 seconds</option>
@@ -242,7 +246,7 @@ function App() {
               <option value="300">5 minutes</option>
               <option value="600">10 minutes</option>
               <option value="900">15 minutes</option>
-              <option value="1200">20 minutes</option>
+              <option value="1200" selected>20 minutes</option>
               <option value="1500">25 minutes</option>
               <option value="1800">30 minutes</option>
             </select>
@@ -277,7 +281,7 @@ function App() {
           <div className="row mainRow">
             <div className="column">
               <p className="exerciseTitle">{currentExercise && currentExercise['title']}</p>
-              <img src={currentExercise && currentExercise['img']} alt="work out" />
+              <img src={currentExercise && currentExercise['img']} alt={currentExercise && currentExercise['title']} />
               <p>[work your {selectedMuscleGroups[exerciseIndex]}]</p>
             </div>
             <div className="column">
@@ -297,6 +301,7 @@ function App() {
 
       {finished && <div>
         <p className="exerciseTitle">YOU FINISHED!</p>
+        <img src="https://media.giphy.com/media/ZY8BVlXHZqMal62QS3/giphy.gif" alt="it's peanut butter jelly time" />
         <p>Total workout time: {formatTime(theTime)}</p>
         <p>Total rounds finished: {currentRound + 1}</p>
       </div>}
@@ -311,6 +316,7 @@ function App() {
         }} className={startedWorkout && !paused ? 'unpausedButton' : ''}>{!startedWorkout ? ("START") : (paused ? "UNPAUSE" : "PAUSE")}</button>
         {!startedWorkout && <button className="previewButton" onClick={() => {
           setShowPreview(!showPreview)
+          if (!showPreview) setTimeout(scrollDown, 200)
         }}>{showPreview ? 'Hide the exercises' : 'Preview the exercises'}</button>}
       </div>
       }
