@@ -17,16 +17,12 @@ const exercises = {
       img: 'https://media.giphy.com/media/UV4Yi70OhwQ6JwJo7m/giphy.gif'
     },
     {
-      title: 'tricep dip',
-      img: gif2
-    },
-    {
       title: 'hammer curl',
       img: 'https://media.giphy.com/media/izaYkYoJMnY07WYFzj/giphy.gif'
     },
     {
       title: 'skull crusher',
-      img: gif3
+      img: 'https://media.giphy.com/media/MdjZSDee0C50ZuYlHa/giphy.gif'
     },
     {
       title: 'tricep pushup',
@@ -38,7 +34,7 @@ const exercises = {
     },
     {
       title: 'pike pushup',
-      img: gif3
+      img: 'https://media.giphy.com/media/eLYEh1IRtaP7oApdCo/giphy.gif'
     },
     {
       title: 'shoulder press',
@@ -48,11 +44,11 @@ const exercises = {
   legs: [
     {
       title: 'squat',
-      img: gif4
+      img: 'https://media.giphy.com/media/XEZsDl0zybBbwJQV07/giphy.gif'
     },
     {
       title: 'bulgarian split squat',
-      img: gif5
+      img: 'https://media.giphy.com/media/YqhMwl3nSuA2Dr3i5v/giphy.gif'
     },
     {
       title: 'reverse lunge',
@@ -82,47 +78,43 @@ const exercises = {
     },
     {
       title: 'fire hydrant',
-      img: gif9
+      img: 'https://media.giphy.com/media/YMY5NMCtfOBJXGAtXY/giphy.gif'
     },
     {
-      title: 'tabletop kick back',
-      img: gif9
+      title: 'glute kick back',
+      img: 'https://media.giphy.com/media/JPy2RNHCXbbLGw59pV/giphy.gif'
     },
     {
       title: 'glute bridge walk out',
-      img: gif9
+      img: 'https://media.giphy.com/media/cir6FkDe7MXgmffNcd/giphy.gif'
     }
   ],
   chest: [
     {
       title: 'chest fly',
-      img: gif4
+      img: 'https://media.giphy.com/media/LOXDvvmMvnk33n12pC/giphy.gif'
     },
     {
       title: 'chest press',
-      img: gif5
+      img: 'https://media.giphy.com/media/d8FZU70Rkj1LGIImBB/giphy.gif'
     },
     {
       title: 'reverse fly',
-      img: gif6
+      img: 'https://media.giphy.com/media/kfvD2clhN8AaM7P4L5/giphy.gif'
     },
     {
       title: 'wide grip pushup',
-      img: gif6
+      img: 'https://media.giphy.com/media/iFt57qzEXZisX6JcZ7/giphy.gif'
     }
   ],
   back: [
     {
       title: 'upright row',
-      img: gif7
+      img: 'https://media.giphy.com/media/h7tvdrSjSzmB3XUPgH/giphy.gif'
     },
     {
       title: 'superman',
       img: 'https://media.giphy.com/media/lTArkNAXA1Dk9b4PsX/giphy.gif'
-    },
-    {
-      title: 'pull up',
-      img: gif9
     },
     {
       title: 'i-t-y',
@@ -130,7 +122,7 @@ const exercises = {
     },
     {
       title: 'row',
-      img: gif9
+      img: 'https://media.giphy.com/media/cmg3rpWI915jERDeYY/giphy.gif'
     }
   ],
   core: [
@@ -294,8 +286,7 @@ function App() {
           <div className="row mainRow">
             <div className="column">
               <p className="exerciseTitle">{currentExercise && currentExercise['title']}</p>
-              {/* <img src={currentExercise && currentExercise['img']} alt="hello" /> */}
-              <img src="https://media.giphy.com/media/dscqPpbt6z16WJSvkc/giphy.gif" alt="hello" />
+              <img src={currentExercise && currentExercise['img']} alt="work out" />
               <p>[work your {selectedMuscleGroups[exerciseIndex]}]</p>
             </div>
             <div className="column">
