@@ -297,14 +297,14 @@ function App() {
           <div className="row progressRow">
             <div className="progressBar"><div className="fill" style={{width: `${parseInt(theTime / ((restTime + workTime) * rounds) * 100)}%`}}></div></div>
           </div>
-          <div className="row mainRow">
+          <div className={resting ? 'restText row mainRow' : 'workText row mainRow'}>
             <div className="column">
               <p className="exerciseTitle">{currentExercise && currentExercise['title']}</p>
               <img src={currentExercise && currentExercise['img']} alt={currentExercise && currentExercise['title']} />
               <p>[work your {selectedMuscleGroups[exerciseIndex]}]</p>
             </div>
             <div className="column">
-              <div className={resting ? 'restText centerize' : 'workText centerize'}>
+              <div className='centerize'>
                 <p className='countdownTitle'>{resting ? "REST" : "WORK"}</p>
                 <p className="countdown">{currentIntervalCount >= 0 ? currentIntervalCount : ""}</p>
               </div>

@@ -132,6 +132,7 @@ button {
 
 .mainRow {
   min-height: 80vh;
+  border-radius: 2rem;
 }
 .mainRow .column {
   width: 45%;
@@ -150,10 +151,12 @@ button {
 
 .progressBar {
   height: 1rem;
+  background: white;
   border: 1px solid lightgray;
   border-radius: 15px;
   position: relative;
-  width: 100%;
+  width: 80%;
+  margin-bottom: -0.5rem;
 }
 
 .fill {
@@ -165,6 +168,7 @@ button {
   height: 100%;
   border-radius: 15px 0 0 15px;
   transition: width 0.25s;
+  z-index: 1;
 }
 
 .progressRow {
