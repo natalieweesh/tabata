@@ -140,6 +140,18 @@ const exercises = {
     {
       title: 'standing side crunch',
       img: 'https://media.giphy.com/media/Q8a7nGMti3uuCFHfF5/giphy.gif'
+    },
+    {
+      title: 'sit up',
+      img: 'https://media.giphy.com/media/TiCqf0dCsS0UiSLWqd/giphy.gif'
+    },
+    {
+      title: 'crunch',
+      img: 'https://media.giphy.com/media/J5dtNyZYvFIFFC1fUV/giphy.gif'
+    },
+    {
+      title: 'bicycle crunch',
+      img: 'https://media.giphy.com/media/cKmbHxWIQrs5x4k6ur/giphy.gif'
     }
   ]
 }
