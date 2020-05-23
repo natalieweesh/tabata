@@ -166,7 +166,6 @@ function App() {
 
   useEffect(() => {
     if (paused || finished) {
-      console.log("CLEAR TIMEOUT", currentIntervalCount)
       clearTimeout(timer.current);
       if (finished) {
         setCurrentExercise(null)
@@ -218,9 +217,9 @@ function App() {
             <label>Choose your work time:</label>
             <select className="select-css" onChange={e => {
               setWorkTime(parseInt(e.target.value))
-            }}>
+            }} value="20">
               <option value="5">5 seconds</option>
-              <option value="20" selected>20 seconds</option>
+              <option value="20">20 seconds</option>
               <option value="30">30 seconds</option>
               <option value="45">45 seconds</option>
               <option value="50">50 seoncds</option>
@@ -229,9 +228,9 @@ function App() {
           </div>
           <div className="column">
             <label>Choose your rest time:</label>
-            <select className="select-css" onChange={e => setRestTime(parseInt(e.target.value))}>
+            <select className="select-css" onChange={e => setRestTime(parseInt(e.target.value))} value="10">
               <option value="3">3 seconds</option>
-              <option value="10" selected>10 seconds</option>
+              <option value="10">10 seconds</option>
               <option value="15">15 seconds</option>
               <option value="20">20 seconds</option>
               <option value="25">25 seconds</option>
@@ -240,13 +239,13 @@ function App() {
           </div>
           <div className="column">
             <label>Choose your total workout duration:</label>
-            <select className="select-css" onChange={e => setTotalTime(parseInt(e.target.value))}>
+            <select className="select-css" onChange={e => setTotalTime(parseInt(e.target.value))} value="1200">
               <option value="30">30 seconds</option>
               <option value="60">1 minute</option>
               <option value="300">5 minutes</option>
               <option value="600">10 minutes</option>
               <option value="900">15 minutes</option>
-              <option value="1200" selected>20 minutes</option>
+              <option value="1200">20 minutes</option>
               <option value="1500">25 minutes</option>
               <option value="1800">30 minutes</option>
             </select>
@@ -258,7 +257,7 @@ function App() {
           </div>
           <div className="row muscleRow">
               {Object.keys(exercises).map(muscle => {
-                return <div className="checkboxWrapper">
+                return <div className="checkboxWrapper" key={muscle}>
                   <label className="checkboxLabel" htmlFor={muscle}>{muscle}</label><input onChange={() => {
                     if (selectedMuscleGroups.includes(muscle)) {
                       setSelectedMuscleGroups(selectedMuscleGroups.filter(x => x !== muscle))
