@@ -184,6 +184,9 @@ button {
   .countdown {
     font-size: 2rem;
   }
+  .countdownTitle {
+    padding: 0;
+  }
   .checkboxLabel, .fakeCheckbox {
     padding: 1rem;
   }
