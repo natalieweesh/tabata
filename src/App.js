@@ -42,7 +42,7 @@ const exercises = {
     },
     {
       title: 'shoulder press',
-      img: gif9
+      img: 'https://media.giphy.com/media/SUtRTnS36VFpC12IrT/giphy.gif'
     }
   ],
   legs: [
@@ -144,11 +144,11 @@ const exercises = {
     },
     {
       title: 'bear plank',
-      img: gif8
+      img: 'https://media.giphy.com/media/dscqPpbt6z16WJSvkc/giphy.gif'
     },
     {
       title: 'standing side crunch',
-      img: gif8
+      img: 'https://media.giphy.com/media/Q8a7nGMti3uuCFHfF5/giphy.gif'
     }
   ]
 }
@@ -295,7 +295,7 @@ function App() {
             <div className="column">
               <p className="exerciseTitle">{currentExercise && currentExercise['title']}</p>
               {/* <img src={currentExercise && currentExercise['img']} alt="hello" /> */}
-              <img src="https://media.giphy.com/media/Yqz7ZokQ0kCs8uaN9E/giphy.gif" alt="hello" />
+              <img src="https://media.giphy.com/media/dscqPpbt6z16WJSvkc/giphy.gif" alt="hello" />
               <p>[work your {selectedMuscleGroups[exerciseIndex]}]</p>
             </div>
             <div className="column">
