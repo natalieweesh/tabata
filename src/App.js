@@ -199,6 +199,19 @@ function App() {
   const [selectedMuscleGroups, setSelectedMuscleGroups] = useState(['arms', 'legs', 'butt', 'back'])
   const rounds = useRef(null)
   const [showPreview, setShowPreview] = useState(false);
+  const arrays = {}
+  Object.keys(exercises).map((muscleGroup) => {
+    let template = []
+    for (let i = 0; i < exercises[muscleGroup].length; i++) {
+      template.push(i);
+    }
+    arrays[muscleGroup] = {
+      template: template,
+      selector: template
+    }
+  })
+
+  let exerciseRandomizer = useRef(arrays);
 
   useEffect(() => {
     if (paused || finished) {
@@ -217,7 +230,15 @@ function App() {
     }
     if (!currentExercise.current) { // starting the first exercise of the workout
       const currentMuscleGroup = selectedMuscleGroups[exerciseIndex.current];
-      currentExercise.current = exercises[currentMuscleGroup][Math.floor(Math.random() * selectedMuscleGroups[exerciseIndex.current].length)]
+      if (exerciseRandomizer.current[currentMuscleGroup]['selector'].length === 0) {
+        exerciseRandomizer.current[currentMuscleGroup]['selector'] = exerciseRandomizer.current[currentMuscleGroup]['template']
+      }
+      if (exerciseRandomizer.current[currentMuscleGroup]['selector'].length > 0) {
+        let randomi = Math.floor(Math.random() * exerciseRandomizer.current[currentMuscleGroup]['selector'].length)
+        let idx = exerciseRandomizer.current[currentMuscleGroup]['selector'][randomi]
+        currentExercise.current = exercises[currentMuscleGroup][idx]
+        exerciseRandomizer.current[currentMuscleGroup]['selector'] = exerciseRandomizer.current[currentMuscleGroup]['selector'].slice(0, randomi).concat(exerciseRandomizer.current[currentMuscleGroup]['selector'].slice(randomi+1))
+      }
       currentIntervalCount.current = restTime;
       speak(`let's do this! first exercise is ${currentExercise.current['title']}`)
     }
@@ -237,7 +258,16 @@ function App() {
         const newIndex = ((exerciseIndex.current + 1) % (selectedMuscleGroups.length))
         exerciseIndex.current = newIndex;
         const newMuscleGroup = selectedMuscleGroups[newIndex]
-        currentExercise.current = exercises[newMuscleGroup][Math.floor(Math.random() * selectedMuscleGroups[newIndex].length)]
+        console.log(exerciseRandomizer.current[newMuscleGroup]['selector'])
+        if (exerciseRandomizer.current[newMuscleGroup]['selector'].length === 0) {
+          exerciseRandomizer.current[newMuscleGroup]['selector'] = exerciseRandomizer.current[newMuscleGroup]['template']
+        }
+        if (exerciseRandomizer.current[newMuscleGroup]['selector'].length > 0) {
+          let randomi = Math.floor(Math.random() * exerciseRandomizer.current[newMuscleGroup]['selector'].length)
+          let idx = exerciseRandomizer.current[newMuscleGroup]['selector'][randomi]
+          currentExercise.current = exercises[newMuscleGroup][idx]
+          exerciseRandomizer.current[newMuscleGroup]['selector'] = exerciseRandomizer.current[newMuscleGroup]['selector'].slice(0, randomi).concat(exerciseRandomizer.current[newMuscleGroup]['selector'].slice(randomi+1))
+        }
         currentIntervalCount.current = restTime
         speak(`${randomRestPhrase()}. ${currentExercise.current['title']} is next`, 1000)
       } else {
