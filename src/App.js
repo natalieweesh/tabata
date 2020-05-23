@@ -30,6 +30,14 @@ const exercises = {
     {
       title: 'shoulder press',
       img: 'https://media.giphy.com/media/SUtRTnS36VFpC12IrT/giphy.gif'
+    },
+    {
+      title: 'curl + press',
+      img: 'https://media.giphy.com/media/Lq1ERaOKq2LEuK7xd1/giphy.gif'
+    },
+    {
+      title: 'tricep dip',
+      img: 'https://media.giphy.com/media/W3emLNQKTecUA1POxp/giphy.gif'
     }
   ],
   legs: [
