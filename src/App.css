@@ -131,7 +131,7 @@ button {
 }
 
 .mainRow {
-  min-height: 80vh;
+  min-height: 70vh;
   border-radius: 2rem;
 }
 .mainRow .column {
@@ -200,8 +200,5 @@ button {
   }
   .previewRow img {
     max-width: 90%;
-  }
-  .mainRow {
-    min-height: 70vh;
   }
 }

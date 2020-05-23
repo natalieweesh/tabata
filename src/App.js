@@ -166,29 +166,45 @@ const scrollDown = () => {
   window.scroll(0, window.scrollY + 300);
 }
 
+const speak = (words, timeout = 0) => {
+  setTimeout(() => {
+    window.responsiveVoice.speak(words)
+  }, timeout)
+}
+
+const randomWorkPhrase = () => {
+  const phrases = ['time to work', 'get to it', 'go go go', "let's get it done", 'begin'];
+  return phrases[Math.floor(Math.random() * phrases.length)]
+}
+
+const randomRestPhrase = () => {
+  const phrases = ['take a break', 'and rest', 'break time', 'take a breather'];
+  return phrases[Math.floor(Math.random() * phrases.length)]
+}
+
 function App() {
   const timer = useRef(null);
-  const [currentRound, setCurrentRound] = useState(0);
-  const [resting, setResting] = useState(true);
+  const currentIntervalCount = useRef(3);
+  const currentRound = useRef(0);
+  const resting = useRef(true);
   const [paused, setPaused] = useState(true);
   const [finished, setFinished] = useState(false);
   const [theTime, setTheTime] = useState(0);
-  const [exerciseIndex, setExerciseIndex] = useState(0);
-  const [currentExercise, setCurrentExercise] = useState(null);
+  const exerciseIndex = useRef(0);
+  const currentExercise = useRef(null);
   const [startedWorkout, setStartedWorkout] = useState(false);
   const [workTime, setWorkTime] = useState(20)
   const [restTime, setRestTime] = useState(10)
   const [totalTime, setTotalTime] = useState(1200)
   const [selectedMuscleGroups, setSelectedMuscleGroups] = useState(['arms', 'legs', 'butt', 'back'])
-  const [currentIntervalCount, setCurrentIntervalCount] = useState(3);
-  const [rounds, setRounds] = useState(null);
+  const rounds = useRef(null)
   const [showPreview, setShowPreview] = useState(false);
 
   useEffect(() => {
     if (paused || finished) {
       clearTimeout(timer.current);
       if (finished) {
-        setCurrentExercise(null)
+        currentExercise.current = null;
       }
       return;
     }
@@ -196,37 +212,41 @@ function App() {
       setSelectedMuscleGroups(['arms', 'legs', 'chest', 'butt', 'back', 'core']) // if they selected no muscle groups use them all
       return;
     }
-    if (!rounds) {
-      setRounds(Math.floor(totalTime / (workTime + restTime)))
+    if (!rounds.current) {
+      rounds.current = Math.floor(totalTime / (workTime + restTime))
     }
-    if (!currentExercise) { // starting the first exercise of the workout
-      const currentMuscleGroup = selectedMuscleGroups[exerciseIndex];
-      setCurrentExercise(exercises[currentMuscleGroup][Math.floor(Math.random() * selectedMuscleGroups[exerciseIndex].length)])
-      setCurrentIntervalCount(restTime);
+    if (!currentExercise.current) { // starting the first exercise of the workout
+      const currentMuscleGroup = selectedMuscleGroups[exerciseIndex.current];
+      currentExercise.current = exercises[currentMuscleGroup][Math.floor(Math.random() * selectedMuscleGroups[exerciseIndex.current].length)]
+      currentIntervalCount.current = restTime;
+      speak(`let's do this! first exercise is ${currentExercise.current['title']}`)
     }
     timer.current = setTimeout(() => {
       setTheTime(theTime + 1)
-      if (currentRound * (workTime + restTime) + restTime === theTime + 1) { // start work (after rest is done)
-        setResting(false)
-        setCurrentIntervalCount(workTime)
-      } else if (theTime+1 === (rounds) * (workTime + restTime)) { // finished with whole workout
+      if (currentRound.current * (workTime + restTime) + restTime === theTime + 1) { // start work (after rest is done)
+        resting.current = false;
+        currentIntervalCount.current = workTime
+        speak(randomWorkPhrase(), 1000)
+      } else if (theTime + 1 === (rounds.current) * (workTime + restTime)) { // finished with whole workout
         setFinished(true);
+        speak("good job! workout complete! it's peanut butter jelly time")
         return;
-      } else if ((currentRound + 1) * (workTime + restTime) === theTime+1) { // start next round, start new exercise
-        setResting(true)
-        setCurrentRound(currentRound + 1)
-        const newIndex = ((exerciseIndex + 1) % (selectedMuscleGroups.length))
-        setExerciseIndex(newIndex)
+      } else if ((currentRound.current + 1) * (workTime + restTime) === theTime + 1) { // start next round, start new exercise
+        resting.current = true;
+        currentRound.current = currentRound.current + 1
+        const newIndex = ((exerciseIndex.current + 1) % (selectedMuscleGroups.length))
+        exerciseIndex.current = newIndex;
         const newMuscleGroup = selectedMuscleGroups[newIndex]
-        setCurrentExercise(exercises[newMuscleGroup][Math.floor(Math.random() * selectedMuscleGroups[newIndex].length)])
-        setCurrentIntervalCount(restTime)
+        currentExercise.current = exercises[newMuscleGroup][Math.floor(Math.random() * selectedMuscleGroups[newIndex].length)]
+        currentIntervalCount.current = restTime
+        speak(`${randomRestPhrase()}. ${currentExercise.current['title']} is next`, 1000)
       } else {
-        if (currentIntervalCount - 1 >= 0) {
-          setCurrentIntervalCount(currentIntervalCount - 1)
+        if (currentIntervalCount.current - 1 >= 0) {
+          currentIntervalCount.current = currentIntervalCount.current - 1
         }
       }
     }, 1000)
-  }, [finished, paused, theTime, currentRound, rounds, currentExercise, exerciseIndex, selectedMuscleGroups, restTime, totalTime, workTime, currentIntervalCount])
+  }, [paused, restTime, totalTime, workTime, theTime, finished, selectedMuscleGroups])
   return (
     <div className="App">
       {!startedWorkout && <p className="exerciseTitle">It's tabata time!</p>}
@@ -292,21 +312,21 @@ function App() {
       </div>
       }
 
-      {currentExercise && (
+      {currentExercise.current && !finished && (
         <div>
           <div className="row progressRow">
-            <div className="progressBar"><div className="fill" style={{width: `${parseInt(theTime / ((restTime + workTime) * rounds) * 100)}%`}}></div></div>
+            <div className="progressBar"><div className="fill" style={{width: `${parseInt(theTime / ((restTime + workTime) * rounds.current) * 100)}%`}}></div></div>
           </div>
-          <div className={resting ? 'restText row mainRow' : 'workText row mainRow'}>
+          <div className={resting.current ? 'restText row mainRow' : 'workText row mainRow'}>
             <div className="column">
-              <p className="exerciseTitle">{currentExercise && currentExercise['title']}</p>
-              <img src={currentExercise && currentExercise['img']} alt={currentExercise && currentExercise['title']} />
-              <p>[work your {selectedMuscleGroups[exerciseIndex]}]</p>
+              <p className="exerciseTitle">{currentExercise.current && currentExercise.current['title']}</p>
+              <img src={currentExercise.current && currentExercise.current['img']} alt={currentExercise.current && currentExercise.current['title']} />
+              <p>[work your {selectedMuscleGroups[exerciseIndex.current]}]</p>
             </div>
             <div className="column">
               <div className='centerize'>
-                <p className='countdownTitle'>{resting ? "REST" : "WORK"}</p>
-                <p className="countdown">{currentIntervalCount >= 0 ? currentIntervalCount : ""}</p>
+                <p className='countdownTitle'>{resting.current ? "REST" : "WORK"}</p>
+                <p className="countdown">{currentIntervalCount.current >= 0 ? currentIntervalCount.current : ""}</p>
               </div>
           </div>
         </div>
@@ -318,11 +338,15 @@ function App() {
         </div>
       )}
 
+      {!currentExercise.current && startedWorkout && <div><div className="row progressRow">
+            <div className="progressBar"><div className="fill" style={{width: `${parseInt(theTime / ((restTime + workTime) * rounds.current) * 100)}%`}}></div></div>
+          </div><div className="row restText mainRow"><p className="exerciseTitle centerize">Let's get ready to rumble...</p></div></div>}
+
       {finished && <div>
         <p className="exerciseTitle">YOU FINISHED!</p>
         <img src="https://media.giphy.com/media/ZY8BVlXHZqMal62QS3/giphy.gif" alt="it's peanut butter jelly time" />
         <p>Total workout time: {formatTime(theTime)}</p>
-        <p>Total rounds finished: {currentRound + 1}</p>
+        <p>Total rounds finished: {currentRound.current + 1}</p>
       </div>}
 
       {!finished &&
