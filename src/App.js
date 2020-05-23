@@ -1,14 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
-import gif1 from './gifs/testgif1.gif';
-import gif2 from './gifs/testgif2.gif';
-import gif3 from './gifs/testgif3.gif';
-import gif4 from './gifs/testgif4.gif';
-import gif5 from './gifs/testgif5.gif';
-import gif6 from './gifs/testgif6.gif';
-import gif7 from './gifs/testgif7.gif';
-import gif8 from './gifs/testgif8.gif';
-import gif9 from './gifs/testgif9.gif';
 
 const exercises = {
   arms: [
