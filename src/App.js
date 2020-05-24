@@ -346,6 +346,9 @@ function App() {
         currentIntervalCount.current = restTime
         speak(`${randomPhrase()}. ${currentExercise.current['title']} is next`, 1000)
       } else {
+        if (currentExercise.current['unilateral'] && !resting.current && currentIntervalCount.current === Math.floor(workTime / 2)) {
+          speak('switch sides');
+        }
         if (currentIntervalCount.current - 1 >= 0) {
           currentIntervalCount.current = currentIntervalCount.current - 1
         }
