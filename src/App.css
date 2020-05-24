@@ -181,6 +181,12 @@ button {
   padding: 2rem;
 }
 
+.faq {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 2.2rem;
+}
+
 .previewRow p {
   font-size: 1.5rem;
 }
