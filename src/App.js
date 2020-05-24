@@ -393,14 +393,14 @@ function App() {
         }
       }
     }, 1000)
-  }, [paused, restTime, totalTime, workTime, theTime, finished, selectedMuscleGroups])
+  }, [paused, restTime, totalTime, workTime, theTime, finished, selectedMuscleGroups, generateExerciseRandomizer])
   return (
     <div className="App">
     {fullScreenable && <button className='fullscreenButton restText' onClick={() => {
         document.documentElement.requestFullscreen();
       }}>Fullscreen mode</button>
     }
-      {!startedWorkout && <p className="exerciseTitle">It's tabata time!</p>}
+      {!startedWorkout && <p className="exerciseTitle pageTitle">It's tabata time!</p>}
       {!startedWorkout &&
       <div className="settingsRow">
         <div className="row">

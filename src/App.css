@@ -124,6 +124,9 @@ button {
 .exerciseTitle {
   font-size: 3rem;
 }
+.pageTitle {
+  margin: 0.5rem auto;
+}
 .countdown {
   font-size: 10rem;
   font-weight: bold;
@@ -220,5 +223,8 @@ button {
   }
   .previewRow img {
     max-width: 90%;
+  }
+  .App {
+    padding: 1rem;
   }
 }
