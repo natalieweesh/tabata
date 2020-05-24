@@ -273,6 +273,7 @@ function App() {
   const rounds = useRef(null)
   const [showPreview, setShowPreview] = useState(false);
   const [showFAQ, setShowFAQ] = useState(false);
+  const fullScreenable = document.fullscreenEnabled;
   const arrays = {}
   Object.keys(exercises).map((muscleGroup) => {
     let template = []
@@ -353,6 +354,10 @@ function App() {
   }, [paused, restTime, totalTime, workTime, theTime, finished, selectedMuscleGroups])
   return (
     <div className="App">
+    {fullScreenable && <button className='fullscreenButton restText' onClick={() => {
+        document.documentElement.requestFullscreen();
+      }}>Fullscreen mode</button>
+    }
       {!startedWorkout && <p className="exerciseTitle">It's tabata time!</p>}
       {!startedWorkout &&
       <div className="settingsRow">
