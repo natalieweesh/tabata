@@ -461,11 +461,13 @@ function App() {
           </div>
         </div>
         <div>
+          <div className="row">
+            <label>Do you want bodyweight exercises only? (Best option if you don't have dumbbells)</label>
+          </div>
           <div className="row muscleRow">
-            <label>Do you want bodyweight exercises only? (Say yes if you don't have dumbbells)</label>
-              <div className="checkboxWrapper"><label className="checkboxLabel" htmlFor='bodyweight'>BODYWEIGHT ONLY</label><input onChange={() => {
-                setBodyweightOnly(!bodyweightOnly);
-              }} checked={bodyweightOnly} id='bodyweight' value='Bodyweight only' type="checkbox"/><div className="fakeCheckbox">BODYWEIGHT ONLY</div></div>
+            <div className="checkboxWrapper"><label className="checkboxLabel" htmlFor='bodyweight'>BODYWEIGHT ONLY</label><input onChange={() => {
+              setBodyweightOnly(!bodyweightOnly);
+            }} checked={bodyweightOnly} id='bodyweight' value='Bodyweight only' type="checkbox"/><div className="fakeCheckbox">BODYWEIGHT ONLY</div></div>
           </div>
         </div>
       </div>
@@ -477,12 +479,12 @@ function App() {
             <div className="progressBar"><div className="fill" style={{width: `${parseInt(theTime / ((restTime + workTime) * rounds.current) * 100)}%`}}></div></div>
           </div>
           <div className={resting.current ? 'restText row mainRow' : 'workText row mainRow'}>
-            <div className="column">
+            <div className="column bigger">
               <p className="exerciseTitle">{currentExercise.current && currentExercise.current['title']}</p>
               <img src={currentExercise.current && currentExercise.current['img']} alt={currentExercise.current && currentExercise.current['title']} />
               <p>[work your {selectedMuscleGroups[exerciseIndex.current]}]</p>
             </div>
-            <div className="column">
+            <div className="column smaller">
               <div className='centerize'>
                 <p className='countdownTitle'>{resting.current ? "REST" : "WORK"}</p>
                 <p className="countdown">{currentIntervalCount.current >= 0 ? currentIntervalCount.current : ""}</p>

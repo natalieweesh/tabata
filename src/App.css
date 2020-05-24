@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  padding: 2rem 3rem 3rem;
+  padding: 0 3rem 3rem;
   background:#fff;
 }
 
@@ -59,7 +59,7 @@ button {
 }
 
 .muscleRowTitle {
-  margin-top: 3rem;
+  margin-top: 1.5rem;
 }
 
 .select-css::-ms-expand {
@@ -135,7 +135,10 @@ button {
   border-radius: 2rem;
 }
 .mainRow .column {
-  width: 45%;
+  width: 65%;
+}
+.mainRow .column.smaller {
+  width: 35%;
 }
 .mainRow img {
   width: 100%;
@@ -178,7 +181,7 @@ button {
 .centerize {
   align-items: center;
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 2rem 0;
 }
 
 .faq {
@@ -204,7 +207,7 @@ button {
     font-size: 1.75rem;
   }
   .countdown {
-    font-size: 5rem;
+    font-size: 4rem;
   }
   .countdownTitle {
     padding: 0;
