@@ -51,6 +51,12 @@ const exercises = {
       title: 'tricep kickback',
       img: 'https://media.giphy.com/media/fvfoHSsvAeUVrrNc33/giphy.gif',
       character: 'meeseeks'
+    },
+    {
+      title: 'plank tricep extension',
+      img: 'https://media.giphy.com/media/lQCdZTKL8NbiU4OViv/giphy.gif',
+      character: 'bob',
+      bodyweight: true
     }
   ],
   legs: [
@@ -96,6 +102,12 @@ const exercises = {
       img: 'https://media.giphy.com/media/dWsKZW6A3PdJnKROMl/giphy.gif',
       character: 'meeseeks',
       bodyweight: true
+    },
+    {
+      title: 'squat to kneel',
+      img: 'https://media.giphy.com/media/ZbN2PwMLD0boIjJrrn/giphy.gif',
+      character: 'bmo',
+      bodyweight: true
     }
   ],
   butt: [
@@ -140,6 +152,20 @@ const exercises = {
       title: 'glute bridge walk out',
       img: 'https://media.giphy.com/media/cir6FkDe7MXgmffNcd/giphy.gif',
       character: 'tina',
+      bodyweight: true
+    },
+    {
+      title: 'lunge to knee raise',
+      img: 'https://media.giphy.com/media/YqnrLFFt8KVfJ7Y09Q/giphy.gif',
+      character: 'bmo',
+      unilateral: true,
+      bodyweight: true
+    },
+    {
+      title: 'squat to side crunch',
+      img: 'https://media.giphy.com/media/QvRsGfbid6t6YTp6bi/giphy.gif',
+      character: 'bob',
+      unilateral: true,
       bodyweight: true
     }
   ],
@@ -260,6 +286,18 @@ const exercises = {
       title: 'crunch',
       img: 'https://media.giphy.com/media/J5dtNyZYvFIFFC1fUV/giphy.gif',
       character: 'tina',
+      bodyweight: true
+    },
+    {
+      title: 'plank shoulder tap',
+      img: 'https://media.giphy.com/media/ejCVKLqCrppg2TpFgp/giphy.gif',
+      character: 'bob',
+      bodyweight: true
+    },
+    {
+      title: 'commando',
+      img: 'https://media.giphy.com/media/XeMer2mEKQauNA6ISm/giphy.gif',
+      character: 'bob',
       bodyweight: true
     }
   ]
