@@ -152,6 +152,11 @@ const exercises = {
       title: 'wide grip pushup',
       img: 'https://media.giphy.com/media/iFt57qzEXZisX6JcZ7/giphy.gif',
       character: 'tina'
+    },
+    {
+      title: 'fly rotation',
+      img: 'https://media.giphy.com/media/Y0UMEAVeLtIAgmOuZA/giphy.gif',
+      character: 'bmo'
     }
   ],
   back: [
