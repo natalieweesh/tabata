@@ -306,20 +306,26 @@ function App() {
   const rounds = useRef(null)
   const [showPreview, setShowPreview] = useState(false);
   const [showFAQ, setShowFAQ] = useState(false);
+  const [bodyweightOnly, setBodyweightOnly] = useState(false);
   const fullScreenable = document.fullscreenEnabled;
-  const arrays = {}
-  Object.keys(exercises).map((muscleGroup) => {
-    let template = []
-    for (let i = 0; i < exercises[muscleGroup].length; i++) {
-      template.push(i);
-    }
-    arrays[muscleGroup] = {
-      template: template,
-      selector: template
-    }
-  })
+  let exerciseRandomizer = useRef(null);
 
-  let exerciseRandomizer = useRef(arrays);
+  const generateExerciseRandomizer = () => {
+    const arrays = {}
+    Object.keys(exercises).map((muscleGroup) => {
+      let template = []
+      for (let i = 0; i < exercises[muscleGroup].length; i++) {
+        if (!bodyweightOnly || (bodyweightOnly && exercises[muscleGroup][i]['bodyweight'])) {
+          template.push(i);
+        }
+      }
+      arrays[muscleGroup] = {
+        template: template,
+        selector: template
+      }
+    })
+    exerciseRandomizer.current = arrays;
+  }
 
   useEffect(() => {
     if (paused || finished) {
@@ -337,6 +343,7 @@ function App() {
       rounds.current = Math.floor(totalTime / (workTime + restTime))
     }
     if (!currentExercise.current) { // starting the first exercise of the workout
+      generateExerciseRandomizer();
       const currentMuscleGroup = selectedMuscleGroups[exerciseIndex.current];
       if (exerciseRandomizer.current[currentMuscleGroup]['selector'].length === 0) {
         exerciseRandomizer.current[currentMuscleGroup]['selector'] = exerciseRandomizer.current[currentMuscleGroup]['template']
@@ -451,6 +458,14 @@ function App() {
                   }} checked={selectedMuscleGroups.includes(muscle)} id={muscle} value={muscle} type="checkbox"/><div className="fakeCheckbox">{muscle.toUpperCase()}</div>
                 </div>
               })}
+          </div>
+        </div>
+        <div>
+          <div className="row muscleRow">
+            <label>Do you want bodyweight exercises only? (Say yes if you don't have dumbbells)</label>
+              <div className="checkboxWrapper"><label className="checkboxLabel" htmlFor='bodyweight'>BODYWEIGHT ONLY</label><input onChange={() => {
+                setBodyweightOnly(!bodyweightOnly);
+              }} checked={bodyweightOnly} id='bodyweight' value='Bodyweight only' type="checkbox"/><div className="fakeCheckbox">BODYWEIGHT ONLY</div></div>
           </div>
         </div>
       </div>
