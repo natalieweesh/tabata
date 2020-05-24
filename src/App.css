@@ -191,7 +191,7 @@ button {
   font-size: 1.5rem;
 }
 
-.fullscreenButton {
+.fullscreenButton, .fullscreenButton button {
   font-size: 0.5rem;
   width: 4rem;
   position: absolute;

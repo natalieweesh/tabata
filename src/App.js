@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import ReactNoSleep from 'react-no-sleep';
 import './App.css';
 
 const exercises = {
@@ -333,7 +334,6 @@ function App() {
         const newIndex = ((exerciseIndex.current + 1) % (selectedMuscleGroups.length))
         exerciseIndex.current = newIndex;
         const newMuscleGroup = selectedMuscleGroups[newIndex]
-        console.log(exerciseRandomizer.current[newMuscleGroup]['selector'])
         if (exerciseRandomizer.current[newMuscleGroup]['selector'].length === 0) {
           exerciseRandomizer.current[newMuscleGroup]['selector'] = exerciseRandomizer.current[newMuscleGroup]['template']
         }
@@ -463,6 +463,19 @@ function App() {
 
       {!finished &&
       <div className="row">
+        <ReactNoSleep className="fulscreenButton">
+          {({ isOn, enable, disable }) => (
+            <button onClick={() => {
+              setPaused(!paused)
+              if (!startedWorkout) {
+                setStartedWorkout(true);
+              }
+              if (!isOn) {
+                enable();
+              }
+            }} className={startedWorkout && !paused ? 'unpausedButton' : ''}>{!startedWorkout ? ("START") : (paused ? "UNPAUSE" : "PAUSE")}</button>
+          )}
+        </ReactNoSleep>
         <button onClick={() => {
           setPaused(!paused)
           if (!startedWorkout) {
