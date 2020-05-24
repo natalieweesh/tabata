@@ -476,12 +476,6 @@ function App() {
             }} className={startedWorkout && !paused ? 'unpausedButton' : ''}>{!startedWorkout ? ("START") : (paused ? "UNPAUSE" : "PAUSE")}</button>
           )}
         </ReactNoSleep>
-        <button onClick={() => {
-          setPaused(!paused)
-          if (!startedWorkout) {
-            setStartedWorkout(true);
-          }
-        }} className={startedWorkout && !paused ? 'unpausedButton' : ''}>{!startedWorkout ? ("START") : (paused ? "UNPAUSE" : "PAUSE")}</button>
         {!startedWorkout && <button className="previewButton" onClick={() => {
           setShowPreview(!showPreview)
           setShowFAQ(false)
