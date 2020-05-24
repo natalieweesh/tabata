@@ -167,6 +167,13 @@ const exercises = {
       character: 'bob',
       unilateral: true,
       bodyweight: true
+    },
+    {
+      title: 'single leg deadlift',
+      img: 'https://media.giphy.com/media/YmhQcV7p3jabLZJZSt/giphy.gif',
+      character: 'prince',
+      unilateral: true,
+      bodyweight: true
     }
   ],
   chest: [
@@ -299,6 +306,13 @@ const exercises = {
       img: 'https://media.giphy.com/media/XeMer2mEKQauNA6ISm/giphy.gif',
       character: 'bob',
       bodyweight: true
+    },
+    {
+      title: 'bird dog crunch',
+      img: 'https://media.giphy.com/media/eKCrBlcoEx2yIJFjPT/giphy.gif',
+      character: 'prince',
+      unilateral: true,
+      bodyweight: true
     }
   ]
 }
@@ -340,7 +354,7 @@ function App() {
   const [workTime, setWorkTime] = useState(20)
   const [restTime, setRestTime] = useState(10)
   const [totalTime, setTotalTime] = useState(1200)
-  const [selectedMuscleGroups, setSelectedMuscleGroups] = useState(['arms', 'legs', 'butt', 'back'])
+  const [selectedMuscleGroups, setSelectedMuscleGroups] = useState(['arms', 'legs', 'chest', 'butt', 'back', 'core'])
   const rounds = useRef(null)
   const [showPreview, setShowPreview] = useState(false);
   const [showFAQ, setShowFAQ] = useState(false);
@@ -431,7 +445,7 @@ function App() {
         }
       }
     }, 1000)
-  }, [paused, restTime, totalTime, workTime, theTime, finished, selectedMuscleGroups, generateExerciseRandomizer])
+  }, [paused, restTime, totalTime, workTime, theTime, finished, selectedMuscleGroups])
   return (
     <div className="App">
     {fullScreenable && <button className='fullscreenButton restText' onClick={() => {
