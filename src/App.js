@@ -9,33 +9,8 @@ const exercises = {
       character: 'meeseeks'
     },
     {
-      title: 'hammer curl',
-      img: 'https://media.giphy.com/media/izaYkYoJMnY07WYFzj/giphy.gif',
-      character: 'meeseeks'
-    },
-    {
       title: 'skull crusher',
       img: 'https://media.giphy.com/media/MdjZSDee0C50ZuYlHa/giphy.gif',
-      character: 'tina'
-    },
-    {
-      title: 'tricep pushup',
-      img: 'https://media.giphy.com/media/KehD7SA2RF4gqHQP8r/giphy.gif',
-      character: 'meeseeks'
-    },
-    {
-      title: 'tricep kickback',
-      img: 'https://media.giphy.com/media/fvfoHSsvAeUVrrNc33/giphy.gif',
-      character: 'meeseeks'
-    },
-    {
-      title: 'pike pushup',
-      img: 'https://media.giphy.com/media/eLYEh1IRtaP7oApdCo/giphy.gif',
-      character: 'tina'
-    },
-    {
-      title: 'shoulder press',
-      img: 'https://media.giphy.com/media/SUtRTnS36VFpC12IrT/giphy.gif',
       character: 'tina'
     },
     {
@@ -44,33 +19,37 @@ const exercises = {
       character: 'spongebob'
     },
     {
+      title: 'hammer curl',
+      img: 'https://media.giphy.com/media/izaYkYoJMnY07WYFzj/giphy.gif',
+      character: 'meeseeks'
+    },
+    {
+      title: 'pike pushup',
+      img: 'https://media.giphy.com/media/eLYEh1IRtaP7oApdCo/giphy.gif',
+      character: 'tina'
+    },
+    {
       title: 'tricep dip',
       img: 'https://media.giphy.com/media/W3emLNQKTecUA1POxp/giphy.gif',
       character: 'spongebob'
+    },
+    {
+      title: 'tricep pushup',
+      img: 'https://media.giphy.com/media/KehD7SA2RF4gqHQP8r/giphy.gif',
+      character: 'meeseeks'
+    },
+    {
+      title: 'shoulder press',
+      img: 'https://media.giphy.com/media/SUtRTnS36VFpC12IrT/giphy.gif',
+      character: 'tina'
+    },
+    {
+      title: 'tricep kickback',
+      img: 'https://media.giphy.com/media/fvfoHSsvAeUVrrNc33/giphy.gif',
+      character: 'meeseeks'
     }
   ],
   legs: [
-    {
-      title: 'squat',
-      img: 'https://media.giphy.com/media/XEZsDl0zybBbwJQV07/giphy.gif',
-      character: 'tina'
-    },
-    {
-      title: 'bulgarian split squat',
-      img: 'https://media.giphy.com/media/YqhMwl3nSuA2Dr3i5v/giphy.gif',
-      unilateral: true,
-      character: 'tina'
-    },
-    {
-      title: 'reverse lunge',
-      img: 'https://media.giphy.com/media/QWR3SDoEL6ggzL9rub/giphy.gif',
-      character: 'meeseeks'
-    },
-    {
-      title: 'squat jump',
-      img: 'https://media.giphy.com/media/dWsKZW6A3PdJnKROMl/giphy.gif',
-      character: 'meeseeks'
-    },
     {
       title: 'jumping jack',
       img: 'https://media.giphy.com/media/lNWbCKbffqCIzY8RR1/giphy.gif',
@@ -82,12 +61,44 @@ const exercises = {
       character: 'bmo'
     },
     {
+      title: 'squat',
+      img: 'https://media.giphy.com/media/XEZsDl0zybBbwJQV07/giphy.gif',
+      character: 'tina'
+    },
+    {
+      title: 'reverse lunge',
+      img: 'https://media.giphy.com/media/QWR3SDoEL6ggzL9rub/giphy.gif',
+      character: 'meeseeks'
+    },
+    {
       title: 'jumprope',
       img: 'https://media.giphy.com/media/Y1jNTxApOQRfKOJt8k/giphy.gif',
       character: 'bmo'
+    },
+    {
+      title: 'bulgarian split squat',
+      img: 'https://media.giphy.com/media/YqhMwl3nSuA2Dr3i5v/giphy.gif',
+      unilateral: true,
+      character: 'tina'
+    },
+    {
+      title: 'squat jump',
+      img: 'https://media.giphy.com/media/dWsKZW6A3PdJnKROMl/giphy.gif',
+      character: 'meeseeks'
     }
   ],
   butt: [
+    {
+      title: 'squat to leg raise',
+      img: 'https://media.giphy.com/media/SwNf4vey9bnBLRypko/giphy.gif',
+      character: 'bmo'
+    },
+    {
+      title: 'glute kick back',
+      img: 'https://media.giphy.com/media/JPy2RNHCXbbLGw59pV/giphy.gif',
+      unilateral: true,
+      character: 'tina'
+    },
     {
       title: 'glute bridge',
       img: 'https://media.giphy.com/media/cKKAg0wrGRYENJiUei/giphy.gif',
@@ -99,31 +110,20 @@ const exercises = {
       character: 'meeseeks'
     },
     {
-      title: 'sumo squat',
-      img: 'https://media.giphy.com/media/emGfboB1RYoSodN7XG/giphy.gif',
-      character: 'meeseeks'
-    },
-    {
       title: 'fire hydrant',
       img: 'https://media.giphy.com/media/YMY5NMCtfOBJXGAtXY/giphy.gif',
       unilateral: true,
       character: 'tina'
     },
     {
-      title: 'glute kick back',
-      img: 'https://media.giphy.com/media/JPy2RNHCXbbLGw59pV/giphy.gif',
-      unilateral: true,
-      character: 'tina'
+      title: 'sumo squat',
+      img: 'https://media.giphy.com/media/emGfboB1RYoSodN7XG/giphy.gif',
+      character: 'meeseeks'
     },
     {
       title: 'glute bridge walk out',
       img: 'https://media.giphy.com/media/cir6FkDe7MXgmffNcd/giphy.gif',
       character: 'tina'
-    },
-    {
-      title: 'squat to leg raise',
-      img: 'https://media.giphy.com/media/SwNf4vey9bnBLRypko/giphy.gif',
-      character: 'bmo'
     }
   ],
   chest: [
@@ -131,6 +131,11 @@ const exercises = {
       title: 'chest fly',
       img: 'https://media.giphy.com/media/LOXDvvmMvnk33n12pC/giphy.gif',
       character: 'tina'
+    },
+    {
+      title: 'pullover',
+      img: 'https://media.giphy.com/media/Lo03vYJTNH6ouIRr4V/giphy.gif',
+      character: 'bmo'
     },
     {
       title: 'chest press',
@@ -146,23 +151,18 @@ const exercises = {
       title: 'wide grip pushup',
       img: 'https://media.giphy.com/media/iFt57qzEXZisX6JcZ7/giphy.gif',
       character: 'tina'
-    },
-    {
-      title: 'pullover',
-      img: 'https://media.giphy.com/media/Lo03vYJTNH6ouIRr4V/giphy.gif',
-      character: 'bmo'
     }
   ],
   back: [
     {
-      title: 'upright row',
-      img: 'https://media.giphy.com/media/h7tvdrSjSzmB3XUPgH/giphy.gif',
-      character: 'tina'
-    },
-    {
       title: 'superman',
       img: 'https://media.giphy.com/media/lTArkNAXA1Dk9b4PsX/giphy.gif',
       character: 'poopybutthole'
+    },
+    {
+      title: 'upright row',
+      img: 'https://media.giphy.com/media/h7tvdrSjSzmB3XUPgH/giphy.gif',
+      character: 'tina'
     },
     {
       title: 'i-t-y',
@@ -170,52 +170,32 @@ const exercises = {
       character: 'meeseeks'
     },
     {
-      title: 'row',
-      img: 'https://media.giphy.com/media/cmg3rpWI915jERDeYY/giphy.gif',
-      character: 'tina'
-    },
-    {
       title: 'row to tricep kickback',
       img: 'https://media.giphy.com/media/fqbSg8AqQ09t09RYsY/giphy.gif',
       unilateral: true,
       character: 'bmo'
+    },
+    {
+      title: 'row',
+      img: 'https://media.giphy.com/media/cmg3rpWI915jERDeYY/giphy.gif',
+      character: 'tina'
     }
   ],
   core: [
+    {
+      title: 'bicycle crunch',
+      img: 'https://media.giphy.com/media/cKmbHxWIQrs5x4k6ur/giphy.gif',
+      character: 'tina'
+    },
     {
       title: 'plank jack',
       img: 'https://media.giphy.com/media/kegbiTdPMMqUzWb4ub/giphy.gif',
       character: 'meeseeks'
     },
     {
-      title: 'mountain climber',
-      img: 'https://media.giphy.com/media/W35qtGrrpweU00eLwI/giphy.gif',
-      character: 'meeseeks'
-    },
-    {
-      title: 'bear plank',
-      img: 'https://media.giphy.com/media/dscqPpbt6z16WJSvkc/giphy.gif',
-      character: 'tina'
-    },
-    {
       title: 'standing side crunch',
       img: 'https://media.giphy.com/media/Q8a7nGMti3uuCFHfF5/giphy.gif',
       unilateral: true,
-      character: 'tina'
-    },
-    {
-      title: 'sit up',
-      img: 'https://media.giphy.com/media/TiCqf0dCsS0UiSLWqd/giphy.gif',
-      character: 'tina'
-    },
-    {
-      title: 'crunch',
-      img: 'https://media.giphy.com/media/J5dtNyZYvFIFFC1fUV/giphy.gif',
-      character: 'tina'
-    },
-    {
-      title: 'bicycle crunch',
-      img: 'https://media.giphy.com/media/cKmbHxWIQrs5x4k6ur/giphy.gif',
       character: 'tina'
     },
     {
@@ -225,9 +205,29 @@ const exercises = {
       character: 'bmo'
     },
     {
+      title: 'bear plank',
+      img: 'https://media.giphy.com/media/dscqPpbt6z16WJSvkc/giphy.gif',
+      character: 'tina'
+    },
+    {
+      title: 'mountain climber',
+      img: 'https://media.giphy.com/media/W35qtGrrpweU00eLwI/giphy.gif',
+      character: 'meeseeks'
+    },
+    {
+      title: 'sit up',
+      img: 'https://media.giphy.com/media/TiCqf0dCsS0UiSLWqd/giphy.gif',
+      character: 'tina'
+    },
+    {
       title: 'plank',
       img: 'https://media.giphy.com/media/J2rGWkLU7IS5D2Us7f/giphy.gif',
       character: 'bmo'
+    },
+    {
+      title: 'crunch',
+      img: 'https://media.giphy.com/media/J5dtNyZYvFIFFC1fUV/giphy.gif',
+      character: 'tina'
     }
   ]
 }
