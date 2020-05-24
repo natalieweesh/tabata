@@ -47,7 +47,8 @@ const exercises = {
     },
     {
       title: 'bulgarian split squat',
-      img: 'https://media.giphy.com/media/YqhMwl3nSuA2Dr3i5v/giphy.gif'
+      img: 'https://media.giphy.com/media/YqhMwl3nSuA2Dr3i5v/giphy.gif',
+      unilateral: true
     },
     {
       title: 'reverse lunge',
@@ -60,6 +61,10 @@ const exercises = {
     {
       title: 'jumping jack',
       img: 'https://media.giphy.com/media/lNWbCKbffqCIzY8RR1/giphy.gif'
+    },
+    {
+      title: 'calf raise',
+      img: 'https://media.giphy.com/media/QyhLeRDWoIusTLMyNk/giphy.gif'
     }
   ],
   butt: [
@@ -77,15 +82,21 @@ const exercises = {
     },
     {
       title: 'fire hydrant',
-      img: 'https://media.giphy.com/media/YMY5NMCtfOBJXGAtXY/giphy.gif'
+      img: 'https://media.giphy.com/media/YMY5NMCtfOBJXGAtXY/giphy.gif',
+      unilateral: true
     },
     {
       title: 'glute kick back',
-      img: 'https://media.giphy.com/media/JPy2RNHCXbbLGw59pV/giphy.gif'
+      img: 'https://media.giphy.com/media/JPy2RNHCXbbLGw59pV/giphy.gif',
+      unilateral: true
     },
     {
       title: 'glute bridge walk out',
       img: 'https://media.giphy.com/media/cir6FkDe7MXgmffNcd/giphy.gif'
+    },
+    {
+      title: 'squat to leg raise',
+      img: 'https://media.giphy.com/media/SwNf4vey9bnBLRypko/giphy.gif'
     }
   ],
   chest: [
@@ -104,6 +115,10 @@ const exercises = {
     {
       title: 'wide grip pushup',
       img: 'https://media.giphy.com/media/iFt57qzEXZisX6JcZ7/giphy.gif'
+    },
+    {
+      title: 'pullover',
+      img: 'https://media.giphy.com/media/Lo03vYJTNH6ouIRr4V/giphy.gif'
     }
   ],
   back: [
@@ -122,6 +137,11 @@ const exercises = {
     {
       title: 'row',
       img: 'https://media.giphy.com/media/cmg3rpWI915jERDeYY/giphy.gif'
+    },
+    {
+      title: 'row to tricep kickback',
+      img: 'https://media.giphy.com/media/fqbSg8AqQ09t09RYsY/giphy.gif',
+      unilateral: true
     }
   ],
   core: [
@@ -139,7 +159,8 @@ const exercises = {
     },
     {
       title: 'standing side crunch',
-      img: 'https://media.giphy.com/media/Q8a7nGMti3uuCFHfF5/giphy.gif'
+      img: 'https://media.giphy.com/media/Q8a7nGMti3uuCFHfF5/giphy.gif',
+      unilateral: true
     },
     {
       title: 'sit up',
@@ -152,6 +173,15 @@ const exercises = {
     {
       title: 'bicycle crunch',
       img: 'https://media.giphy.com/media/cKmbHxWIQrs5x4k6ur/giphy.gif'
+    },
+    {
+      title: 'side plank',
+      img: 'https://media.giphy.com/media/jq0G0EmNEGYyfhENhA/giphy.gif',
+      unilateral: true
+    },
+    {
+      title: 'plank',
+      img: 'https://media.giphy.com/media/J2rGWkLU7IS5D2Us7f/giphy.gif'
     }
   ]
 }
