@@ -82,7 +82,8 @@ const exercises = {
       title: 'reverse lunge',
       img: 'https://media.giphy.com/media/QWR3SDoEL6ggzL9rub/giphy.gif',
       character: 'meeseeks',
-      bodyweight: true
+      bodyweight: true,
+      unilateral: true
     },
     {
       title: 'jumprope',
@@ -115,7 +116,8 @@ const exercises = {
       title: 'squat to leg raise',
       img: 'https://media.giphy.com/media/SwNf4vey9bnBLRypko/giphy.gif',
       character: 'bmo',
-      bodyweight: true
+      bodyweight: true,
+      unilateral: true
     },
     {
       title: 'glute kick back',
@@ -173,6 +175,12 @@ const exercises = {
       img: 'https://media.giphy.com/media/YmhQcV7p3jabLZJZSt/giphy.gif',
       character: 'prince',
       unilateral: true,
+      bodyweight: true
+    },
+    {
+      title: 'glute bridge march',
+      img: '',
+      character: '',
       bodyweight: true
     }
   ],
@@ -248,6 +256,56 @@ const exercises = {
       title: 'row',
       img: 'https://media.giphy.com/media/cmg3rpWI915jERDeYY/giphy.gif',
       character: 'tina'
+    },
+    {
+      title: 'bird dog crunch',
+      img: 'https://media.giphy.com/media/eKCrBlcoEx2yIJFjPT/giphy.gif',
+      character: 'prince',
+      unilateral: true,
+      bodyweight: true
+    },
+    {
+      title: 'good morning',
+      img: 'https://media.giphy.com/media/UUngOy2VaiPCYrh2uq/giphy.gif',
+      character: 'prince',
+      bodyweight: true
+    },
+    {
+      title: 'crab walk',
+      img: 'https://media.giphy.com/media/jqGmd9gmGxDPXby3wc/giphy.gif',
+      character: 'prince',
+      bodyweight: true
+    },
+    {
+      title: 'plank row',
+      img: 'https://media.giphy.com/media/l4M6n87ScoBRUrjMBD/giphy.gif',
+      character: 'prince',
+      bodyweight: true
+    },
+    {
+      title: 'prone lat pulldown',
+      img: 'https://media.giphy.com/media/ZeKvP6fl0ZV63RlV8E/giphy.gif',
+      character: 'prince',
+      bodyweight: true
+    },
+    {
+      title: 'reverse snow angel',
+      img: 'https://media.giphy.com/media/kzqvH8IO3cXqDEVT1y/giphy.gif',
+      character: 'prince',
+      bodyweight: true
+    },
+    {
+      title: 'posterior plank',
+      img: 'https://media.giphy.com/media/Rkn765eSFkmJTS4Npe/giphy.gif',
+      character: 'prince',
+      bodyweight: true
+    },
+    {
+      title: 'plank reach to down dog toe touch',
+      img: 'https://media.giphy.com/media/L3WFDllHa0UJxS6Lyj/giphy.gif',
+      character: 'prince',
+      bodyweight: true,
+      unilateral: true
     }
   ],
   core: [
@@ -270,18 +328,10 @@ const exercises = {
       bodyweight: true
     },
     {
-      title: 'bird dog crunch',
-      img: 'https://media.giphy.com/media/eKCrBlcoEx2yIJFjPT/giphy.gif',
-      character: 'prince',
-      unilateral: true,
-      bodyweight: true
-    },
-    {
       title: 'standing side crunch',
       img: 'https://media.giphy.com/media/Q8a7nGMti3uuCFHfF5/giphy.gif',
       unilateral: true,
-      character: 'tina',
-      bodyweight: true
+      character: 'tina'
     },
     {
       title: 'plank shoulder tap',
