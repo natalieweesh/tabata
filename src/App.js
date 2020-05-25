@@ -740,7 +740,7 @@ function App() {
 
       {!currentExercise.current && startedWorkout && <div><div className="row progressRow">
             <div className="progressBar"><div className="fill" style={{width: `${parseInt(theTime / ((restTime + workTime) * rounds.current) * 100)}%`}}></div></div>
-          </div><div className="row restText mainRow"><p className="exerciseTitle centerize">Let's get ready to rumble...</p></div></div>}
+          </div><div className="row restText mainRow"><p className="exerciseTitle centerize">Turn up the volume!<br/><br/>Let's get ready to rumble...</p></div></div>}
 
       {finished && <div>
         <p className="exerciseTitle">YOU FINISHED!</p>
