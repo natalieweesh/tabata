@@ -160,8 +160,8 @@ button {
 
 .progressBar {
   height: 1rem;
-  background: lightgray;
-  border: 1px solid lightgray;
+  background: white;
+  border: 3px solid lightgray;
   border-radius: 15px;
   position: relative;
   width: 80%;
