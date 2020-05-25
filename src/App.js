@@ -138,6 +138,12 @@ const exercises = {
       character: 'meeseeks'
     },
     {
+      title: 'glute bridge march',
+      img: 'https://media.giphy.com/media/KZTBAKLnPVrpTuYag8/giphy.gif',
+      character: 'bob',
+      bodyweight: true
+    },
+    {
       title: 'fire hydrant',
       img: 'https://media.giphy.com/media/YMY5NMCtfOBJXGAtXY/giphy.gif',
       unilateral: true,
@@ -177,12 +183,6 @@ const exercises = {
       unilateral: true,
       bodyweight: true
     },
-    {
-      title: 'glute bridge march',
-      img: 'https://media.giphy.com/media/KZTBAKLnPVrpTuYag8/giphy.gif',
-      character: 'bob',
-      bodyweight: true
-    }
   ],
   chest: [
     {
@@ -231,9 +231,21 @@ const exercises = {
   ],
   back: [
     {
+      title: 'plank row',
+      img: 'https://media.giphy.com/media/l4M6n87ScoBRUrjMBD/giphy.gif',
+      character: 'prince',
+      bodyweight: true
+    },
+    {
       title: 'superman',
       img: 'https://media.giphy.com/media/lTArkNAXA1Dk9b4PsX/giphy.gif',
       character: 'poopybutthole',
+      bodyweight: true
+    },
+    {
+      title: 'prone lat pulldown',
+      img: 'https://media.giphy.com/media/ZeKvP6fl0ZV63RlV8E/giphy.gif',
+      character: 'prince',
       bodyweight: true
     },
     {
@@ -241,16 +253,35 @@ const exercises = {
       img: 'https://media.giphy.com/media/h7tvdrSjSzmB3XUPgH/giphy.gif',
       character: 'tina'
     },
+
+    {
+      title: 'reverse snow angel',
+      img: 'https://media.giphy.com/media/kzqvH8IO3cXqDEVT1y/giphy.gif',
+      character: 'prince',
+      bodyweight: true
+    },
     {
       title: 'i-t-y',
       img: 'https://media.giphy.com/media/Wp0gT1ibDsmUU5KmHm/giphy.gif',
       character: 'meeseeks'
     },
     {
+      title: 'crab walk',
+      img: 'https://media.giphy.com/media/jqGmd9gmGxDPXby3wc/giphy.gif',
+      character: 'prince',
+      bodyweight: true
+    },
+    {
       title: 'row to tricep kickback',
       img: 'https://media.giphy.com/media/fqbSg8AqQ09t09RYsY/giphy.gif',
       unilateral: true,
       character: 'bmo'
+    },
+    {
+      title: 'posterior plank',
+      img: 'https://media.giphy.com/media/Rkn765eSFkmJTS4Npe/giphy.gif',
+      character: 'prince',
+      bodyweight: true
     },
     {
       title: 'row',
@@ -271,36 +302,6 @@ const exercises = {
       bodyweight: true
     },
     {
-      title: 'crab walk',
-      img: 'https://media.giphy.com/media/jqGmd9gmGxDPXby3wc/giphy.gif',
-      character: 'prince',
-      bodyweight: true
-    },
-    {
-      title: 'plank row',
-      img: 'https://media.giphy.com/media/l4M6n87ScoBRUrjMBD/giphy.gif',
-      character: 'prince',
-      bodyweight: true
-    },
-    {
-      title: 'prone lat pulldown',
-      img: 'https://media.giphy.com/media/ZeKvP6fl0ZV63RlV8E/giphy.gif',
-      character: 'prince',
-      bodyweight: true
-    },
-    {
-      title: 'reverse snow angel',
-      img: 'https://media.giphy.com/media/kzqvH8IO3cXqDEVT1y/giphy.gif',
-      character: 'prince',
-      bodyweight: true
-    },
-    {
-      title: 'posterior plank',
-      img: 'https://media.giphy.com/media/Rkn765eSFkmJTS4Npe/giphy.gif',
-      character: 'prince',
-      bodyweight: true
-    },
-    {
       title: 'plank reach to down dog toe touch',
       img: 'https://media.giphy.com/media/L3WFDllHa0UJxS6Lyj/giphy.gif',
       character: 'prince',
@@ -309,6 +310,12 @@ const exercises = {
     }
   ],
   core: [
+    {
+      title: 'commando',
+      img: 'https://media.giphy.com/media/XeMer2mEKQauNA6ISm/giphy.gif',
+      character: 'bob',
+      bodyweight: true
+    },
     {
       title: 'crab toe touch',
       img: 'https://media.giphy.com/media/JUejec6cI22RSbM62j/giphy.gif',
@@ -377,6 +384,12 @@ const exercises = {
       bodyweight: true
     },
     {
+      title: 'forearm plank',
+      img: 'https://media.giphy.com/media/hXO58SRA8RSj2cfgge/giphy.gif',
+      character: 'prince',
+      bodyweight: true
+    },
+    {
       title: 'plank',
       img: 'https://media.giphy.com/media/J2rGWkLU7IS5D2Us7f/giphy.gif',
       character: 'bmo',
@@ -388,22 +401,9 @@ const exercises = {
       character: 'tina',
       bodyweight: true
     },
-
-    {
-      title: 'commando',
-      img: 'https://media.giphy.com/media/XeMer2mEKQauNA6ISm/giphy.gif',
-      character: 'bob',
-      bodyweight: true
-    },
     {
       title: 'toe touch',
       img: 'https://media.giphy.com/media/UoeJ3obguCjCR4nisU/giphy.gif',
-      character: 'prince',
-      bodyweight: true
-    },
-    {
-      title: 'forearm plank',
-      img: 'https://media.giphy.com/media/hXO58SRA8RSj2cfgge/giphy.gif',
       character: 'prince',
       bodyweight: true
     },
