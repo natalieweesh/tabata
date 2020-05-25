@@ -179,8 +179,8 @@ const exercises = {
     },
     {
       title: 'glute bridge march',
-      img: '',
-      character: '',
+      img: 'https://media.giphy.com/media/KZTBAKLnPVrpTuYag8/giphy.gif',
+      character: 'bob',
       bodyweight: true
     }
   ],
@@ -400,6 +400,19 @@ const exercises = {
       img: 'https://media.giphy.com/media/UoeJ3obguCjCR4nisU/giphy.gif',
       character: 'prince',
       bodyweight: true
+    },
+    {
+      title: 'forearm plank',
+      img: 'https://media.giphy.com/media/hXO58SRA8RSj2cfgge/giphy.gif',
+      character: 'prince',
+      bodyweight: true
+    },
+    {
+      title: 'forearm plank knee to elbow',
+      img: 'https://media.giphy.com/media/elhRhEtr2uYqXuDUfW/giphy.gif',
+      character: 'bob',
+      bodyweight: true,
+      unilateral: true
     }
   ]
 }
