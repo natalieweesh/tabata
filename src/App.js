@@ -193,15 +193,15 @@ const exercises = {
       character: 'tina'
     },
     {
+      title: 'burpee',
+      img: 'https://media.giphy.com/media/RlrSX7HvlDddz4Qmcc/giphy.gif',
+      character: 'prince',
+      bodyweight: true
+    },
+    {
       title: 'reverse fly',
       img: 'https://media.giphy.com/media/kfvD2clhN8AaM7P4L5/giphy.gif',
       character: 'tina'
-    },
-    {
-      title: 'wide grip pushup',
-      img: 'https://media.giphy.com/media/iFt57qzEXZisX6JcZ7/giphy.gif',
-      character: 'tina',
-      bodyweight: true
     },
     {
       title: 'fly rotation',
@@ -209,9 +209,9 @@ const exercises = {
       character: 'bmo'
     },
     {
-      title: 'burpee',
-      img: 'https://media.giphy.com/media/RlrSX7HvlDddz4Qmcc/giphy.gif',
-      character: 'prince',
+      title: 'wide grip pushup',
+      img: 'https://media.giphy.com/media/iFt57qzEXZisX6JcZ7/giphy.gif',
+      character: 'tina',
       bodyweight: true
     },
     {
@@ -252,6 +252,12 @@ const exercises = {
   ],
   core: [
     {
+      title: 'crab toe touch',
+      img: 'https://media.giphy.com/media/JUejec6cI22RSbM62j/giphy.gif',
+      character: 'prince',
+      bodyweight: true
+    },
+    {
       title: 'bicycle crunch',
       img: 'https://media.giphy.com/media/cKmbHxWIQrs5x4k6ur/giphy.gif',
       character: 'tina',
@@ -264,10 +270,23 @@ const exercises = {
       bodyweight: true
     },
     {
+      title: 'bird dog crunch',
+      img: 'https://media.giphy.com/media/eKCrBlcoEx2yIJFjPT/giphy.gif',
+      character: 'prince',
+      unilateral: true,
+      bodyweight: true
+    },
+    {
       title: 'standing side crunch',
       img: 'https://media.giphy.com/media/Q8a7nGMti3uuCFHfF5/giphy.gif',
       unilateral: true,
       character: 'tina',
+      bodyweight: true
+    },
+    {
+      title: 'plank shoulder tap',
+      img: 'https://media.giphy.com/media/ejCVKLqCrppg2TpFgp/giphy.gif',
+      character: 'bob',
       bodyweight: true
     },
     {
@@ -284,6 +303,12 @@ const exercises = {
       bodyweight: true
     },
     {
+      title: 'dead bug',
+      img: 'https://media.giphy.com/media/Ib19iaeZvif1be0rbL/giphy.gif',
+      character: 'prince',
+      bodyweight: true
+    },
+    {
       title: 'mountain climber',
       img: 'https://media.giphy.com/media/W35qtGrrpweU00eLwI/giphy.gif',
       character: 'meeseeks',
@@ -293,6 +318,12 @@ const exercises = {
       title: 'sit up',
       img: 'https://media.giphy.com/media/TiCqf0dCsS0UiSLWqd/giphy.gif',
       character: 'tina',
+      bodyweight: true
+    },
+    {
+      title: 'russian twist',
+      img: 'https://media.giphy.com/media/jt3y986EVb6L1woQS6/giphy.gif',
+      character: 'prince',
       bodyweight: true
     },
     {
@@ -307,41 +338,11 @@ const exercises = {
       character: 'tina',
       bodyweight: true
     },
-    {
-      title: 'plank shoulder tap',
-      img: 'https://media.giphy.com/media/ejCVKLqCrppg2TpFgp/giphy.gif',
-      character: 'bob',
-      bodyweight: true
-    },
+
     {
       title: 'commando',
       img: 'https://media.giphy.com/media/XeMer2mEKQauNA6ISm/giphy.gif',
       character: 'bob',
-      bodyweight: true
-    },
-    {
-      title: 'bird dog crunch',
-      img: 'https://media.giphy.com/media/eKCrBlcoEx2yIJFjPT/giphy.gif',
-      character: 'prince',
-      unilateral: true,
-      bodyweight: true
-    },
-    {
-      title: 'dead bug',
-      img: 'https://media.giphy.com/media/Ib19iaeZvif1be0rbL/giphy.gif',
-      character: 'prince',
-      bodyweight: true
-    },
-    {
-      title: 'russian twist',
-      img: 'https://media.giphy.com/media/jt3y986EVb6L1woQS6/giphy.gif',
-      character: 'prince',
-      bodyweight: true
-    },
-    {
-      title: 'crab toe touch',
-      img: 'https://media.giphy.com/media/JUejec6cI22RSbM62j/giphy.gif',
-      character: 'prince',
       bodyweight: true
     },
     {
