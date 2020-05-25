@@ -207,6 +207,18 @@ const exercises = {
       title: 'fly rotation',
       img: 'https://media.giphy.com/media/Y0UMEAVeLtIAgmOuZA/giphy.gif',
       character: 'bmo'
+    },
+    {
+      title: 'burpee',
+      img: 'https://media.giphy.com/media/RlrSX7HvlDddz4Qmcc/giphy.gif',
+      character: 'prince',
+      bodyweight: true
+    },
+    {
+      title: 'power snatch',
+      img: 'https://media.giphy.com/media/eLv4iOPVrSI0PoNA1Z/giphy.gif',
+      character: 'prince',
+      unilateral: true
     }
   ],
   back: [
@@ -312,6 +324,30 @@ const exercises = {
       img: 'https://media.giphy.com/media/eKCrBlcoEx2yIJFjPT/giphy.gif',
       character: 'prince',
       unilateral: true,
+      bodyweight: true
+    },
+    {
+      title: 'dead bug',
+      img: 'https://media.giphy.com/media/Ib19iaeZvif1be0rbL/giphy.gif',
+      character: 'prince',
+      bodyweight: true
+    },
+    {
+      title: 'russian twist',
+      img: 'https://media.giphy.com/media/jt3y986EVb6L1woQS6/giphy.gif',
+      character: 'prince',
+      bodyweight: true
+    },
+    {
+      title: 'crab toe touch',
+      img: 'https://media.giphy.com/media/JUejec6cI22RSbM62j/giphy.gif',
+      character: 'prince',
+      bodyweight: true
+    },
+    {
+      title: 'toe touch',
+      img: 'https://media.giphy.com/media/UoeJ3obguCjCR4nisU/giphy.gif',
+      character: 'prince',
       bodyweight: true
     }
   ]
