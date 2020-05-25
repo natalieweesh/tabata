@@ -211,6 +211,11 @@ button {
 .previewImageWrapper {
   position: relative;
   overflow: hidden;
+  margin: 0 auto;
+}
+
+.previewImageWrapper img {
+  width: 100%;
 }
 
 .bodyweightBanner {
