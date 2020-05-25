@@ -57,6 +57,49 @@ const exercises = {
       img: 'https://media.giphy.com/media/lQCdZTKL8NbiU4OViv/giphy.gif',
       character: 'bob',
       bodyweight: true
+    },
+    {
+      title: 'chest fly',
+      img: 'https://media.giphy.com/media/LOXDvvmMvnk33n12pC/giphy.gif',
+      character: 'tina'
+    },
+    {
+      title: 'pullover',
+      img: 'https://media.giphy.com/media/Lo03vYJTNH6ouIRr4V/giphy.gif',
+      character: 'bmo'
+    },
+    {
+      title: 'chest press',
+      img: 'https://media.giphy.com/media/d8FZU70Rkj1LGIImBB/giphy.gif',
+      character: 'tina'
+    },
+    {
+      title: 'burpee',
+      img: 'https://media.giphy.com/media/RlrSX7HvlDddz4Qmcc/giphy.gif',
+      character: 'prince',
+      bodyweight: true
+    },
+    {
+      title: 'reverse fly',
+      img: 'https://media.giphy.com/media/kfvD2clhN8AaM7P4L5/giphy.gif',
+      character: 'tina'
+    },
+    {
+      title: 'fly rotation',
+      img: 'https://media.giphy.com/media/Y0UMEAVeLtIAgmOuZA/giphy.gif',
+      character: 'bmo'
+    },
+    {
+      title: 'wide grip pushup',
+      img: 'https://media.giphy.com/media/iFt57qzEXZisX6JcZ7/giphy.gif',
+      character: 'tina',
+      bodyweight: true
+    },
+    {
+      title: 'power snatch',
+      img: 'https://media.giphy.com/media/eLv4iOPVrSI0PoNA1Z/giphy.gif',
+      character: 'prince',
+      unilateral: true
     }
   ],
   legs: [
@@ -183,51 +226,6 @@ const exercises = {
       unilateral: true,
       bodyweight: true
     },
-  ],
-  chest: [
-    {
-      title: 'chest fly',
-      img: 'https://media.giphy.com/media/LOXDvvmMvnk33n12pC/giphy.gif',
-      character: 'tina'
-    },
-    {
-      title: 'pullover',
-      img: 'https://media.giphy.com/media/Lo03vYJTNH6ouIRr4V/giphy.gif',
-      character: 'bmo'
-    },
-    {
-      title: 'chest press',
-      img: 'https://media.giphy.com/media/d8FZU70Rkj1LGIImBB/giphy.gif',
-      character: 'tina'
-    },
-    {
-      title: 'burpee',
-      img: 'https://media.giphy.com/media/RlrSX7HvlDddz4Qmcc/giphy.gif',
-      character: 'prince',
-      bodyweight: true
-    },
-    {
-      title: 'reverse fly',
-      img: 'https://media.giphy.com/media/kfvD2clhN8AaM7P4L5/giphy.gif',
-      character: 'tina'
-    },
-    {
-      title: 'fly rotation',
-      img: 'https://media.giphy.com/media/Y0UMEAVeLtIAgmOuZA/giphy.gif',
-      character: 'bmo'
-    },
-    {
-      title: 'wide grip pushup',
-      img: 'https://media.giphy.com/media/iFt57qzEXZisX6JcZ7/giphy.gif',
-      character: 'tina',
-      bodyweight: true
-    },
-    {
-      title: 'power snatch',
-      img: 'https://media.giphy.com/media/eLv4iOPVrSI0PoNA1Z/giphy.gif',
-      character: 'prince',
-      unilateral: true
-    }
   ],
   back: [
     {
@@ -454,7 +452,7 @@ function App() {
   const [workTime, setWorkTime] = useState(20)
   const [restTime, setRestTime] = useState(10)
   const [totalTime, setTotalTime] = useState(1200)
-  const [selectedMuscleGroups, setSelectedMuscleGroups] = useState(['arms', 'legs', 'chest', 'butt', 'back', 'core'])
+  const [selectedMuscleGroups, setSelectedMuscleGroups] = useState(['arms', 'legs', 'butt', 'back', 'core'])
   const rounds = useRef(null)
   const [showPreview, setShowPreview] = useState(false);
   const [showFAQ, setShowFAQ] = useState(false);
@@ -488,7 +486,7 @@ function App() {
       return;
     }
     if (!selectedMuscleGroups || selectedMuscleGroups.length === 0) {
-      setSelectedMuscleGroups(['arms', 'legs', 'chest', 'butt', 'back', 'core']) // if they selected no muscle groups use them all
+      setSelectedMuscleGroups(['arms', 'legs', 'butt', 'back', 'core']) // if they selected no muscle groups use them all
       return;
     }
     if (!rounds.current) {
@@ -601,13 +599,13 @@ function App() {
           <div className="row muscleRow">
               {Object.keys(exercises).map(muscle => {
                 return <div className="checkboxWrapper" key={muscle}>
-                  <label className="checkboxLabel" htmlFor={muscle}>{muscle}</label><input onChange={() => {
+                  <label className="checkboxLabel" htmlFor={muscle}>{muscle === 'arms' ? 'ARMS + CHEST' : 'ARMS'}</label><input onChange={() => {
                     if (selectedMuscleGroups.includes(muscle)) {
                       setSelectedMuscleGroups(selectedMuscleGroups.filter(x => x !== muscle))
                     } else {
                       setSelectedMuscleGroups(selectedMuscleGroups.concat([muscle]))
                     }
-                  }} checked={selectedMuscleGroups.includes(muscle)} id={muscle} value={muscle} type="checkbox"/><div className="fakeCheckbox">{muscle.toUpperCase()}</div>
+                  }} checked={selectedMuscleGroups.includes(muscle)} id={muscle} value={muscle} type="checkbox"/><div className="fakeCheckbox">{muscle === 'arms' ? 'ARMS + CHEST' : muscle.toUpperCase()}</div>
                 </div>
               })}
           </div>
@@ -694,7 +692,7 @@ function App() {
         <div className="row">
           {Object.keys(exercises).map(muscle => {
             return <div>
-              <p className="exerciseTitle">exercises for your {muscle}:</p>
+              <p className="exerciseTitle">exercises for your {muscle === 'arms' ? 'arms + chest' : muscle}:</p>
               <div className="row previewRow">
               {exercises[muscle].map(exercise => {
                 return <div className="column"><p>{exercise['title']}</p><div className="previewImageWrapper">{exercise['bodyweight'] && <div className='bodyweightBanner'>Bodyweight</div>}<img src={exercise['img']} alt={exercise['title']}/></div></div>
