@@ -120,6 +120,19 @@ const exercises = {
       title: 'overhead tricep extension',
       img: 'https://media.giphy.com/media/QAPISHGDiqMr46KY34/giphy.gif',
       character: 'bob'
+    },
+    {
+      title: 'plank raise tap crunch',
+      img: 'https://media.giphy.com/media/ZDuizwB1eyoahVcakV/giphy.gif',
+      character: 'rick',
+      bodyweight: true,
+      unilateral: true
+    },
+    {
+      title: 'forearm plank to dolphin',
+      img: 'https://media.giphy.com/media/lnxh6bTaaZeApIlH2j/giphy.gif',
+      character: 'rick',
+      bodyweight: true
     }
   ],
   legs: [
@@ -179,6 +192,52 @@ const exercises = {
       character: 'bob',
       bodyweight: true,
       unilateral: true
+    },
+    {
+      title: 'side lunge',
+      img: 'https://media.giphy.com/media/h8glgzspdY8A0eNh1D/giphy.gif',
+      character: 'rick',
+      bodyweight: true,
+      unilateral: true
+    },
+    {
+      title: 'wall sit',
+      img: 'https://media.giphy.com/media/iDHzTcVMzTq6zaxhL4/giphy.gif',
+      character: 'rick',
+      bodyweight: true
+    },
+    {
+      title: 'high knee',
+      img: 'https://media.giphy.com/media/W089J4JifogF6mba9y/giphy.gif',
+      character: 'rick',
+      bodyweight: true
+    },
+    {
+      title: 'curtsy lunge',
+      img: 'https://media.giphy.com/media/SqqsM3NXDgY1K1l7pt/giphy.gif',
+      character: 'rick',
+      bodyweight: true,
+      unilateral: true
+    },
+    {
+      title: 'single leg glute bridge',
+      img: 'https://media.giphy.com/media/ZG16HjoxNrCApq0xg3/giphy.gif',
+      character: 'rick',
+      bodyweight: true,
+      unilateral: true
+    },
+    {
+      title: 'pistol squat',
+      img: 'https://media.giphy.com/media/hqU0p2ivboCEYJQJaM/giphy.gif',
+      character: 'rick',
+      bodyweight: true,
+      unilateral: true
+    },
+    {
+      title: 'frog pump',
+      img: 'https://media.giphy.com/media/MEjmyZ6dKVNBhZlXfq/giphy.gif',
+      character: 'rick',
+      bodyweight: true
     }
   ],
   butt: [
