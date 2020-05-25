@@ -100,6 +100,26 @@ const exercises = {
       img: 'https://media.giphy.com/media/eLv4iOPVrSI0PoNA1Z/giphy.gif',
       character: 'prince',
       unilateral: true
+    },
+    {
+      title: 'lateral raise',
+      img: 'https://media.giphy.com/media/cKbb0WgweRU2GU15Cc/giphy.gif',
+      character: 'bob'
+    },
+    {
+      title: 'front shoulder raise',
+      img: 'https://media.giphy.com/media/fA2bpgpVfdJWgz1YZ9/giphy.gif',
+      character: 'bob'
+    },
+    {
+      title: 'scarecrow raise',
+      img: 'https://media.giphy.com/media/JRUrE0VJcIifpGOxpy/giphy.gif',
+      character: 'bob',
+    },
+    {
+      title: 'overhead tricep extension',
+      img: 'https://media.giphy.com/media/QAPISHGDiqMr46KY34/giphy.gif',
+      character: 'bob'
     }
   ],
   legs: [
@@ -152,6 +172,13 @@ const exercises = {
       img: 'https://media.giphy.com/media/ZbN2PwMLD0boIjJrrn/giphy.gif',
       character: 'bmo',
       bodyweight: true
+    },
+    {
+      title: 'inner thigh leg raise',
+      img: 'https://media.giphy.com/media/Y1v6Ohkohe4yjM2F4r/giphy.gif',
+      character: 'bob',
+      bodyweight: true,
+      unilateral: true
     }
   ],
   butt: [
