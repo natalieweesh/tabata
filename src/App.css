@@ -208,6 +208,22 @@ button {
   right: 0;
 }
 
+.previewImageWrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.bodyweightBanner {
+  background: #feff81;
+  position: absolute;
+  top: 2rem;
+  right: -2.5rem;
+  width: 11rem;
+  transform: rotate(45deg);
+  height: 2rem;
+  line-height: 2rem;
+}
+
 @media only screen and (max-width: 888px) {
   .exerciseTitle, .countdownTitle, button {
     font-size: 1.75rem;
@@ -221,7 +237,7 @@ button {
   .checkboxLabel, .fakeCheckbox {
     padding: 1rem;
   }
-  .previewRow img {
+  .previewImageWrapper {
     max-width: 90%;
   }
   .App {
