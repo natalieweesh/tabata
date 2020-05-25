@@ -20,6 +20,18 @@ const exercises = {
       character: 'spongebob'
     },
     {
+      title: 'lateral raise',
+      img: 'https://media.giphy.com/media/cKbb0WgweRU2GU15Cc/giphy.gif',
+      character: 'bob'
+    },
+    {
+      title: 'plank raise tap crunch',
+      img: 'https://media.giphy.com/media/ZDuizwB1eyoahVcakV/giphy.gif',
+      character: 'rick',
+      bodyweight: true,
+      unilateral: true
+    },
+    {
       title: 'hammer curl',
       img: 'https://media.giphy.com/media/izaYkYoJMnY07WYFzj/giphy.gif',
       character: 'meeseeks'
@@ -41,6 +53,11 @@ const exercises = {
       img: 'https://media.giphy.com/media/KehD7SA2RF4gqHQP8r/giphy.gif',
       character: 'meeseeks',
       bodyweight: true
+    },
+    {
+      title: 'front shoulder raise',
+      img: 'https://media.giphy.com/media/fA2bpgpVfdJWgz1YZ9/giphy.gif',
+      character: 'bob'
     },
     {
       title: 'shoulder press',
@@ -74,6 +91,11 @@ const exercises = {
       character: 'tina'
     },
     {
+      title: 'scarecrow raise',
+      img: 'https://media.giphy.com/media/JRUrE0VJcIifpGOxpy/giphy.gif',
+      character: 'bob',
+    },
+    {
       title: 'burpee',
       img: 'https://media.giphy.com/media/RlrSX7HvlDddz4Qmcc/giphy.gif',
       character: 'prince',
@@ -102,32 +124,11 @@ const exercises = {
       unilateral: true
     },
     {
-      title: 'lateral raise',
-      img: 'https://media.giphy.com/media/cKbb0WgweRU2GU15Cc/giphy.gif',
-      character: 'bob'
-    },
-    {
-      title: 'front shoulder raise',
-      img: 'https://media.giphy.com/media/fA2bpgpVfdJWgz1YZ9/giphy.gif',
-      character: 'bob'
-    },
-    {
-      title: 'scarecrow raise',
-      img: 'https://media.giphy.com/media/JRUrE0VJcIifpGOxpy/giphy.gif',
-      character: 'bob',
-    },
-    {
       title: 'overhead tricep extension',
       img: 'https://media.giphy.com/media/QAPISHGDiqMr46KY34/giphy.gif',
       character: 'bob'
     },
-    {
-      title: 'plank raise tap crunch',
-      img: 'https://media.giphy.com/media/ZDuizwB1eyoahVcakV/giphy.gif',
-      character: 'rick',
-      bodyweight: true,
-      unilateral: true
-    },
+
     {
       title: 'forearm plank to dolphin',
       img: 'https://media.giphy.com/media/lnxh6bTaaZeApIlH2j/giphy.gif',
@@ -136,6 +137,13 @@ const exercises = {
     }
   ],
   legs: [
+    {
+      title: 'pistol squat',
+      img: 'https://media.giphy.com/media/hqU0p2ivboCEYJQJaM/giphy.gif',
+      character: 'rick',
+      bodyweight: true,
+      unilateral: true
+    },
     {
       title: 'jumping jack',
       img: 'https://media.giphy.com/media/lNWbCKbffqCIzY8RR1/giphy.gif',
@@ -146,6 +154,12 @@ const exercises = {
       title: 'calf raise',
       img: 'https://media.giphy.com/media/QyhLeRDWoIusTLMyNk/giphy.gif',
       character: 'bmo',
+      bodyweight: true
+    },
+    {
+      title: 'wall sit',
+      img: 'https://media.giphy.com/media/iDHzTcVMzTq6zaxhL4/giphy.gif',
+      character: 'rick',
       bodyweight: true
     },
     {
@@ -162,6 +176,13 @@ const exercises = {
       unilateral: true
     },
     {
+      title: 'side lunge',
+      img: 'https://media.giphy.com/media/h8glgzspdY8A0eNh1D/giphy.gif',
+      character: 'rick',
+      bodyweight: true,
+      unilateral: true
+    },
+    {
       title: 'jumprope',
       img: 'https://media.giphy.com/media/Y1jNTxApOQRfKOJt8k/giphy.gif',
       character: 'bmo',
@@ -172,6 +193,12 @@ const exercises = {
       img: 'https://media.giphy.com/media/YqhMwl3nSuA2Dr3i5v/giphy.gif',
       unilateral: true,
       character: 'tina',
+      bodyweight: true
+    },
+    {
+      title: 'high knee',
+      img: 'https://media.giphy.com/media/W089J4JifogF6mba9y/giphy.gif',
+      character: 'rick',
       bodyweight: true
     },
     {
@@ -194,50 +221,11 @@ const exercises = {
       unilateral: true
     },
     {
-      title: 'side lunge',
-      img: 'https://media.giphy.com/media/h8glgzspdY8A0eNh1D/giphy.gif',
-      character: 'rick',
-      bodyweight: true,
-      unilateral: true
-    },
-    {
-      title: 'wall sit',
-      img: 'https://media.giphy.com/media/iDHzTcVMzTq6zaxhL4/giphy.gif',
-      character: 'rick',
-      bodyweight: true
-    },
-    {
-      title: 'high knee',
-      img: 'https://media.giphy.com/media/W089J4JifogF6mba9y/giphy.gif',
-      character: 'rick',
-      bodyweight: true
-    },
-    {
       title: 'curtsy lunge',
       img: 'https://media.giphy.com/media/SqqsM3NXDgY1K1l7pt/giphy.gif',
       character: 'rick',
       bodyweight: true,
       unilateral: true
-    },
-    {
-      title: 'single leg glute bridge',
-      img: 'https://media.giphy.com/media/ZG16HjoxNrCApq0xg3/giphy.gif',
-      character: 'rick',
-      bodyweight: true,
-      unilateral: true
-    },
-    {
-      title: 'pistol squat',
-      img: 'https://media.giphy.com/media/hqU0p2ivboCEYJQJaM/giphy.gif',
-      character: 'rick',
-      bodyweight: true,
-      unilateral: true
-    },
-    {
-      title: 'frog pump',
-      img: 'https://media.giphy.com/media/MEjmyZ6dKVNBhZlXfq/giphy.gif',
-      character: 'rick',
-      bodyweight: true
     }
   ],
   butt: [
@@ -271,6 +259,13 @@ const exercises = {
       img: 'https://media.giphy.com/media/KZTBAKLnPVrpTuYag8/giphy.gif',
       character: 'bob',
       bodyweight: true
+    },
+    {
+      title: 'single leg glute bridge',
+      img: 'https://media.giphy.com/media/ZG16HjoxNrCApq0xg3/giphy.gif',
+      character: 'rick',
+      bodyweight: true,
+      unilateral: true
     },
     {
       title: 'fire hydrant',
@@ -312,6 +307,14 @@ const exercises = {
       unilateral: true,
       bodyweight: true
     },
+
+
+    {
+      title: 'frog pump',
+      img: 'https://media.giphy.com/media/MEjmyZ6dKVNBhZlXfq/giphy.gif',
+      character: 'rick',
+      bodyweight: true
+    }
   ],
   back: [
     {
