@@ -632,7 +632,7 @@ function App() {
             <div className="column bigger">
               <p className="exerciseTitle">{currentExercise.current && currentExercise.current['title']}</p>
               <img src={currentExercise.current && currentExercise.current['img']} alt={currentExercise.current && currentExercise.current['title']} />
-              <p>[work your {selectedMuscleGroups[exerciseIndex.current]}]</p>
+              <p>[work your {selectedMuscleGroups[exerciseIndex.current] === 'arms' ? 'arms / chest' : selectedMuscleGroups[exerciseIndex.current]}]</p>
             </div>
             <div className="column smaller">
               <div className='centerize'>
