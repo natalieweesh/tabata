@@ -137,7 +137,7 @@ function App() {
     <div className="App">
     {fullScreenable && <button className='fullscreenButton restText' onClick={() => {
         document.documentElement.requestFullscreen();
-      }}>Fullscreen mode</button>
+      }}>Full screen mode</button>
     }
       {!startedWorkout && <p className="exerciseTitle pageTitle">It's tabata time!</p>}
       {!startedWorkout &&
@@ -201,7 +201,7 @@ function App() {
         </div>
         <div>
           <div className="row">
-            <label>Extra options:<br/>(choose bodyweight only if you don't have dumbbells)<br/>(choose low impact if you just ate a big meal)</label>
+            <label>Extra options:</label>
           </div>
           <div className="row muscleRow">
             <div className="checkboxWrapper"><label className="checkboxLabel" htmlFor='bodyweight'>BODYWEIGHT ONLY</label><input onChange={() => {
@@ -211,6 +211,7 @@ function App() {
               setLowImpact(!lowImpact);
             }} checked={lowImpact} id='lowimpact' value='Low impact' type="checkbox"/><div className="fakeCheckbox">LOW IMPACT</div></div>
           </div>
+          <label>(choose bodyweight only if you don't have dumbbells)<br/>(choose low impact if you just ate a big meal)</label>
         </div>
       </div>
       }

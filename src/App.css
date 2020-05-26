@@ -134,7 +134,7 @@ button {
 }
 
 .mainRow {
-  min-height: 75vh;
+  min-height: 70vh;
   border-radius: 2rem;
 }
 .mainRow .column {
@@ -205,7 +205,7 @@ button {
   width: 4rem;
   position: absolute;
   top: 0;
-  right: 0;
+  right: 1rem;
 }
 
 .previewImageWrapper {
