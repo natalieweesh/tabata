@@ -25,6 +25,13 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'diamond push up',
+        img: 'https://media.giphy.com/media/f3FxRWbklIaWawLnAC/giphy.gif',
+        character: 'rick',
+        bodyweight: true,
+        lowimpact: true
+      },
+      {
         title: 'lateral raise',
         img: 'https://media.giphy.com/media/cKbb0WgweRU2GU15Cc/giphy.gif',
         character: 'bob',
@@ -59,6 +66,14 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'arm circle',
+        img: 'https://media.giphy.com/media/hpMB17GuBirSqGdrDD/giphy.gif',
+        character: 'rick',
+        bodyweight: true,
+        unilateral: true,
+        lowimpact: true
+      },
+      {
         title: 'tricep pushup',
         img: 'https://media.giphy.com/media/KehD7SA2RF4gqHQP8r/giphy.gif',
         character: 'meeseeks',
@@ -72,6 +87,12 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'reverse curl',
+        img: 'https://media.giphy.com/media/iIMI3eGQzvMqkqsse6/giphy.gif',
+        character: 'rick',
+        lowimpact: true
+      },
+      {
         title: 'shoulder press',
         img: 'https://media.giphy.com/media/SUtRTnS36VFpC12IrT/giphy.gif',
         character: 'tina',
@@ -81,6 +102,12 @@ export const exercises = {
         title: 'tricep kickback',
         img: 'https://media.giphy.com/media/fvfoHSsvAeUVrrNc33/giphy.gif',
         character: 'meeseeks',
+        lowimpact: true
+      },
+      {
+        title: 'squat and press',
+        img: 'https://media.giphy.com/media/lNR0BNO0wsBce5zOki/giphy.gif',
+        character: 'rick',
         lowimpact: true
       },
       {
@@ -102,6 +129,14 @@ export const exercises = {
         title: 'chest fly',
         img: 'https://media.giphy.com/media/LOXDvvmMvnk33n12pC/giphy.gif',
         character: 'tina',
+        lowimpact: true
+      },
+      {
+        title: 't push up',
+        img: 'https://media.giphy.com/media/Q5uS7eO5IKpPNzu84E/giphy.gif',
+        character: 'rick',
+        bodyweight: true,
+        unilateral: true,
         lowimpact: true
       },
       {
@@ -214,6 +249,13 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'one leg hop',
+        img: 'https://media.giphy.com/media/S8xr71Wz2YW5pwFYZB/giphy.gif',
+        character: 'rick',
+        bodyweight: true,
+        unilateral: true
+      },
+      {
         title: 'reverse lunge',
         img: 'https://media.giphy.com/media/QWR3SDoEL6ggzL9rub/giphy.gif',
         character: 'meeseeks',
@@ -236,6 +278,13 @@ export const exercises = {
         bodyweight: true
       },
       {
+        title: 'y-t-w',
+        img: 'https://media.giphy.com/media/KeWU4jbTWGiGDgKFxB/giphy.gif',
+        character: 'rick',
+        bodyweight: true,
+        lowimpact: true
+      },
+      {
         title: 'bulgarian split squat',
         img: 'https://media.giphy.com/media/YqhMwl3nSuA2Dr3i5v/giphy.gif',
         unilateral: true,
@@ -256,9 +305,22 @@ export const exercises = {
         bodyweight: true
       },
       {
+        title: 'plank in and out jump',
+        img: 'https://media.giphy.com/media/Id124G1gTGsWjW43pr/giphy.gif',
+        character: 'rick',
+        bodyweight: true
+      },
+      {
         title: 'squat to kneel',
         img: 'https://media.giphy.com/media/ZbN2PwMLD0boIjJrrn/giphy.gif',
         character: 'bmo',
+        bodyweight: true,
+        lowimpact: true
+      },
+      {
+        title: 'squat hold calf raise',
+        img: 'https://media.giphy.com/media/H75JCgAlgDM4uqFZBZ/giphy.gif',
+        character: 'rick',
         bodyweight: true,
         lowimpact: true
       },
@@ -414,6 +476,14 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'tabletop bridge reach',
+        img: 'https://media.giphy.com/media/RG4zta91L6MGC7fLrw/giphy.gif',
+        character: 'rick',
+        bodyweight: true,
+        unilateral: true,
+        lowimpact: true
+      },
+      {
         title: 'i-t-y',
         img: 'https://media.giphy.com/media/Wp0gT1ibDsmUU5KmHm/giphy.gif',
         character: 'meeseeks',
@@ -451,6 +521,13 @@ export const exercises = {
         img: 'https://media.giphy.com/media/eKCrBlcoEx2yIJFjPT/giphy.gif',
         character: 'prince',
         unilateral: true,
+        bodyweight: true,
+        lowimpact: true
+      },
+      {
+        title: 'tabletop bridge to L sit',
+        img: 'https://media.giphy.com/media/L39jKx6wQmsQleLIlv/giphy.gif',
+        character: 'rick',
         bodyweight: true,
         lowimpact: true
       },
@@ -514,6 +591,14 @@ export const exercises = {
         bodyweight: true
       },
       {
+        title: 'side plank reach through',
+        img: 'https://media.giphy.com/media/jTMJGbeTouSoplSCr6/giphy.gif',
+        character: 'rick',
+        bodyweight: true,
+        unilateral: true,
+        lowimpact: true
+      },
+      {
         title: 'standing side crunch',
         img: 'https://media.giphy.com/media/Q8a7nGMti3uuCFHfF5/giphy.gif',
         unilateral: true,
@@ -536,6 +621,13 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'flutter kick',
+        img: 'https://media.giphy.com/media/UtoH18QAUqC5KTspXp/giphy.gif',
+        character: 'rick',
+        bodyweight: true,
+        lowimpact: true
+      },
+      {
         title: 'bear plank',
         img: 'https://media.giphy.com/media/dscqPpbt6z16WJSvkc/giphy.gif',
         character: 'tina',
@@ -546,6 +638,13 @@ export const exercises = {
         title: 'dead bug',
         img: 'https://media.giphy.com/media/Ib19iaeZvif1be0rbL/giphy.gif',
         character: 'prince',
+        bodyweight: true,
+        lowimpact: true
+      },
+      {
+        title: 'butt up',
+        img: 'https://media.giphy.com/media/RhezbxwMxfOPWBv0q2/giphy.gif',
+        character: 'rick',
         bodyweight: true,
         lowimpact: true
       },
@@ -570,6 +669,13 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'heel tap crunch',
+        img: 'https://media.giphy.com/media/QxYWc4WkJSYISEOZtO/giphy.gif',
+        character: 'rick',
+        bodyweight: true,
+        lowimpact: true
+      },
+      {
         title: 'forearm plank',
         img: 'https://media.giphy.com/media/hXO58SRA8RSj2cfgge/giphy.gif',
         character: 'prince',
@@ -577,9 +683,24 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'side plank knee crunch',
+        img: 'https://media.giphy.com/media/dAopngbO6rCLstwOEy/giphy.gif',
+        character: 'rick',
+        bodyweight: true,
+        unilateral: true,
+        lowimpact: true
+      },
+      {
         title: 'plank',
         img: 'https://media.giphy.com/media/J2rGWkLU7IS5D2Us7f/giphy.gif',
         character: 'bmo',
+        bodyweight: true,
+        lowimpact: true
+      },
+      {
+        title: 'v up',
+        img: 'https://media.giphy.com/media/ZG6CmJFvFtkAbvAVb5/giphy.gif',
+        character: 'rick',
         bodyweight: true,
         lowimpact: true
       },
@@ -591,10 +712,25 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'windshield wiper',
+        img: 'https://media.giphy.com/media/fxZShECx7A5caXiWG5/giphy.gif',
+        character: 'rick',
+        bodyweight: true,
+        lowimpact: true
+      },
+      {
         title: 'toe touch',
         img: 'https://media.giphy.com/media/UoeJ3obguCjCR4nisU/giphy.gif',
         character: 'prince',
         bodyweight: true,
+        lowimpact: true
+      },
+      {
+        title: 'breakdancer',
+        img: 'https://media.giphy.com/media/hufu2kbtgx2MY06yTM/giphy.gif',
+        character: 'rick',
+        bodyweight: true,
+        unilateral: true,
         lowimpact: true
       },
       {
