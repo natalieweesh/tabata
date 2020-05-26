@@ -1,6 +1,11 @@
 export const exercises = {
     arms: [
       {
+        title: 'clean and press',
+        img: 'https://media.giphy.com/media/JmJVxfWflfCHVs6rdg/giphy.gif',
+        character: 'rick'
+      },
+      {
         title: 'bicep curl',
         img: 'https://media.giphy.com/media/UV4Yi70OhwQ6JwJo7m/giphy.gif',
         character: 'meeseeks'
@@ -66,6 +71,13 @@ export const exercises = {
         character: 'meeseeks'
       },
       {
+        title: 'side push up',
+        img: 'https://media.giphy.com/media/XEVEDtowHtcTrn00c2/giphy.gif',
+        character: 'rick',
+        bodyweight: true,
+        unilateral: true
+      },
+      {
         title: 'plank tricep extension',
         img: 'https://media.giphy.com/media/lQCdZTKL8NbiU4OViv/giphy.gif',
         character: 'bob',
@@ -80,6 +92,13 @@ export const exercises = {
         title: 'pullover',
         img: 'https://media.giphy.com/media/Lo03vYJTNH6ouIRr4V/giphy.gif',
         character: 'bmo'
+      },
+      {
+        title: 'staggered hand push up',
+        img: 'https://media.giphy.com/media/Qx4RxMfSp4KpTo3vhi/giphy.gif',
+        character: 'rick',
+        bodyweight: true,
+        unilateral: true
       },
       {
         title: 'chest press',
@@ -390,9 +409,22 @@ export const exercises = {
         character: 'prince',
         bodyweight: true,
         unilateral: true
+      },
+      {
+        title: 'supine push up',
+        img: 'https://media.giphy.com/media/kbiJJAnmmJlS8rAV1F/giphy.gif',
+        character: 'rick',
+        bodyweight: true
       }
     ],
     core: [
+      {
+        title: 'rotational lunge',
+        img: 'https://media.giphy.com/media/j1sDCfS8ye0ZlBD3uY/giphy.gif',
+        character: 'rick',
+        bodyweight: true,
+        unilateral: true
+      },
       {
         title: 'commando',
         img: 'https://media.giphy.com/media/XeMer2mEKQauNA6ISm/giphy.gif',
@@ -495,6 +527,17 @@ export const exercises = {
         img: 'https://media.giphy.com/media/elhRhEtr2uYqXuDUfW/giphy.gif',
         character: 'bob',
         bodyweight: true,
+        unilateral: true
+      },
+      {
+        title: 'halo',
+        img: 'https://media.giphy.com/media/H6h2Hvz6JUYSsmbbtO/giphy.gif',
+        character: 'rick'
+      },
+      {
+        title: 'woodchop',
+        img: 'https://media.giphy.com/media/VgfP5T2iOtdRAdqmB2/giphy.gif',
+        character: 'rick',
         unilateral: true
       }
     ]
