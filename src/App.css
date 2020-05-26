@@ -134,7 +134,7 @@ button {
 }
 
 .mainRow {
-  min-height: 70vh;
+  min-height: 75vh;
   border-radius: 2rem;
 }
 .mainRow .column {

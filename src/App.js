@@ -45,6 +45,7 @@ function App() {
   const [showPreview, setShowPreview] = useState(false);
   const [showFAQ, setShowFAQ] = useState(false);
   const [bodyweightOnly, setBodyweightOnly] = useState(false);
+  const [lowImpact, setLowImpact] = useState(false);
   const fullScreenable = document.fullscreenEnabled;
   let exerciseRandomizer = useRef(null);
 
@@ -53,9 +54,9 @@ function App() {
     Object.keys(exercises).map((muscleGroup) => {
       let template = []
       for (let i = 0; i < exercises[muscleGroup].length; i++) {
-        if (!bodyweightOnly || (bodyweightOnly && exercises[muscleGroup][i]['bodyweight'])) {
-          template.push(i);
-        }
+        if (bodyweightOnly && !exercises[muscleGroup][i]['bodyweight']) continue;
+        if (lowImpact && !exercises[muscleGroup][i]['lowimpact']) continue;
+        template.push(i);
       }
       arrays[muscleGroup] = {
         template: template,
@@ -200,12 +201,15 @@ function App() {
         </div>
         <div>
           <div className="row">
-            <label>Do you want bodyweight exercises only? (Best option if you don't have dumbbells)</label>
+            <label>Extra options:<br/>(choose bodyweight only if you don't have dumbbells)<br/>(choose low impact if you just ate a big meal)</label>
           </div>
           <div className="row muscleRow">
             <div className="checkboxWrapper"><label className="checkboxLabel" htmlFor='bodyweight'>BODYWEIGHT ONLY</label><input onChange={() => {
               setBodyweightOnly(!bodyweightOnly);
             }} checked={bodyweightOnly} id='bodyweight' value='Bodyweight only' type="checkbox"/><div className="fakeCheckbox">BODYWEIGHT ONLY</div></div>
+            <div className="checkboxWrapper"><label className="checkboxLabel" htmlFor='lowimpact'>LOW IMPACT</label><input onChange={() => {
+              setLowImpact(!lowImpact);
+            }} checked={lowImpact} id='lowimpact' value='Low impact' type="checkbox"/><div className="fakeCheckbox">LOW IMPACT</div></div>
           </div>
         </div>
       </div>
