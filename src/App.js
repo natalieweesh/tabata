@@ -83,9 +83,9 @@ function App() {
 
   }
 
-  useEffect(() => {
-    printExerciseCounts()
-  })
+  // useEffect(() => {
+  //   printExerciseCounts()
+  // })
 
   useEffect(() => {
     if (paused || finished) {
