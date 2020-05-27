@@ -189,7 +189,12 @@ button {
   border-radius: 1rem;
   padding: 2rem 0;
 }
-
+.statisticsRow .column {
+  padding: 1rem;
+  margin: 1rem;
+  border: 1px solid lightgray;
+  border-radius: 1rem;
+}
 .faq {
   max-width: 800px;
   margin: 0 auto;

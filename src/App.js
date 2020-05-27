@@ -69,23 +69,29 @@ function App() {
   const printExerciseCounts = () => {
     let TRAINERS = ['poopybutthole', 'meeseeks', 'tina', 'bmo', 'bob', 'spongebob', 'rick', 'louise', 'prince'];
     let allExercises = []
+    let tableRows = [];
+    let trainerTableRows = [];
 
     Object.keys(exercises).map(muscle => {
       allExercises = allExercises.concat(exercises[muscle])
-      console.log('total ' + muscle + ' exercises:', exercises[muscle].length)
-      console.log('bodyweight ' + muscle + ' exercises:', exercises[muscle].filter(x => x.bodyweight).length)
-      console.log('low impact ' + muscle + ' exercises:', exercises[muscle].filter(x => x.lowimpact).length)
+      let totalExercises = exercises[muscle].length;
+      let bodyweightExercises = exercises[muscle].filter(x => x.bodyweight).length;
+      let lowimpactExercises = exercises[muscle].filter(x => x.lowimpact).length;
+      let newRow = <tr><td>{muscle === 'arms' ? 'arms + chest' : muscle}</td><td>{totalExercises}</td><td>{bodyweightExercises}</td><td>{lowimpactExercises}</td></tr>
+      tableRows.push(newRow);
     })
     console.log('total exercises: ' + allExercises.length)
     TRAINERS.map(trainer => {
-      console.log('exercises by ' + trainer, allExercises.filter(x => x.character === trainer).length)
+      let trainerExercises = allExercises.filter(x => x.character === trainer).length
+      let newRow = <tr><td>{trainer}</td><td>{trainerExercises}</td></tr>;
+      trainerTableRows.push(newRow)
     })
-
+    return <div className='row statisticsRow'>
+      <p className='exerciseTitle'>that's {allExercises.length} different exercises for you to do!</p>
+      <table className='column'><tbody><tr><td>muscle<br></br>group</td><td>total<br/>exercises</td><td>bodyweight<br/>exercises</td><td>low impact<br/>exercises</td></tr>{tableRows.map(e => e)}</tbody></table>
+      <table className='column '><tbody><tr><td>trainer</td><td>total<br/>exercises</td></tr>{trainerTableRows.map(e => e)}</tbody></table>
+    </div>
   }
-
-  // useEffect(() => {
-  //   printExerciseCounts()
-  // })
 
   useEffect(() => {
     if (paused || finished) {
@@ -314,6 +320,7 @@ function App() {
               </div>
             </div>
           })}
+          <div>{printExerciseCounts()}</div>
         </div>
       }
 
