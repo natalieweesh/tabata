@@ -564,6 +564,13 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'scissor kick',
+        img: 'https://media.giphy.com/media/SqNZWVdqCOPR8Yhdwp/giphy.gif',
+        character: 'louise',
+        bodyweight: true,
+        lowimpact: true
+      },
+      {
         title: 'commando',
         img: 'https://media.giphy.com/media/XeMer2mEKQauNA6ISm/giphy.gif',
         character: 'bob',
@@ -621,6 +628,14 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'side plank dip',
+        img: 'https://media.giphy.com/media/d95Be01OEo1L8xSBEC/giphy.gif',
+        character: 'louise',
+        unilateral: true,
+        bodyweight: true,
+        lowimpact: true
+      },
+      {
         title: 'flutter kick',
         img: 'https://media.giphy.com/media/UtoH18QAUqC5KTspXp/giphy.gif',
         character: 'rick',
@@ -666,6 +681,13 @@ export const exercises = {
         img: 'https://media.giphy.com/media/jt3y986EVb6L1woQS6/giphy.gif',
         character: 'prince',
         bodyweight: true,
+        lowimpact: true
+      },
+      {
+        title: 'half kneeling wood chop',
+        img: 'https://media.giphy.com/media/QuzBummru0m24nihzN/giphy.gif',
+        character: 'louise',
+        unilateral: true,
         lowimpact: true
       },
       {

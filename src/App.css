@@ -199,7 +199,9 @@ button {
 .previewRow p {
   font-size: 1.5rem;
 }
-
+.previewRow .column {
+  width: 22%;
+}
 .fullscreenButton, .fullscreenButton button {
   font-size: 0.5rem;
   width: 4rem;
@@ -247,5 +249,8 @@ button {
   }
   .App {
     padding: 1rem;
+  }
+  .previewRow .column {
+    width: 31%;
   }
 }

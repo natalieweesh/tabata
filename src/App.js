@@ -66,6 +66,27 @@ function App() {
     exerciseRandomizer.current = arrays;
   }
 
+  const printExerciseCounts = () => {
+    let TRAINERS = ['poopybutthole', 'meeseeks', 'tina', 'bmo', 'bob', 'spongebob', 'rick', 'louise', 'prince'];
+    let allExercises = []
+
+    Object.keys(exercises).map(muscle => {
+      allExercises = allExercises.concat(exercises[muscle])
+      console.log('total ' + muscle + ' exercises:', exercises[muscle].length)
+      console.log('bodyweight ' + muscle + ' exercises:', exercises[muscle].filter(x => x.bodyweight).length)
+      console.log('low impact ' + muscle + ' exercises:', exercises[muscle].filter(x => x.lowimpact).length)
+    })
+    console.log('total exercises: ' + allExercises.length)
+    TRAINERS.map(trainer => {
+      console.log('exercises by ' + trainer, allExercises.filter(x => x.character === trainer).length)
+    })
+
+  }
+
+  useEffect(() => {
+    printExerciseCounts()
+  })
+
   useEffect(() => {
     if (paused || finished) {
       clearTimeout(timer.current);
