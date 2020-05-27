@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "17d181a335f28a3e0e50a691bc877f40",
+    "revision": "71d35a5ac994ce764f920f3d9454c2e8",
     "url": "/tabata/index.html"
   },
   {
-    "revision": "fc323d0576268331ee97",
+    "revision": "c15ce53e3b9e66c3a0a8",
     "url": "/tabata/static/css/main.e0628990.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/tabata/static/js/2.bd271a9c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "fc323d0576268331ee97",
-    "url": "/tabata/static/js/main.cb99af6c.chunk.js"
+    "revision": "c15ce53e3b9e66c3a0a8",
+    "url": "/tabata/static/js/main.a28bfbbe.chunk.js"
   },
   {
     "revision": "4469c1d1e27997529a6e",
