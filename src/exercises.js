@@ -70,7 +70,7 @@ export const exercises = {
         img: 'https://media.giphy.com/media/hpMB17GuBirSqGdrDD/giphy.gif',
         character: 'rick',
         bodyweight: true,
-        unilateral: true,
+        unidirectional: true,
         lowimpact: true
       },
       {
@@ -235,6 +235,14 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'step up',
+        img: 'https://media.giphy.com/media/Ri1U98U4AeTpx7yoHD/giphy.gif',
+        character: 'louise',
+        bodyweight: true,
+        unilateral: true,
+        lowimpact: true
+      },
+      {
         title: 'wall sit',
         img: 'https://media.giphy.com/media/iDHzTcVMzTq6zaxhL4/giphy.gif',
         character: 'rick',
@@ -264,6 +272,14 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'reverse lunge leg raise',
+        img: 'https://media.giphy.com/media/RJtaFRohvKbFrHumSW/giphy.gif',
+        character: 'louise',
+        bodyweight: true,
+        unilateral: true,
+        lowimpact: true
+      },
+      {
         title: 'side lunge',
         img: 'https://media.giphy.com/media/h8glgzspdY8A0eNh1D/giphy.gif',
         character: 'rick',
@@ -278,19 +294,18 @@ export const exercises = {
         bodyweight: true
       },
       {
-        title: 'y-t-w',
-        img: 'https://media.giphy.com/media/KeWU4jbTWGiGDgKFxB/giphy.gif',
-        character: 'rick',
-        bodyweight: true,
-        lowimpact: true
-      },
-      {
         title: 'bulgarian split squat',
         img: 'https://media.giphy.com/media/YqhMwl3nSuA2Dr3i5v/giphy.gif',
         unilateral: true,
         character: 'tina',
         bodyweight: true,
         lowimpact: true
+      },
+      {
+        title: 'burpee squat thrust',
+        img: 'https://media.giphy.com/media/lo9oGhgrmEEChrPsDL/giphy.gif',
+        character: 'louise',
+        bodyweight: true
       },
       {
         title: 'high knee',
@@ -351,7 +366,7 @@ export const exercises = {
         lowimpact: true
       },
       {
-        title: 'glute kick back',
+        title: 'donkey kick',
         img: 'https://media.giphy.com/media/JPy2RNHCXbbLGw59pV/giphy.gif',
         unilateral: true,
         character: 'tina',
@@ -379,6 +394,14 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'clamshell',
+        img: 'https://media.giphy.com/media/iiEiV7b6gVvN9WrRIy/giphy.gif',
+        character: 'louise',
+        bodyweight: true,
+        unilateral: true,
+        lowimpact: true
+      },
+      {
         title: 'single leg glute bridge',
         img: 'https://media.giphy.com/media/ZG16HjoxNrCApq0xg3/giphy.gif',
         character: 'rick',
@@ -391,6 +414,13 @@ export const exercises = {
         img: 'https://media.giphy.com/media/YMY5NMCtfOBJXGAtXY/giphy.gif',
         unilateral: true,
         character: 'tina',
+        bodyweight: true,
+        lowimpact: true
+      },
+      {
+        title: 'hip thrust',
+        img: 'https://media.giphy.com/media/L39kt5BZfLtoPQ1FGO/giphy.gif',
+        character: 'louise',
         bodyweight: true,
         lowimpact: true
       },
@@ -412,6 +442,14 @@ export const exercises = {
         title: 'lunge to knee raise',
         img: 'https://media.giphy.com/media/YqnrLFFt8KVfJ7Y09Q/giphy.gif',
         character: 'bmo',
+        unilateral: true,
+        bodyweight: true,
+        lowimpact: true
+      },
+      {
+        title: 'side leg raise',
+        img: 'https://media.giphy.com/media/L3txtROtEn80FoFrwW/giphy.gif',
+        character: 'louise',
         unilateral: true,
         bodyweight: true,
         lowimpact: true
@@ -452,6 +490,13 @@ export const exercises = {
         title: 'superman',
         img: 'https://media.giphy.com/media/lTArkNAXA1Dk9b4PsX/giphy.gif',
         character: 'poopybutthole',
+        bodyweight: true,
+        lowimpact: true
+      },
+      {
+        title: 'y-t-w',
+        img: 'https://media.giphy.com/media/KeWU4jbTWGiGDgKFxB/giphy.gif',
+        character: 'rick',
         bodyweight: true,
         lowimpact: true
       },
@@ -764,10 +809,17 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'roll up',
+        img: 'https://media.giphy.com/media/XD9Jo3QEVHhUVSQWJm/giphy.gif',
+        character: 'louise',
+        bodyweight: true,
+        lowimpact: true
+      },
+      {
         title: 'halo',
         img: 'https://media.giphy.com/media/H6h2Hvz6JUYSsmbbtO/giphy.gif',
         character: 'rick',
-        unilateral: true,
+        unidirectional: true,
         lowimpact: true
       },
       {

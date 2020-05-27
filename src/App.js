@@ -68,6 +68,17 @@ function App() {
 
   const printExerciseCounts = () => {
     let TRAINERS = ['poopybutthole', 'meeseeks', 'tina', 'bmo', 'bob', 'spongebob', 'rick', 'louise', 'prince'];
+    const trainerNames = {
+      'poopybutthole': 'mr. poopybutthole',
+      'meeseeks': 'mr. meeseeks',
+      'tina': 'tina belcher',
+      'bmo': 'bmo',
+      'bob': 'bob belcher',
+      'spongebob': 'spongebob squarepants',
+      'rick': 'rick sanchez',
+      'louise': 'louise belcher',
+      'prince': 'the little prince'
+    }
     let allExercises = []
     let tableRows = [];
     let trainerTableRows = [];
@@ -83,7 +94,7 @@ function App() {
     console.log('total exercises: ' + allExercises.length)
     TRAINERS.map(trainer => {
       let trainerExercises = allExercises.filter(x => x.character === trainer).length
-      let newRow = <tr><td>{trainer}</td><td>{trainerExercises}</td></tr>;
+      let newRow = <tr><td>{trainerNames[trainer]}</td><td>{trainerExercises}</td></tr>;
       trainerTableRows.push(newRow)
     })
     return <div>
@@ -155,6 +166,9 @@ function App() {
       } else {
         if (currentExercise.current['unilateral'] && !resting.current && currentIntervalCount.current === Math.floor(workTime / 2)) {
           speak('switch sides');
+        }
+        if (currentExercise.current['unidirectional'] && !resting.current && currentIntervalCount.current === Math.floor(workTime / 2)) {
+          speak('switch directions');
         }
         if (currentIntervalCount.current - 1 >= 0) {
           currentIntervalCount.current = currentIntervalCount.current - 1
@@ -328,8 +342,7 @@ function App() {
 
       {showFAQ && <div className="row previewRow faq">
         <p><strong>What the squanch is tabata?</strong><br/>Tabata is a type of HIIT workout where you exercise for 20 seconds, rest for 10 seconds, then repeat until your heart falls out.</p>
-        
-        <p><strong>Who are your trainers?</strong><br/>Mr. Poopybutthole, Mr. Meeseeks, Tina Belcher, Spongebob Squarepants, and BMO are some of our distinguished trainers who will be working out with you today. Please note that their form while doing exercises is not always 100% on point so don't hurt yourself trying to copy them exactly.</p>
+        <p><strong>Who are your trainers?</strong><br/>Mr. Poopybutthole, Mr. Meeseeks, Tina Belcher, Spongebob Squarepants, BMO, Bob Belcher, The Little Prince, Rick Sanchez, and Louise Belcher are some of our distinguished trainers who will be working out with you today. Please note that their form while doing exercises is not always 100% on point so don't hurt yourself trying to copy them exactly.</p>
         <p><strong>How does this all work?</strong><br/>Once you pick your preferred work time, rest time, and total workout duration, you can choose the muscle groups you want to focus on for your workout. Then the workout will cycle through each muscle group with a different random exercise each time until your total workout time runs out. Let's get schwifty!</p>
         <p><strong>Who lives in a pineapple under the sea?</strong><br/>Spongebob Squarepants</p>
       </div>}
