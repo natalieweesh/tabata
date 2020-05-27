@@ -307,7 +307,7 @@ function App() {
           {Object.keys(exercises).map(muscle => {
             return <div>
               <p className="exerciseTitle">exercises for your {muscle === 'arms' ? 'arms + chest' : muscle}:</p>
-              <div className="row previewRow">
+              <div className="row previewRow" id={`${muscle}-previews`}>
               {exercises[muscle].map(exercise => {
                 return <div className="column"><p>{exercise['title']}</p><div className="previewImageWrapper">{exercise['bodyweight'] && <div className='bodyweightBanner'>Bodyweight</div>}<img src={exercise['img']} alt={exercise['title']}/></div></div>
               })}
