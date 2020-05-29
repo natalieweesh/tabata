@@ -165,10 +165,12 @@ function App() {
         speak(`${randomPhrase()}. ${currentExercise.current['title']} is next`, 1000)
       } else {
         if (currentExercise.current['unilateral'] && !resting.current && currentIntervalCount.current === Math.floor(workTime / 2)) {
-          speak('switch sides');
+          const switchSidesPrompts = ['switch sides', 'other side'];
+          speak(switchSidesPrompts[Math.floor(Math.random()*switchSidesPrompts.length)])
         }
         if (currentExercise.current['unidirectional'] && !resting.current && currentIntervalCount.current === Math.floor(workTime / 2)) {
-          speak('switch directions');
+          const switchDirectionsPrompts = ['switch directions', 'other direction'];
+          speak(switchDirectionsPrompts[Math.floor(Math.random()*switchDirectionsPrompts.length)])
         }
         if (currentIntervalCount.current - 1 >= 0) {
           currentIntervalCount.current = currentIntervalCount.current - 1
