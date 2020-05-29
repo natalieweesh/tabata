@@ -750,6 +750,12 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'plank pull through',
+        img: 'https://media.giphy.com/media/S6GxagFWOktIYMeBvt/giphy.gif',
+        character: 'louise',
+        lowimpact: true
+      },
+      {
         title: 'side plank knee crunch',
         img: 'https://media.giphy.com/media/dAopngbO6rCLstwOEy/giphy.gif',
         character: 'rick',
@@ -775,6 +781,13 @@ export const exercises = {
         title: 'crunch',
         img: 'https://media.giphy.com/media/J5dtNyZYvFIFFC1fUV/giphy.gif',
         character: 'tina',
+        bodyweight: true,
+        lowimpact: true
+      },
+      {
+        title: 'alternating toe reach',
+        img: 'https://media.giphy.com/media/kFNqdycgDC6XW8BID9/giphy.gif',
+        character: 'louise',
         bodyweight: true,
         lowimpact: true
       },
