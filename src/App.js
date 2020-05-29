@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ReactNoSleep from 'react-no-sleep';
 import { exercises } from './exercises';
+import gif from './transparentgif.gif';
 import './App.css';
 
 const formatTime = (seconds) => {
@@ -77,7 +78,8 @@ function App() {
       'spongebob': 'spongebob squarepants',
       'rick': 'rick sanchez',
       'louise': 'louise belcher',
-      'prince': 'the little prince'
+      'prince': 'the little prince',
+      'finn': 'finn the human'
     }
     let allExercises = []
     let tableRows = [];
@@ -184,7 +186,7 @@ function App() {
         document.documentElement.requestFullscreen();
       }}>Full screen mode</button>
     }
-      {!startedWorkout && <p className="exerciseTitle pageTitle">It's tabata time!</p>}
+      {!startedWorkout && <div><img className="titleImage pageTitle" src={gif} alt="It's Tabata Time!"/></div>}
       {!startedWorkout &&
       <div className="settingsRow">
         <div className="row">

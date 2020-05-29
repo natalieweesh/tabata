@@ -66,6 +66,12 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'dumbbell shrug',
+        img: 'https://media.giphy.com/media/L3FSdg4lDJ6WREqxxG/giphy.gif',
+        character: 'finn',
+        lowimpact: true
+      },
+      {
         title: 'arm circle',
         img: 'https://media.giphy.com/media/hpMB17GuBirSqGdrDD/giphy.gif',
         character: 'rick',
@@ -222,6 +228,12 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'jump switch lunge',
+        img: 'https://media.giphy.com/media/mCm0ryWq5LD7DUn2KV/giphy.gif',
+        character: 'finn',
+        bodyweight: true
+      },
+      {
         title: 'jumping jack',
         img: 'https://media.giphy.com/media/lNWbCKbffqCIzY8RR1/giphy.gif',
         character: 'poopybutthole',
@@ -250,6 +262,13 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'lunge to hop',
+        img: 'https://media.giphy.com/media/gH1hZkJ6kzcYvevXnB/giphy.gif',
+        character: 'finn',
+        bodyweight: true,
+        unilateral: true
+      },
+      {
         title: 'squat',
         img: 'https://media.giphy.com/media/XEZsDl0zybBbwJQV07/giphy.gif',
         character: 'tina',
@@ -272,7 +291,7 @@ export const exercises = {
         lowimpact: true
       },
       {
-        title: 'reverse lunge leg raise',
+        title: 'reverse plank leg raise',
         img: 'https://media.giphy.com/media/RJtaFRohvKbFrHumSW/giphy.gif',
         character: 'louise',
         bodyweight: true,
@@ -487,7 +506,7 @@ export const exercises = {
         lowimpact: true
       },
       {
-        title: 'superman',
+        title: 'back extension',
         img: 'https://media.giphy.com/media/lTArkNAXA1Dk9b4PsX/giphy.gif',
         character: 'poopybutthole',
         bodyweight: true,
@@ -511,6 +530,13 @@ export const exercises = {
         title: 'upright row',
         img: 'https://media.giphy.com/media/h7tvdrSjSzmB3XUPgH/giphy.gif',
         character: 'tina',
+        lowimpact: true
+      },
+      {
+        title: 'superman',
+        img: 'https://media.giphy.com/media/LOhu6dQfzl2zRK8sZU/giphy.gif',
+        character: 'finn',
+        bodyweight: true,
         lowimpact: true
       },
       {
@@ -643,6 +669,13 @@ export const exercises = {
         bodyweight: true
       },
       {
+        title: 'extended plank',
+        img: 'https://media.giphy.com/media/darqZUmc1OV6tnDrR5/giphy.gif',
+        character: 'finn',
+        bodyweight: true,
+        lowimpact: true
+      },
+      {
         title: 'side plank reach through',
         img: 'https://media.giphy.com/media/jTMJGbeTouSoplSCr6/giphy.gif',
         character: 'rick',
@@ -684,6 +717,13 @@ export const exercises = {
         title: 'flutter kick',
         img: 'https://media.giphy.com/media/UtoH18QAUqC5KTspXp/giphy.gif',
         character: 'rick',
+        bodyweight: true,
+        lowimpact: true
+      },
+      {
+        title: 'alternating side plank rotation',
+        img: 'https://media.giphy.com/media/ch2tt1TeUR6Tisy2rM/giphy.gif',
+        character: 'finn',
         bodyweight: true,
         lowimpact: true
       },

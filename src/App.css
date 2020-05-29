@@ -238,6 +238,10 @@ button {
   line-height: 2rem;
 }
 
+.titleImage {
+  max-width: 400px;
+}
+
 @media only screen and (max-width: 888px) {
   .exerciseTitle, .countdownTitle, button {
     font-size: 1.75rem;
