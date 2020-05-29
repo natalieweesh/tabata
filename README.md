@@ -43,12 +43,6 @@ They'll guide you through 20 seconds of work and 10 seconds of rest doing fun ex
 </table>
 
 
-### Lunges
-
-
-### Jumping Jacks
-
-
 and more!
 
 You can customize your workout length, work time, and rest time, and muscle groups to focus on!
