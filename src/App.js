@@ -308,6 +308,7 @@ function App() {
               setPaused(!paused)
               if (!startedWorkout) {
                 setStartedWorkout(true);
+                setTimeout(window.scroll(0, 0), 200);
               }
               if (!isOn) {
                 enable();
