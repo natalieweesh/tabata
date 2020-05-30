@@ -861,6 +861,13 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'bear crawl',
+        img: 'https://media.giphy.com/media/Rl6H5uk1fgtxVCZ00o/giphy.gif',
+        character: 'finn',
+        bodyweight: true,
+        lowimpact: true
+      },
+      {
         title: 'forearm plank knee to elbow',
         img: 'https://media.giphy.com/media/elhRhEtr2uYqXuDUfW/giphy.gif',
         character: 'bob',
