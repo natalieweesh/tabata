@@ -825,6 +825,13 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'leg raise',
+        img: 'https://media.giphy.com/media/WUNhAwHbuPaFcl1hs2/giphy.gif',
+        character: 'finn',
+        bodyweight: true,
+        lowimpact: true
+      },
+      {
         title: 'alternating toe reach',
         img: 'https://media.giphy.com/media/kFNqdycgDC6XW8BID9/giphy.gif',
         character: 'louise',
