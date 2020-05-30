@@ -437,6 +437,12 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'kettlebell swing',
+        img: 'https://media.giphy.com/media/cj8H7bw91h5jdsT8PF/giphy.gif',
+        character: 'finn',
+        lowimpact: true
+      },
+      {
         title: 'hip thrust',
         img: 'https://media.giphy.com/media/L39kt5BZfLtoPQ1FGO/giphy.gif',
         character: 'louise',
@@ -470,6 +476,13 @@ export const exercises = {
         img: 'https://media.giphy.com/media/L3txtROtEn80FoFrwW/giphy.gif',
         character: 'louise',
         unilateral: true,
+        bodyweight: true,
+        lowimpact: true
+      },
+      {
+        title: 'prone leg extension',
+        img: 'https://media.giphy.com/media/gg26aqNPdNNtiQe37n/giphy.gif',
+        character: 'finn',
         bodyweight: true,
         lowimpact: true
       },
@@ -610,6 +623,13 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'swimmer',
+        img: 'https://media.giphy.com/media/J2mFTpEmzh2ITjfiAU/giphy.gif',
+        character: 'finn',
+        bodyweight: true,
+        lowimpact: true
+      },
+      {
         title: 'plank reach to down dog toe touch',
         img: 'https://media.giphy.com/media/L3WFDllHa0UJxS6Lyj/giphy.gif',
         character: 'prince',
@@ -742,6 +762,14 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'side plank hip abduction',
+        img: 'https://media.giphy.com/media/d54XDJ52klOjOYqxbB/giphy.gif',
+        character: 'finn',
+        bodyweight: true,
+        unilateral: true,
+        lowimpact: true
+      },
+      {
         title: 'butt up',
         img: 'https://media.giphy.com/media/RhezbxwMxfOPWBv0q2/giphy.gif',
         character: 'rick',
@@ -766,6 +794,14 @@ export const exercises = {
         img: 'https://media.giphy.com/media/jt3y986EVb6L1woQS6/giphy.gif',
         character: 'prince',
         bodyweight: true,
+        lowimpact: true
+      },
+      {
+        title: 'high plank bird dog',
+        img: 'https://media.giphy.com/media/lPpXhUx6RxTiKHOgKw/giphy.gif',
+        character: 'finn',
+        bodyweight: true,
+        unilateral: true,
         lowimpact: true
       },
       {
@@ -801,6 +837,13 @@ export const exercises = {
         character: 'rick',
         bodyweight: true,
         unilateral: true,
+        lowimpact: true
+      },
+      {
+        title: 'diagonal in and out',
+        img: 'https://media.giphy.com/media/lnfwONWSHiJYLvNql5/giphy.gif',
+        character: 'finn',
+        bodyweight: true,
         lowimpact: true
       },
       {
@@ -846,6 +889,14 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'oblique v up',
+        img: 'https://media.giphy.com/media/KZvvqrRzp0Zwjhf60c/giphy.gif',
+        character: 'finn',
+        bodyweight: true,
+        unilateral: true,
+        lowimpact: true
+      },
+      {
         title: 'toe touch',
         img: 'https://media.giphy.com/media/UoeJ3obguCjCR4nisU/giphy.gif',
         character: 'prince',
@@ -883,6 +934,13 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'bear plank shoulder tap',
+        img: 'https://media.giphy.com/media/IaVuGTCrFg0wWsQHmr/giphy.gif',
+        character: 'finn',
+        bodyweight: true,
+        lowimpact: true
+      },
+      {
         title: 'halo',
         img: 'https://media.giphy.com/media/H6h2Hvz6JUYSsmbbtO/giphy.gif',
         character: 'rick',
@@ -895,6 +953,12 @@ export const exercises = {
         character: 'rick',
         unilateral: true,
         lowimpact: true
+      },
+      {
+        title: 'plank mogul',
+        img: 'https://media.giphy.com/media/jTZ0BABO4lMrRNzAq9/giphy.gif',
+        character: 'finn',
+        bodyweight: true
       }
     ]
   }
