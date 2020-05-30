@@ -68,7 +68,7 @@ function App() {
   }
 
   const printExerciseCounts = () => {
-    let TRAINERS = ['poopybutthole', 'meeseeks', 'tina', 'bmo', 'bob', 'spongebob', 'rick', 'louise', 'prince'];
+    let TRAINERS = ['poopybutthole', 'meeseeks', 'tina', 'bmo', 'bob', 'spongebob', 'rick', 'louise', 'prince', 'finn'];
     const trainerNames = {
       'poopybutthole': 'mr. poopybutthole',
       'meeseeks': 'mr. meeseeks',
