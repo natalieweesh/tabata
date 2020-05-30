@@ -225,6 +225,9 @@ function App() {
               <option value="1200">20 minutes</option>
               <option value="1500">25 minutes</option>
               <option value="1800">30 minutes</option>
+              <option value="2100">35 minutes</option>
+              <option value="2400">40 minutes</option>
+              <option value="2700">45 minutes</option>
             </select>
           </div>
         </div>
