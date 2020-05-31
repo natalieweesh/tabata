@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b69d8954b5e455bd82d5d9721b18ae92",
+    "revision": "5ec322eebd456050347c0e2727b97c28",
     "url": "/tabata/index.html"
   },
   {
-    "revision": "d7fa529c16b7cc88db5f",
-    "url": "/tabata/static/css/main.a9b3fc02.chunk.css"
+    "revision": "f2cfb97d21a7828c1275",
+    "url": "/tabata/static/css/main.a55e13b0.chunk.css"
   },
   {
     "revision": "1eb11eba5e9ac8dd5a5c",
@@ -16,15 +16,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/tabata/static/js/2.ae6933e4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d7fa529c16b7cc88db5f",
-    "url": "/tabata/static/js/main.4d5378a2.chunk.js"
+    "revision": "f2cfb97d21a7828c1275",
+    "url": "/tabata/static/js/main.6368dbcd.chunk.js"
   },
   {
     "revision": "4469c1d1e27997529a6e",
     "url": "/tabata/static/js/runtime-main.b564644e.js"
   },
   {
-    "revision": "0fb75fad3751794f28c9369223d9684e",
-    "url": "/tabata/static/media/transparentgif.0fb75fad.gif"
+    "revision": "09577f713d31f8d36ba6895d7a89e7fa",
+    "url": "/tabata/static/media/titleimage.09577f71.gif"
   }
 ]);
