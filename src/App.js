@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ReactNoSleep from 'react-no-sleep';
 import { exercises } from './exercises';
-import gif from './transparentgif.gif';
+import gif from './titleimage.gif';
 import './App.css';
 
 const formatTime = (seconds) => {
