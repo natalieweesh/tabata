@@ -295,7 +295,6 @@ export const exercises = {
         img: 'https://media.giphy.com/media/RJtaFRohvKbFrHumSW/giphy.gif',
         character: 'louise',
         bodyweight: true,
-        unilateral: true,
         lowimpact: true
       },
       {
