@@ -48,6 +48,7 @@ function App() {
   const [bodyweightOnly, setBodyweightOnly] = useState(false);
   const [lowImpact, setLowImpact] = useState(false);
   const fullScreenable = document.fullscreenEnabled;
+  const [fullScreenOn, setFullScreenOn] = useState(false);
   let exerciseRandomizer = useRef(null);
 
   const generateExerciseRandomizer = () => {
@@ -183,8 +184,14 @@ function App() {
   return (
     <div className="App">
     {fullScreenable && <button className='fullscreenButton restText' onClick={() => {
-        document.documentElement.requestFullscreen();
-      }}>Full screen mode</button>
+      if (fullScreenOn) {
+        document.exitFullscreen()
+        setFullScreenOn(false)
+      } else {
+        document.documentElement.requestFullscreen()
+        setFullScreenOn(true)
+      }
+      }}>{fullScreenOn ? 'Exit full screen' : 'Full screen mode'}</button>
     }
       {!startedWorkout && <div><img className="titleImage pageTitle" src={gif} alt="It's Tabata Time!"/></div>}
       {!startedWorkout &&
@@ -261,7 +268,7 @@ function App() {
               setLowImpact(!lowImpact);
             }} checked={lowImpact} id='lowimpact' value='Low impact' type="checkbox"/><div className="fakeCheckbox">LOW IMPACT</div></div>
           </div>
-          <label>(choose bodyweight only if you don't have dumbbells)<br/>(choose low impact if you just ate a big meal)</label>
+          <label>{bodyweightOnly ? "Turn up the volume and let's go!" : "Grab your dumbells, turn up the volume, and let's go!"}</label>
         </div>
       </div>
       }
@@ -292,7 +299,7 @@ function App() {
         </div>
       )}
 
-      {!currentExercise.current && startedWorkout && <div><div className="row progressRow">
+      {!currentExercise.current && startedWorkout && !finished && <div><div className="row progressRow">
             <div className="progressBar"><div className="fill" style={{width: `${parseInt(theTime / ((restTime + workTime) * rounds.current) * 100)}%`}}></div></div>
           </div><div className="row restText mainRow"><p className="exerciseTitle centerize">Turn up the volume!<br/><br/>Let's get ready to rumble...</p></div></div>}
 
