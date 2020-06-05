@@ -9,26 +9,26 @@ They'll guide you through 20 seconds of work and 10 seconds of rest doing fun ex
 <table>
   <tr>
     <td>
-      Chest Presses
+      Shoulder Presses
     </td>
-    <td>Lunges</td>
+    <td>Reverse Lunges</td>
     <td>Jumping Jacks</td>
   </tr>
   <tr>
-    <td><img src="https://media.giphy.com/media/SUtRTnS36VFpC12IrT/giphy.gif" width="300"/></td>
-    <td><img src="https://media.giphy.com/media/QWR3SDoEL6ggzL9rub/giphy.gif" width="300"/></td>
-    <td><img src="https://media.giphy.com/media/lNWbCKbffqCIzY8RR1/giphy.gif" width="300"/></td>
+    <td><img src="https://media.giphy.com/media/Lm5MYnTZOeqVgqe1iv/giphy.gif" width="300"/></td>
+    <td><img src="https://media.giphy.com/media/f7GXjiX8mN4INgTo2J/giphy.gif" width="300"/></td>
+    <td><img src="https://media.giphy.com/media/KDVESsDjcdHJvy367Y/giphy.gif" width="300"/></td>
   </tr>
   
   <tr>
     <td>Clean and Press</td>
     <td>Hip Thrusts</td>
-    <td>Inner Thigh Leg Raises</td>
+    <td>Front Shoulder Raises</td>
   </tr>
   <tr>
     <td><img src="https://media.giphy.com/media/JmJVxfWflfCHVs6rdg/giphy.gif" width="300"/></td>
     <td><img src="https://media.giphy.com/media/L39kt5BZfLtoPQ1FGO/giphy.gif" width="300"/></td>
-    <td><img src="https://media.giphy.com/media/Y1v6Ohkohe4yjM2F4r/giphy.gif" width="300"/></td>
+    <td><img src="https://media.giphy.com/media/LOtLLICZiRm44aEQej/giphy.gif" width="300"/></td>
   </tr>
   <tr>
     <td>Burpees</td>
