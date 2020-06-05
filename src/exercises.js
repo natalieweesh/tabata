@@ -16,7 +16,8 @@ export const exercises = {
         title: 'skull crusher',
         img: 'https://media.giphy.com/media/MDZcVlT2646sjSPqLW/giphy.gif',
         character: 'tina',
-        lowimpact: true
+        lowimpact: true,
+        singleweight: true
       },
       {
         title: 'curl + press',
@@ -201,13 +202,15 @@ export const exercises = {
         img: 'https://media.giphy.com/media/eLv4iOPVrSI0PoNA1Z/giphy.gif',
         character: 'prince',
         unilateral: true,
-        lowimpact: true
+        lowimpact: true,
+        singleweight: true
       },
       {
         title: 'overhead tricep extension',
         img: 'https://media.giphy.com/media/KFhMWbv34mWIZuuWn8/giphy.gif',
         character: 'bob',
-        lowimpact: true
+        lowimpact: true,
+        singleweight: true
       },
   
       {
@@ -445,7 +448,8 @@ export const exercises = {
         title: 'kettlebell swing',
         img: 'https://media.giphy.com/media/cj8H7bw91h5jdsT8PF/giphy.gif',
         character: 'finn',
-        lowimpact: true
+        lowimpact: true,
+        singleweight: true
       },
       {
         title: 'hip thrust',
@@ -520,6 +524,7 @@ export const exercises = {
         title: 'plank row',
         img: 'https://media.giphy.com/media/l4M6n87ScoBRUrjMBD/giphy.gif',
         character: 'prince',
+        unilateral: true,
         bodyweight: true,
         lowimpact: true
       },
@@ -590,7 +595,8 @@ export const exercises = {
         img: 'https://media.giphy.com/media/LpXU1W5qCgKoAF0p6S/giphy.gif',
         unilateral: true,
         character: 'spongebob',
-        lowimpact: true
+        lowimpact: true,
+        singleweight: true
       },
       {
         title: 'posterior plank',
@@ -713,7 +719,8 @@ export const exercises = {
         img: 'https://media.giphy.com/media/kI407wXwNjvmG56GvQ/giphy.gif',
         unilateral: true,
         character: 'tina',
-        lowimpact: true
+        lowimpact: true,
+        singleweight: true
       },
       {
         title: 'plank shoulder tap',
@@ -814,7 +821,8 @@ export const exercises = {
         img: 'https://media.giphy.com/media/QuzBummru0m24nihzN/giphy.gif',
         character: 'louise',
         unilateral: true,
-        lowimpact: true
+        lowimpact: true,
+        singleweight: true
       },
       {
         title: 'heel tap crunch',
@@ -834,7 +842,8 @@ export const exercises = {
         title: 'plank pull through',
         img: 'https://media.giphy.com/media/S6GxagFWOktIYMeBvt/giphy.gif',
         character: 'louise',
-        lowimpact: true
+        lowimpact: true,
+        singleweight: true
       },
       {
         title: 'side plank knee crunch',
@@ -950,14 +959,16 @@ export const exercises = {
         img: 'https://media.giphy.com/media/H6h2Hvz6JUYSsmbbtO/giphy.gif',
         character: 'rick',
         unidirectional: true,
-        lowimpact: true
+        lowimpact: true,
+        singleweight: true
       },
       {
         title: 'woodchop',
         img: 'https://media.giphy.com/media/VgfP5T2iOtdRAdqmB2/giphy.gif',
         character: 'rick',
         unilateral: true,
-        lowimpact: true
+        lowimpact: true,
+        singleweight: true
       },
       {
         title: 'plank mogul',

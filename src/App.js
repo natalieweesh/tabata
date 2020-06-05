@@ -46,6 +46,7 @@ function App() {
   const [showPreview, setShowPreview] = useState(false);
   const [showFAQ, setShowFAQ] = useState(false);
   const [bodyweightOnly, setBodyweightOnly] = useState(false);
+  const [singleWeightOnly, setSingleWeightOnly] = useState(false);
   const [lowImpact, setLowImpact] = useState(false);
   const fullScreenable = document.fullscreenEnabled;
   const [fullScreenOn, setFullScreenOn] = useState(false);
@@ -57,6 +58,7 @@ function App() {
       let template = []
       for (let i = 0; i < exercises[muscleGroup].length; i++) {
         if (bodyweightOnly && !exercises[muscleGroup][i]['bodyweight']) continue;
+        if (singleWeightOnly && !(exercises[muscleGroup][i]['singleweight'] || exercises[muscleGroup][i]['bodyweight'])) continue;
         if (lowImpact && !exercises[muscleGroup][i]['lowimpact']) continue;
         template.push(i);
       }
@@ -263,12 +265,17 @@ function App() {
           <div className="row muscleRow">
             <div className="checkboxWrapper"><label className="checkboxLabel" htmlFor='bodyweight'>BODYWEIGHT ONLY</label><input onChange={() => {
               setBodyweightOnly(!bodyweightOnly);
+              setSingleWeightOnly(false);
             }} checked={bodyweightOnly} id='bodyweight' value='Bodyweight only' type="checkbox"/><div className="fakeCheckbox">BODYWEIGHT ONLY</div></div>
+            <div className="checkboxWrapper"><label className="checkboxLabel" htmlFor='singleweight'>I ONLY HAVE 1 DUMBBELL</label><input onChange={() => {
+              setSingleWeightOnly(!singleWeightOnly);
+              setBodyweightOnly(false);
+            }} checked={singleWeightOnly} id='singleweight' value='Singleweight only' type="checkbox"/><div className="fakeCheckbox">I ONLY HAVE 1 DUMBBELL</div></div>
             <div className="checkboxWrapper"><label className="checkboxLabel" htmlFor='lowimpact'>LOW IMPACT</label><input onChange={() => {
               setLowImpact(!lowImpact);
             }} checked={lowImpact} id='lowimpact' value='Low impact' type="checkbox"/><div className="fakeCheckbox">LOW IMPACT</div></div>
           </div>
-          <label>{bodyweightOnly ? "Turn up the volume and let's go!" : "Grab your dumbells, turn up the volume, and let's go!"}</label>
+          <label>{bodyweightOnly && "Turn up the volume and let's go!"}{singleWeightOnly && "Grab your dumbbell, turn up the volume, and let's go!"}{!bodyweightOnly && !singleWeightOnly && "Grab your dumbbells, turn up the volume, and let's go!"}</label>
         </div>
       </div>
       }
