@@ -88,10 +88,25 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'lawnmower lunge',
+        img: 'https://media.giphy.com/media/jqI6Hrw2Rax8hGsmRi/giphy.gif',
+        character: 'tina',
+        singleweight: true,
+        unilateral: true,
+        lowimpact: true
+      },
+      {
         title: 'front shoulder raise',
         img: 'https://media.giphy.com/media/LOtLLICZiRm44aEQej/giphy.gif',
         character: 'bob',
         lowimpact: true
+      },
+      {
+        title: 'tricep kick dip',
+        img: 'https://media.giphy.com/media/hSFmSDlwR0NRWPEytu/giphy.gif',
+        character: 'tina',
+        lowimpact: true,
+        bodyweight: true
       },
       {
         title: 'reverse curl',
@@ -116,6 +131,14 @@ export const exercises = {
         img: 'https://media.giphy.com/media/lNR0BNO0wsBce5zOki/giphy.gif',
         character: 'rick',
         lowimpact: true
+      },
+      {
+        title: 'side plank front + side raise',
+        img: 'https://media.giphy.com/media/QVVUbn7iHUOdy2xc8u/giphy.gif',
+        character: 'tina',
+        lowimpact: true,
+        singleweight: true,
+        unilateral: true
       },
       {
         title: 'side push up',
@@ -171,6 +194,14 @@ export const exercises = {
         img: 'https://media.giphy.com/media/Phg6TLgERam8Pi8N0W/giphy.gif',
         character: 'bob',
         lowimpact: true
+      },
+      {
+        title: 'single arm lunge press',
+        img: 'https://media.giphy.com/media/STTLz7DWUB1xC5Grq1/giphy.gif',
+        character: 'tina',
+        lowimpact: true,
+        unilateral: true,
+        singlweight: true
       },
       {
         title: 'burpee',
@@ -961,6 +992,14 @@ export const exercises = {
         unidirectional: true,
         lowimpact: true,
         singleweight: true
+      },
+      {
+        title: 'windmill',
+        img: 'https://media.giphy.com/media/Vzq4RecFNXj5Hb4mNp/giphy.gif',
+        character: 'tina',
+        unilateral: true,
+        singleweight: true,
+        lowimpact: true
       },
       {
         title: 'woodchop',
