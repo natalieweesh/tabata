@@ -230,8 +230,8 @@ export const exercises = {
       },
       {
         title: 'power snatch',
-        img: 'https://media.giphy.com/media/eLv4iOPVrSI0PoNA1Z/giphy.gif',
-        character: 'prince',
+        img: 'https://media.giphy.com/media/dCXnHt16lwAp6Z23r7/giphy.gif',
+        character: 'meeseeks',
         unilateral: true,
         lowimpact: true,
         singleweight: true
