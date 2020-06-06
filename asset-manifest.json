@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/tabata/static/css/main.a55e13b0.chunk.css",
-    "main.js": "/tabata/static/js/main.1f0d3f35.chunk.js",
-    "main.js.map": "/tabata/static/js/main.1f0d3f35.chunk.js.map",
+    "main.js": "/tabata/static/js/main.0262fe0c.chunk.js",
+    "main.js.map": "/tabata/static/js/main.0262fe0c.chunk.js.map",
     "runtime-main.js": "/tabata/static/js/runtime-main.b564644e.js",
     "runtime-main.js.map": "/tabata/static/js/runtime-main.b564644e.js.map",
     "static/js/2.ae6933e4.chunk.js": "/tabata/static/js/2.ae6933e4.chunk.js",
     "static/js/2.ae6933e4.chunk.js.map": "/tabata/static/js/2.ae6933e4.chunk.js.map",
     "index.html": "/tabata/index.html",
-    "precache-manifest.5d459063be898fcd7d83c5bfdc082f4c.js": "/tabata/precache-manifest.5d459063be898fcd7d83c5bfdc082f4c.js",
+    "precache-manifest.da922a84eabcbdc2851b8df6f0451a28.js": "/tabata/precache-manifest.da922a84eabcbdc2851b8df6f0451a28.js",
     "service-worker.js": "/tabata/service-worker.js",
     "static/css/main.a55e13b0.chunk.css.map": "/tabata/static/css/main.a55e13b0.chunk.css.map",
     "static/js/2.ae6933e4.chunk.js.LICENSE.txt": "/tabata/static/js/2.ae6933e4.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.b564644e.js",
     "static/js/2.ae6933e4.chunk.js",
     "static/css/main.a55e13b0.chunk.css",
-    "static/js/main.1f0d3f35.chunk.js"
+    "static/js/main.0262fe0c.chunk.js"
   ]
 }
