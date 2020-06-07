@@ -50,6 +50,7 @@ function App() {
   const [lowImpact, setLowImpact] = useState(false);
   const fullScreenable = document.fullscreenEnabled;
   const [fullScreenOn, setFullScreenOn] = useState(false);
+  let history = useRef([]);
   let exerciseRandomizer = useRef(null);
 
   const generateExerciseRandomizer = () => {
@@ -97,7 +98,6 @@ function App() {
       let newRow = <tr><td>{muscle === 'arms' ? 'arms + chest' : muscle}</td><td>{totalExercises}</td><td>{bodyweightExercises}</td><td>{lowimpactExercises}</td></tr>
       tableRows.push(newRow);
     })
-    console.log('total exercises: ' + allExercises.length)
     TRAINERS.map(trainer => {
       let trainerExercises = allExercises.filter(x => x.character === trainer).length
       let newRow = <tr><td>{trainerNames[trainer]}</td><td>{trainerExercises}</td></tr>;
@@ -141,6 +141,7 @@ function App() {
       }
       currentIntervalCount.current = restTime;
       speak(`let's do this! first exercise is ${currentExercise.current['title']}`)
+      history.current.push(currentExercise.current)
     }
     timer.current = setTimeout(() => {
       setTheTime(theTime + 1)
@@ -169,6 +170,7 @@ function App() {
         }
         currentIntervalCount.current = restTime
         speak(`${randomPhrase()}. ${currentExercise.current['title']} is next`, 1000)
+        history.current.push(currentExercise.current)
       } else {
         if (currentExercise.current['unilateral'] && !resting.current && currentIntervalCount.current === Math.floor(workTime / 2)) {
           const switchSidesPrompts = ['switch sides', 'other side'];
@@ -316,6 +318,17 @@ function App() {
         <img src="https://media.giphy.com/media/ZY8BVlXHZqMal62QS3/giphy.gif" alt="it's peanut butter jelly time" />
         <p>Total workout time: {formatTime(theTime)}</p>
         <p>Total rounds finished: {currentRound.current + 1}</p>
+        <p className="exerciseTitle">Look at all the exercises you did!</p>
+        <div className="row previewRow">
+          {history.current.map(e => {
+            return <div className="column">
+              <p>{e.title}</p>
+              <div className="previewImageWrapper">
+                <img src={e.img} alt={e.title}/>
+              </div>
+            </div>
+          })}
+        </div>
       </div>}
 
       {!finished &&
