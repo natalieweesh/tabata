@@ -20,6 +20,13 @@ export const exercises = {
         singleweight: true
       },
       {
+        title: 'steering wheel',
+        img: 'https://media.giphy.com/media/H4hIiVofPBBvKMRBpZ/giphy.gif',
+        character: 'jake',
+        lowimpact: true,
+        singleweight: true
+      },
+      {
         title: 'curl + press',
         img: 'https://media.giphy.com/media/Wp7MFoLzg7EMeC0S4n/giphy.gif',
         character: 'spongebob',
@@ -74,7 +81,7 @@ export const exercises = {
       },
       {
         title: 'arm circle',
-        img: 'https://media.giphy.com/media/hpMB17GuBirSqGdrDD/giphy.gif',
+        img: 'https://media.giphy.com/media/gh6klcxeGugJt0L2lQ/giphy.gif',
         character: 'rick',
         bodyweight: true,
         unidirectional: true,
@@ -223,8 +230,8 @@ export const exercises = {
       },
       {
         title: 'wide grip pushup',
-        img: 'https://media.giphy.com/media/iFt57qzEXZisX6JcZ7/giphy.gif',
-        character: 'tina',
+        img: 'https://media.giphy.com/media/KE58J4tPHWCGFfuzcg/giphy.gif',
+        character: 'jake',
         bodyweight: true,
         lowimpact: true
       },
@@ -274,6 +281,13 @@ export const exercises = {
         bodyweight: true
       },
       {
+        title: 'donkey kick',
+        img: 'https://media.giphy.com/media/Vho30XKJpPMdiFKSzR/giphy.gif',
+        character: 'jake',
+        bodyweight: true,
+
+      },
+      {
         title: 'calf raise',
         img: 'https://media.giphy.com/media/QyhLeRDWoIusTLMyNk/giphy.gif',
         character: 'bmo',
@@ -301,6 +315,12 @@ export const exercises = {
         character: 'finn',
         bodyweight: true,
         unilateral: true
+      },
+      {
+        title: 'kneeling squat jump',
+        img: 'https://media.giphy.com/media/eIZqQKs482Y8z455tg/giphy.gif',
+        character: 'jake',
+        bodyweight: true
       },
       {
         title: 'squat',
@@ -472,7 +492,7 @@ export const exercises = {
         lowimpact: true
       },
       {
-        title: 'donkey kick',
+        title: 'donkey glute kick',
         img: 'https://media.giphy.com/media/KdwhlIZLDN4PryQYQp/giphy.gif',
         unilateral: true,
         character: 'poopybutthole',
@@ -497,9 +517,9 @@ export const exercises = {
       },
       {
         title: 'fire hydrant',
-        img: 'https://media.giphy.com/media/YMY5NMCtfOBJXGAtXY/giphy.gif',
+        img: 'https://media.giphy.com/media/Y4ELYnfs6c0ZHsXvlB/giphy.gif',
         unilateral: true,
-        character: 'tina',
+        character: 'jake',
         bodyweight: true,
         lowimpact: true
       },
@@ -526,15 +546,15 @@ export const exercises = {
       },
       {
         title: 'glute bridge walk out',
-        img: 'https://media.giphy.com/media/cir6FkDe7MXgmffNcd/giphy.gif',
-        character: 'tina',
+        img: 'https://media.giphy.com/media/YSqSbS0WWAY5ym9DeG/giphy.gif',
+        character: 'jake',
         bodyweight: true,
         lowimpact: true
       },
       {
         title: 'lunge to knee raise',
-        img: 'https://media.giphy.com/media/YqnrLFFt8KVfJ7Y09Q/giphy.gif',
-        character: 'bmo',
+        img: 'https://media.giphy.com/media/XI1bIathTUkGEQBqYK/giphy.gif',
+        character: 'jake',
         unilateral: true,
         bodyweight: true,
         lowimpact: true
@@ -755,8 +775,8 @@ export const exercises = {
       },
       {
         title: 'bicycle crunch',
-        img: 'https://media.giphy.com/media/Y1Xw3rwSyrW0CcdfKn/giphy.gif',
-        character: 'tina',
+        img: 'https://media.giphy.com/media/f9f0hGMSXFx5J4UOvE/giphy.gif',
+        character: 'jake',
         bodyweight: true,
         lowimpact: true
       },
@@ -813,6 +833,14 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'side crunch',
+        img: 'https://media.giphy.com/media/dy3rgOkqSYyppZsfLR/giphy.gif',
+        character: 'jake',
+        bodyweight: true,
+        unilateral: true,
+        lowimpact: true
+      },
+      {
         title: 'flutter kick',
         img: 'https://media.giphy.com/media/UtoH18QAUqC5KTspXp/giphy.gif',
         character: 'rick',
@@ -863,8 +891,8 @@ export const exercises = {
       },
       {
         title: 'sit up',
-        img: 'https://media.giphy.com/media/TiCqf0dCsS0UiSLWqd/giphy.gif',
-        character: 'tina',
+        img: 'https://media.giphy.com/media/VCnSALmv549aTqPb4e/giphy.gif',
+        character: 'jake',
         bodyweight: true,
         lowimpact: true
       },
@@ -950,6 +978,13 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'twisting sit up',
+        img: 'https://media.giphy.com/media/XbgyHuI7cnXJfprHeL/giphy.gif',
+        character: 'jake',
+        bodyweight: true,
+        lowimpact: true
+      },
+      {
         title: 'crunch',
         img: 'https://media.giphy.com/media/J5dtNyZYvFIFFC1fUV/giphy.gif',
         character: 'tina',
@@ -1013,6 +1048,13 @@ export const exercises = {
         character: 'bob',
         bodyweight: true,
         unilateral: true,
+        lowimpact: true
+      },
+      {
+        title: 'reverse crunch',
+        img: 'https://media.giphy.com/media/H6Dhmc80VkqZQqHF8X/giphy.gif',
+        character: 'jake',
+        bodyweight: true,
         lowimpact: true
       },
       {
