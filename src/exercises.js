@@ -346,6 +346,12 @@ export const exercises = {
         bodyweight: true
       },
       {
+        title: 'toe taps',
+        img: 'https://media.giphy.com/media/l57qQS9tUM5XFQbVgu/giphy.gif',
+        character: 'louise',
+        bodyweight: true
+      },
+      {
         title: 'bulgarian split squat',
         img: 'https://media.giphy.com/media/kD4x2JT7V3LS8USYND/giphy.gif',
         unilateral: true,
@@ -358,6 +364,14 @@ export const exercises = {
         img: 'https://media.giphy.com/media/lo9oGhgrmEEChrPsDL/giphy.gif',
         character: 'louise',
         bodyweight: true
+      },
+      {
+        title: 'inner thigh opener',
+        img: 'https://media.giphy.com/media/W1O7YBdU7F4Gp2Wp89/giphy.gif',
+        character: 'finn',
+        bodyweight: true,
+        unilateral: true,
+        lowimpact: true
       },
       {
         title: 'high knee',
@@ -378,6 +392,13 @@ export const exercises = {
         bodyweight: true
       },
       {
+        title: 'hamstring curl',
+        img: 'https://media.giphy.com/media/iIdrL8PN88ttScaRAK/giphy.gif',
+        character: 'finn',
+        singleweight: true,
+        lowimpact: true
+      },
+      {
         title: 'squat to kneel',
         img: 'https://media.giphy.com/media/ZbN2PwMLD0boIjJrrn/giphy.gif',
         character: 'bmo',
@@ -388,6 +409,13 @@ export const exercises = {
         title: 'squat hold calf raise',
         img: 'https://media.giphy.com/media/H75JCgAlgDM4uqFZBZ/giphy.gif',
         character: 'rick',
+        bodyweight: true,
+        lowimpact: true
+      },
+      {
+        title: 'cossack squat',
+        img: 'https://media.giphy.com/media/M95GNhzTMqWdnoWI9Q/giphy.gif',
+        character: 'finn',
         bodyweight: true,
         lowimpact: true
       },
@@ -571,6 +599,14 @@ export const exercises = {
         img: 'https://media.giphy.com/media/KeWU4jbTWGiGDgKFxB/giphy.gif',
         character: 'rick',
         bodyweight: true,
+        lowimpact: true
+      },
+      {
+        title: 'crossbody row',
+        img: 'https://media.giphy.com/media/cKnagqCU3CTflIERzL/giphy.gif',
+        character: 'finn',
+        singleweight: true,
+        unilateral: true,
         lowimpact: true
       },
       {
@@ -899,6 +935,14 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'half turkish get up',
+        img: 'https://media.giphy.com/media/UQVLizHnpXbPHhmg5K/giphy.gif',
+        character: 'finn',
+        singleweight: true,
+        unilateral: true,
+        lowimpact: true
+      },
+      {
         title: 'v up',
         img: 'https://media.giphy.com/media/ZG6CmJFvFtkAbvAVb5/giphy.gif',
         character: 'rick',
@@ -1010,8 +1054,15 @@ export const exercises = {
         singleweight: true
       },
       {
+        title: 'butterfly crunch',
+        img: 'https://media.giphy.com/media/Ur8fhzmWcehV9GxDZL/giphy.gif',
+        character: 'louise',
+        lowimpact: true,
+        bodyweight: true
+      },
+      {
         title: 'plank mogul',
-        img: 'https://media.giphy.com/media/jTZ0BABO4lMrRNzAq9/giphy.gif',
+        img: 'https://media.giphy.com/media/QVUMgxQ0DESRVEnvLu/giphy.gif',
         character: 'finn',
         bodyweight: true
       }
