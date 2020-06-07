@@ -109,7 +109,7 @@ export const exercises = {
         lowimpact: true
       },
       {
-        title: 'tricep kick dip',
+        title: 'tricep dip kick',
         img: 'https://media.giphy.com/media/hSFmSDlwR0NRWPEytu/giphy.gif',
         character: 'tina',
         lowimpact: true,

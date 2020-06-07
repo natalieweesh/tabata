@@ -21,7 +21,7 @@ const speak = (words, timeout = 0) => {
 }
 
 const randomPhrase = (work = false) => {
-  const workPhrases = ['time to work', 'get to it', 'go go go', "let's get it done", 'begin', "ok go", 'go for it'];
+  const workPhrases = ['time to work', "let's go", 'go go go', "let's get it done", 'begin', "ok go", 'go for it'];
   const restPhrases = ['take a break', 'and rest', 'break time', 'take a breather', 'and stop', 'and break'];
   const phrases = work ? workPhrases : restPhrases;
   return phrases[Math.floor(Math.random() * phrases.length)]
