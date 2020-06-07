@@ -352,6 +352,12 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'reverse burpee',
+        img: 'https://media.giphy.com/media/egv3YnQ9zvktPkkFc3/giphy.gif',
+        character: 'jake',
+        bodyweight: true
+      },
+      {
         title: 'side lunge',
         img: 'https://media.giphy.com/media/h8glgzspdY8A0eNh1D/giphy.gif',
         character: 'rick',
@@ -372,6 +378,12 @@ export const exercises = {
         bodyweight: true
       },
       {
+        title: 'narrow to wide squat jump',
+        img: 'https://media.giphy.com/media/gKNG0yGn0wGK4PVgc8/giphy.gif',
+        character: 'rick',
+        bodyweight: true
+      },
+      {
         title: 'bulgarian split squat',
         img: 'https://media.giphy.com/media/kD4x2JT7V3LS8USYND/giphy.gif',
         unilateral: true,
@@ -389,6 +401,14 @@ export const exercises = {
         title: 'inner thigh opener',
         img: 'https://media.giphy.com/media/W1O7YBdU7F4Gp2Wp89/giphy.gif',
         character: 'finn',
+        bodyweight: true,
+        unilateral: true,
+        lowimpact: true
+      },
+      {
+        title: 'pendulum lunge',
+        img: 'https://media.giphy.com/media/RKSRGbnQTm3Y41PimA/giphy.gif',
+        character: 'jake',
         bodyweight: true,
         unilateral: true,
         lowimpact: true
@@ -583,10 +603,24 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'elevated glute bridge',
+        img: 'https://media.giphy.com/media/fA8eAXpUlginakoQjL/giphy.gif',
+        character: 'jake',
+        bodyweight: true,
+        lowimpact: true
+      },
+      {
         title: 'single leg deadlift',
         img: 'https://media.giphy.com/media/YmhQcV7p3jabLZJZSt/giphy.gif',
         character: 'prince',
         unilateral: true,
+        bodyweight: true,
+        lowimpact: true
+      },
+      {
+        title: 'squat + knee to elbow',
+        img: 'https://media.giphy.com/media/gitWL4sUgoOu52p0iZ/giphy.gif',
+        character: 'jake',
         bodyweight: true,
         lowimpact: true
       },
@@ -787,6 +821,12 @@ export const exercises = {
         bodyweight: true
       },
       {
+        title: 'boat pose chest press',
+        img: 'https://media.giphy.com/media/KatDsQARCo6diQUVwO/giphy.gif',
+        character: 'jake',
+        lowimpact: true
+      },
+      {
         title: 'extended plank',
         img: 'https://media.giphy.com/media/darqZUmc1OV6tnDrR5/giphy.gif',
         character: 'finn',
@@ -825,6 +865,13 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'elevated plank up down',
+        img: 'https://media.giphy.com/media/gH3MyyA7laIsg1FDJ6/giphy.gif',
+        character: 'rick',
+        bodyweight: true,
+        lowimpact: true
+      },
+      {
         title: 'side plank dip',
         img: 'https://media.giphy.com/media/d95Be01OEo1L8xSBEC/giphy.gif',
         character: 'louise',
@@ -844,6 +891,13 @@ export const exercises = {
         title: 'flutter kick',
         img: 'https://media.giphy.com/media/UtoH18QAUqC5KTspXp/giphy.gif',
         character: 'rick',
+        bodyweight: true,
+        lowimpact: true
+      },
+      {
+        title: 'elevated plank to pike',
+        img: 'https://media.giphy.com/media/TdjbJleIuBy5rQ61l3/giphy.gif',
+        character: 'jake',
         bodyweight: true,
         lowimpact: true
       },
@@ -881,6 +935,14 @@ export const exercises = {
         img: 'https://media.giphy.com/media/RhezbxwMxfOPWBv0q2/giphy.gif',
         character: 'rick',
         bodyweight: true,
+        lowimpact: true
+      },
+      {
+        title: 'opposite knee to elbow crunch',
+        img: 'https://media.giphy.com/media/h597gbGtebB7NKcYz3/giphy.gif',
+        character: 'jake',
+        bodyweight: true,
+        unilateral: true,
         lowimpact: true
       },
       {
@@ -931,6 +993,14 @@ export const exercises = {
         img: 'https://media.giphy.com/media/hXO58SRA8RSj2cfgge/giphy.gif',
         character: 'prince',
         bodyweight: true,
+        lowimpact: true
+      },
+      {
+        title: 'side plank opposite knee to elbow',
+        img: 'https://media.giphy.com/media/fW5CkfF5XsemLXYKZe/giphy.gif',
+        character: 'rick',
+        bodyweight: true,
+        unilateral: true,
         lowimpact: true
       },
       {
