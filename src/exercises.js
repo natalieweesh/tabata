@@ -27,6 +27,13 @@ export const exercises = {
         singleweight: true
       },
       {
+        title: 'high plank alternating fly',
+        img: 'https://media.giphy.com/media/W2KREjKiWpkqwN9BCR/giphy.gif',
+        character: 'louise',
+        lowimpact: true,
+        singleweight: true
+      },
+      {
         title: 'curl + press',
         img: 'https://media.giphy.com/media/Wp7MFoLzg7EMeC0S4n/giphy.gif',
         character: 'spongebob',
@@ -505,6 +512,14 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'elevated single leg glute bridge',
+        img: 'https://media.giphy.com/media/S9Kn2Ar8Y5ds0Fqc5R/giphy.gif',
+        character: 'jake',
+        bodyweight: true,
+        unilateral: true,
+        lowimpact: true
+      },
+      {
         title: 'deadlift',
         img: 'https://media.giphy.com/media/XfUecNswkAnI1pdgHB/giphy.gif',
         character: 'meeseeks',
@@ -524,6 +539,14 @@ export const exercises = {
         character: 'poopybutthole',
         bodyweight: true,
         lowimpact: true
+      },
+      {
+        title: 'staggered stance deadlift',
+        img: 'https://media.giphy.com/media/VJ6BE098Od6R265k7c/giphy.gif',
+        character: 'jake',
+        singleweight: true,
+        lowimpact: true,
+        unilateral: true
       },
       {
         title: 'clamshell',
