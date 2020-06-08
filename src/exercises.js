@@ -724,7 +724,8 @@ export const exercises = {
         img: 'https://media.giphy.com/media/MXumj6ThUZugB9TMz4/giphy.gif',
         character: 'jake',
         singleweight: true,
-        lowimpact: true
+        lowimpact: true,
+        unilateral: true
       },
       {
         title: 'reverse snow angel',
