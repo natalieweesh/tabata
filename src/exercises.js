@@ -685,6 +685,13 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'single arm suitcase deadlift',
+        img: 'https://media.giphy.com/media/IdID3LWM6nMKUuNQ9r/giphy.gif',
+        character: 'jake',
+        singleweight: true,
+        lowimpact: true
+      },
+      {
         title: 'crossbody row',
         img: 'https://media.giphy.com/media/cKnagqCU3CTflIERzL/giphy.gif',
         character: 'finn',
@@ -717,6 +724,13 @@ export const exercises = {
         img: 'https://media.giphy.com/media/kzqvH8IO3cXqDEVT1y/giphy.gif',
         character: 'prince',
         bodyweight: true,
+        lowimpact: true
+      },
+      {
+        title: 'bent over pendulum',
+        img: 'https://media.giphy.com/media/jropl6IeRSItATJTKL/giphy.gif',
+        character: 'louise',
+        singleweight: true,
         lowimpact: true
       },
       {
