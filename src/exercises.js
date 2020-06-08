@@ -720,6 +720,13 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'single arm rear delt raise',
+        img: 'https://media.giphy.com/media/MXumj6ThUZugB9TMz4/giphy.gif',
+        character: 'jake',
+        singleweight: true,
+        lowimpact: true
+      },
+      {
         title: 'reverse snow angel',
         img: 'https://media.giphy.com/media/kzqvH8IO3cXqDEVT1y/giphy.gif',
         character: 'prince',
@@ -767,6 +774,12 @@ export const exercises = {
         img: 'https://media.giphy.com/media/Rkn765eSFkmJTS4Npe/giphy.gif',
         character: 'prince',
         bodyweight: true,
+        lowimpact: true
+      },
+      {
+        title: 'underhand bent over row',
+        img: 'https://media.giphy.com/media/RIYiUqYq2RqAUvFIUJ/giphy.gif',
+        character: 'meeseeks',
         lowimpact: true
       },
       {
