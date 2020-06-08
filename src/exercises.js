@@ -601,14 +601,6 @@ export const exercises = {
         lowimpact: true
       },
       {
-        title: 'lunge to knee raise',
-        img: 'https://media.giphy.com/media/XI1bIathTUkGEQBqYK/giphy.gif',
-        character: 'jake',
-        unilateral: true,
-        bodyweight: true,
-        lowimpact: true
-      },
-      {
         title: 'side leg raise',
         img: 'https://media.giphy.com/media/L3txtROtEn80FoFrwW/giphy.gif',
         character: 'louise',
@@ -620,6 +612,14 @@ export const exercises = {
         title: 'prone leg extension',
         img: 'https://media.giphy.com/media/gg26aqNPdNNtiQe37n/giphy.gif',
         character: 'finn',
+        bodyweight: true,
+        lowimpact: true
+      },
+      {
+        title: 'lunge to knee raise',
+        img: 'https://media.giphy.com/media/XI1bIathTUkGEQBqYK/giphy.gif',
+        character: 'jake',
+        unilateral: true,
         bodyweight: true,
         lowimpact: true
       },
