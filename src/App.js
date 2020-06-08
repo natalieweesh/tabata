@@ -93,7 +93,9 @@ function App() {
       if (exerciseRandomizer.current[currentMuscleGroup]['selector'].length > 0) {
         let randomi = Math.floor(Math.random() * exerciseRandomizer.current[currentMuscleGroup]['selector'].length)
         let idx = exerciseRandomizer.current[currentMuscleGroup]['selector'][randomi]
-        subroundTemplate.current.push(exercises[currentMuscleGroup][idx])
+        let pushMe = exercises[currentMuscleGroup][idx];
+        pushMe['muscle'] = currentMuscleGroup;
+        subroundTemplate.current.push(pushMe)
         exerciseRandomizer.current[currentMuscleGroup]['selector'] = exerciseRandomizer.current[currentMuscleGroup]['selector'].slice(0, randomi).concat(exerciseRandomizer.current[currentMuscleGroup]['selector'].slice(randomi+1))
       }
       muscleIndex = (muscleIndex + 1) % selectedMuscleGroups.length;
@@ -349,6 +351,7 @@ function App() {
             <div className="column bigger">
               <p className="exerciseTitle">{currentExercise.current && currentExercise.current['title']}</p>
               <img src={currentExercise.current && currentExercise.current['img']} alt={currentExercise.current && currentExercise.current['title']} />
+              <p>[work your {currentExercise.current['muscle'] === 'arms' ? 'arms / chest' : selectedMuscleGroups[exerciseIndex.current]}]</p>
             </div>
             <div className="column smaller">
               <div className='centerize'>
