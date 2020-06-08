@@ -323,6 +323,12 @@ export const exercises = {
         bodyweight: true
       },
       {
+        title: 'long jump to burpee to inchworm',
+        img: 'https://media.giphy.com/media/daaDJsiBN1VMcZOZpj/giphy.gif',
+        character: 'rick',
+        bodyweight: true
+      },
+      {
         title: 'squat',
         img: 'https://media.giphy.com/media/lNM6OyiUAc24fNW1p0/giphy.gif',
         character: 'tina',
