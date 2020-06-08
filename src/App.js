@@ -50,8 +50,11 @@ function App() {
   const [lowImpact, setLowImpact] = useState(false);
   const fullScreenable = document.fullscreenEnabled;
   const [fullScreenOn, setFullScreenOn] = useState(false);
-  let history = useRef([]);
+  const [subrounds, setSubrounds] = useState(1);
+  const [allAtOnce, setAllAtOnce] = useState(false);
+  let subroundTemplate = useRef([]);
   let exerciseRandomizer = useRef(null);
+  let masterList = useRef([]);
 
   const generateExerciseRandomizer = () => {
     const arrays = {}
@@ -69,6 +72,51 @@ function App() {
       }
     })
     exerciseRandomizer.current = arrays;
+  }
+
+  const generateExerciseList = () => {
+    const subroundLength = Math.floor(rounds.current / subrounds);
+    const extraSubround = rounds.current % subrounds !== 0;
+    const extraSubroundLength = rounds.current % subrounds;
+    console.log(
+      'rounds', rounds.current,
+      'subround length', subroundLength,
+      'extra subround?', !!extraSubround,
+      'extra subround length', extraSubroundLength
+    )
+    let muscleIndex = 0;
+    for (let i=0; i < subroundLength; i++) {
+      let currentMuscleGroup = selectedMuscleGroups[muscleIndex];
+      if (exerciseRandomizer.current[currentMuscleGroup]['selector'].length === 0) {
+        exerciseRandomizer.current[currentMuscleGroup]['selector'] = exerciseRandomizer.current[currentMuscleGroup]['template']
+      }
+      if (exerciseRandomizer.current[currentMuscleGroup]['selector'].length > 0) {
+        let randomi = Math.floor(Math.random() * exerciseRandomizer.current[currentMuscleGroup]['selector'].length)
+        let idx = exerciseRandomizer.current[currentMuscleGroup]['selector'][randomi]
+        subroundTemplate.current.push(exercises[currentMuscleGroup][idx])
+        exerciseRandomizer.current[currentMuscleGroup]['selector'] = exerciseRandomizer.current[currentMuscleGroup]['selector'].slice(0, randomi).concat(exerciseRandomizer.current[currentMuscleGroup]['selector'].slice(randomi+1))
+      }
+      muscleIndex = (muscleIndex + 1) % selectedMuscleGroups.length;
+    }
+    if (subrounds !== 1 && allAtOnce) {
+      for (let j = 0; j < subroundLength; j++) {
+        for (let k=0; k < subrounds; k++) {
+          masterList.current.push(subroundTemplate.current[j])
+        }
+        if (extraSubround && j >= subroundLength - extraSubroundLength) {
+          masterList.current.push(subroundTemplate.current[j])
+        }
+      }
+    } else {
+      for (let j = 0; j < subrounds; j++) {
+        masterList.current = masterList.current.concat(subroundTemplate.current)
+      }
+      if (extraSubround) {
+        masterList.current = masterList.current.concat(subroundTemplate.current.slice(0, extraSubroundLength))
+      }
+    }
+    console.log('subround template!', subroundTemplate.current)
+    console.log('master list!', masterList.current)
   }
 
   const printExerciseCounts = () => {
@@ -129,19 +177,10 @@ function App() {
     }
     if (!currentExercise.current) { // starting the first exercise of the workout
       generateExerciseRandomizer();
-      const currentMuscleGroup = selectedMuscleGroups[exerciseIndex.current];
-      if (exerciseRandomizer.current[currentMuscleGroup]['selector'].length === 0) {
-        exerciseRandomizer.current[currentMuscleGroup]['selector'] = exerciseRandomizer.current[currentMuscleGroup]['template']
-      }
-      if (exerciseRandomizer.current[currentMuscleGroup]['selector'].length > 0) {
-        let randomi = Math.floor(Math.random() * exerciseRandomizer.current[currentMuscleGroup]['selector'].length)
-        let idx = exerciseRandomizer.current[currentMuscleGroup]['selector'][randomi]
-        currentExercise.current = exercises[currentMuscleGroup][idx]
-        exerciseRandomizer.current[currentMuscleGroup]['selector'] = exerciseRandomizer.current[currentMuscleGroup]['selector'].slice(0, randomi).concat(exerciseRandomizer.current[currentMuscleGroup]['selector'].slice(randomi+1))
-      }
+      generateExerciseList();
+      currentExercise.current = masterList.current[exerciseIndex.current]
       currentIntervalCount.current = restTime;
       speak(`let's do this! first exercise is ${currentExercise.current['title']}`)
-      history.current.push(currentExercise.current)
     }
     timer.current = setTimeout(() => {
       setTheTime(theTime + 1)
@@ -156,21 +195,10 @@ function App() {
       } else if ((currentRound.current + 1) * (workTime + restTime) === theTime + 1) { // start next round, start new exercise
         resting.current = true;
         currentRound.current = currentRound.current + 1
-        const newIndex = ((exerciseIndex.current + 1) % (selectedMuscleGroups.length))
-        exerciseIndex.current = newIndex;
-        const newMuscleGroup = selectedMuscleGroups[newIndex]
-        if (exerciseRandomizer.current[newMuscleGroup]['selector'].length === 0) {
-          exerciseRandomizer.current[newMuscleGroup]['selector'] = exerciseRandomizer.current[newMuscleGroup]['template']
-        }
-        if (exerciseRandomizer.current[newMuscleGroup]['selector'].length > 0) {
-          let randomi = Math.floor(Math.random() * exerciseRandomizer.current[newMuscleGroup]['selector'].length)
-          let idx = exerciseRandomizer.current[newMuscleGroup]['selector'][randomi]
-          currentExercise.current = exercises[newMuscleGroup][idx]
-          exerciseRandomizer.current[newMuscleGroup]['selector'] = exerciseRandomizer.current[newMuscleGroup]['selector'].slice(0, randomi).concat(exerciseRandomizer.current[newMuscleGroup]['selector'].slice(randomi+1))
-        }
+        exerciseIndex.current = exerciseIndex.current + 1;
+        currentExercise.current = masterList.current[exerciseIndex.current];
         currentIntervalCount.current = restTime
         speak(`${randomPhrase()}. ${currentExercise.current['title']} is next`, 1000)
-        history.current.push(currentExercise.current)
       } else {
         if (currentExercise.current['unilateral'] && !resting.current && currentIntervalCount.current === Math.floor(workTime / 2)) {
           const switchSidesPrompts = ['switch sides', 'other side'];
@@ -189,14 +217,14 @@ function App() {
   return (
     <div className="App">
     {fullScreenable && <button className='fullscreenButton restText' onClick={() => {
-      if (fullScreenOn) {
+      if (fullScreenOn && document.fullscreenElement) {
         document.exitFullscreen()
         setFullScreenOn(false)
       } else {
         document.documentElement.requestFullscreen()
         setFullScreenOn(true)
       }
-      }}>{fullScreenOn ? 'Exit full screen' : 'Full screen mode'}</button>
+      }}>Full screen mode</button>
     }
       {!startedWorkout && <div><img className="titleImage pageTitle" src={gif} alt="It's Tabata Time!"/></div>}
       {!startedWorkout &&
@@ -278,7 +306,36 @@ function App() {
               setLowImpact(!lowImpact);
             }} checked={lowImpact} id='lowimpact' value='Low impact' type="checkbox"/><div className="fakeCheckbox">LOW IMPACT</div></div>
           </div>
-          <label>{bodyweightOnly && "Turn up the volume and let's go!"}{singleWeightOnly && "Grab your dumbbell, turn up the volume, and let's go!"}{!bodyweightOnly && !singleWeightOnly && "Grab your dumbbells, turn up the volume, and let's go!"}</label>
+          <div className="row">
+            <label>How many times do you want to repeat each exercise?</label>
+          </div>
+          <div className="row muscleRow">
+            <div className="column">
+              <select className='select-css' onChange={e => setSubrounds(parseInt(e.target.value))} value={subrounds}>
+                <option value="1">No Repeats!</option>
+                <option value="2">2 times</option>
+                <option value="3">3 times</option>
+                <option value="4">4 times</option>
+                <option value="5">5 times</option>
+                <option value="6">6 times</option>
+              </select>
+            </div>
+            {subrounds !== 1 && <>
+              <div className="column">
+                <div className="checkboxWrapper"><label className="checkboxLabel" htmlFor='roundRobin'>CIRCUIT STYLE</label><input onChange={() => {
+                  setAllAtOnce(!allAtOnce)
+                }} checked={!allAtOnce} id='roundRobin' value='Round robin' type="checkbox"/><div className="fakeCheckbox">CIRCUIT STYLE</div></div>
+              </div>
+              <div className='column'>
+                <div className="checkboxWrapper"><label className="checkboxLabel" htmlFor='allAtOnce'>FINISH ALL ROUNDS OF ONE EXERCISE BEFORE MOVING ONTO THE NEXT EXERCISE</label><input onChange={() => {
+                  setAllAtOnce(!allAtOnce);
+                }} checked={allAtOnce} id='allAtOnce' value='All at once' type="checkbox"/><div className="fakeCheckbox">FINISH ALL ROUNDS OF ONE EXERCISE BEFORE MOVING ONTO THE NEXT EXERCISE</div></div>
+              </div>
+            </>}
+          </div>
+          <div className="row muscleRow">
+            <label>{bodyweightOnly && "Turn up the volume and let's go!"}{singleWeightOnly && "Grab your dumbbell, turn up the volume, and let's go!"}{!bodyweightOnly && !singleWeightOnly && "Grab your dumbbells, turn up the volume, and let's go!"}</label>
+          </div>
         </div>
       </div>
       }
@@ -292,7 +349,6 @@ function App() {
             <div className="column bigger">
               <p className="exerciseTitle">{currentExercise.current && currentExercise.current['title']}</p>
               <img src={currentExercise.current && currentExercise.current['img']} alt={currentExercise.current && currentExercise.current['title']} />
-              <p>[work your {selectedMuscleGroups[exerciseIndex.current] === 'arms' ? 'arms / chest' : selectedMuscleGroups[exerciseIndex.current]}]</p>
             </div>
             <div className="column smaller">
               <div className='centerize'>
@@ -317,10 +373,10 @@ function App() {
         <p className="exerciseTitle">YOU FINISHED!</p>
         <img src="https://media.giphy.com/media/ZY8BVlXHZqMal62QS3/giphy.gif" alt="it's peanut butter jelly time" />
         <p>Total workout time: {formatTime(theTime)}</p>
-        <p>Total rounds finished: {currentRound.current + 1}</p>
+        <p>Total exercises completed: {currentRound.current + 1}</p>
         <p className="exerciseTitle">Look at all the exercises you did!</p>
         <div className="row previewRow">
-          {history.current.map(e => {
+          {subroundTemplate.current.map(e => {
             return <div className="column">
               <p>{e.title}</p>
               <div className="previewImageWrapper">
