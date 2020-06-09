@@ -55,6 +55,7 @@ function App() {
   const [fullScreenOn, setFullScreenOn] = useState(false);
   const [subrounds, setSubrounds] = useState(1);
   const [allAtOnce, setAllAtOnce] = useState(false);
+  const [videoPlaying, setVideoPlaying] = useState(false);
   let subroundTemplate = useRef([]);
   let exerciseRandomizer = useRef(null);
   let masterList = useRef([]);
@@ -256,6 +257,8 @@ function App() {
         theTime={theTime}
         currentRound={currentRound}
         subroundTemplate={subroundTemplate}
+        videoPlaying={videoPlaying}
+        setVideoPlaying={setVideoPlaying}
       />}
 
       {!finished && <BigButtons

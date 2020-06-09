@@ -276,3 +276,26 @@ button {
     line-height: 1rem;
   }
 }
+
+#vid {
+  width: 100%;
+}
+
+.videoWrapper {
+  position: relative;
+  width: 95%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.videoWrapper img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.videoWrapper img:hover {
+  cursor: pointer;
+}
