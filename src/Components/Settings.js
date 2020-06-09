@@ -67,6 +67,8 @@ export default class Settings extends Component {
                 <option value="2100">35 minutes</option>
                 <option value="2400">40 minutes</option>
                 <option value="2700">45 minutes</option>
+                <option value="3000">50 minutes</option>
+                <option value="3600">1 hour</option>
               </select>
             </div>
           </div>
