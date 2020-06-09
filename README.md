@@ -40,6 +40,14 @@ They'll guide you through 20 seconds of work and 10 seconds of rest doing fun ex
     <td><img src="https://media.giphy.com/media/W3emLNQKTecUA1POxp/giphy.gif" width="300"/></td>
     <td><img src="https://media.giphy.com/media/Y1jNTxApOQRfKOJt8k/giphy.gif" width="300"/></td>
   </tr>
+  <tr>
+    <td>Dumbbell Steering Wheels</td>
+    <td>Kettlebell Swings</td>
+  </tr>
+  <tr>
+    <td><img src="https://media.giphy.com/media/H4hIiVofPBBvKMRBpZ/giphy.gif" width="300"/></td>
+    <td><img src="https://media.giphy.com/media/cj8H7bw91h5jdsT8PF/giphy.gif" width="300"/></td>
+  </tr>
 </table>
 
 
