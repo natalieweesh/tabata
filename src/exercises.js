@@ -74,6 +74,13 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'hammer curl + tricep extension',
+        img: 'https://media.giphy.com/media/MdX3yPGPJkhzjH3wWm/giphy.gif',
+        character: 'jake',
+        lowimpact: true,
+        unilateral: true
+      },
+      {
         title: 'tricep dip',
         img: 'https://media.giphy.com/media/W3emLNQKTecUA1POxp/giphy.gif',
         character: 'spongebob',
@@ -114,6 +121,14 @@ export const exercises = {
         img: 'https://media.giphy.com/media/LOtLLICZiRm44aEQej/giphy.gif',
         character: 'bob',
         lowimpact: true
+      },
+      {
+        title: 'bear plank hammer curl',
+        img: 'https://media.giphy.com/media/hWpTcd0zHTesx989KJ/giphy.gif',
+        character: 'jake',
+        lowimpact: true,
+        singleweight: true,
+        unilateral: true
       },
       {
         title: 'tricep dip kick',
@@ -658,6 +673,13 @@ export const exercises = {
         img: 'https://media.giphy.com/media/MEjmyZ6dKVNBhZlXfq/giphy.gif',
         character: 'rick',
         bodyweight: true,
+        lowimpact: true
+      },
+      {
+        title: 'sumo romanian deadlift to squat',
+        img: 'https://media.giphy.com/media/KeWfZba5vZsKNNCvK6/giphy.gif',
+        character: 'jake',
+        singleweight: true,
         lowimpact: true
       }
     ],
