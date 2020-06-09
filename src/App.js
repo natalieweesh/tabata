@@ -8,6 +8,7 @@ import PreviewSection from './Components/PreviewSection';
 import ActiveWorkoutSection from './Components/ActiveWorkoutSection';
 import FAQSection from './Components/FAQSection';
 import BigButtons from './Components/BigButtons';
+import ProgressBar from './Components/ProgressBar';
 import './App.css';
 
 const formatTime = (seconds) => {
@@ -245,14 +246,10 @@ function App() {
         exerciseIndex={exerciseIndex}
       />}
 
-      {!currentExercise.current && startedWorkout && !finished &&
-        <div>
-          <div className="row progressRow">
-            <div className="progressBar"><div className="fill" style={{width: `${parseInt(theTime / ((restTime + workTime) * rounds.current) * 100)}%`}}></div></div>
-          </div>
-          <div className="row restText mainRow"><p className="exerciseTitle centerize">Turn up the volume!<br/><br/>Let's get ready to rumble...</p></div>
-        </div>
-      }
+      {!currentExercise.current && startedWorkout && !finished && <div>
+        <ProgressBar theTime={theTime} restTime={restTime} workTime={workTime} rounds={rounds} />
+        <div className="row restText mainRow"><p className="exerciseTitle centerize">Turn up the volume!<br/><br/>Let's get ready to rumble...</p></div>
+      </div>}
 
       {finished && <FinishedSection
         formatTime={formatTime}

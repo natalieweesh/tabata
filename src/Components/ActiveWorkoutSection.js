@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import ProgressBar from './ProgressBar';
 
 export default class ActiveWorkoutSection extends Component {
   render() {
@@ -16,11 +16,7 @@ export default class ActiveWorkoutSection extends Component {
       exerciseIndex
     } = this.props;
     return <div>
-      <div className="row progressRow">
-        <div className="progressBar">
-          <div className="fill" style={{width: `${parseInt(theTime / ((restTime + workTime) * rounds.current) * 100)}%`}}></div>
-        </div>
-      </div>
+      <ProgressBar theTime={theTime} restTime={restTime} workTime={workTime} rounds={rounds} />
       <div className={resting.current ? 'restText row mainRow' : 'workText row mainRow'}>
         <div className="column bigger">
           <p className="exerciseTitle">{currentExercise.current && currentExercise.current['title']}</p>
