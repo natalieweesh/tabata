@@ -1,17 +1,19 @@
 import React, { useState, useEffect, useRef } from 'react';
-import ReactNoSleep from 'react-no-sleep';
 import { exercises } from './exercises';
-import gif from './titleimage.gif';
+import DataSection from './Components/DataSection';
+import Settings from './Components/Settings';
+import FinishedSection from './Components/FinishedSection';
+import FullScreenButton from './Components/FullScreenButton';
+import PreviewSection from './Components/PreviewSection';
+import ActiveWorkoutSection from './Components/ActiveWorkoutSection';
+import FAQSection from './Components/FAQSection';
+import BigButtons from './Components/BigButtons';
 import './App.css';
 
 const formatTime = (seconds) => {
   const mins = Math.floor(seconds / 60);
   const secs = seconds % 60;
   return `${mins < 10 ? "0" : ""}${mins}:${secs < 10 ? "0" : ""}${secs}`
-}
-
-const scrollDown = () => {
-  window.scroll(0, window.scrollY + 300);
 }
 
 const speak = (words, timeout = 0) => {
@@ -153,13 +155,7 @@ function App() {
       let newRow = <tr><td>{trainerNames[trainer]}</td><td>{trainerExercises}</td></tr>;
       trainerTableRows.push(newRow)
     })
-    return <div>
-      <p className='exerciseTitle'>that's {allExercises.length} different exercises for you to do!</p>
-      <div className='row statisticsRow'>
-        <table className='column'><tbody><tr><td>muscle<br></br>group</td><td>total<br/>exercises</td><td>bodyweight<br/>exercises</td><td>low impact<br/>exercises</td></tr>{tableRows.map(e => e)}</tbody></table>
-        <table className='column '><tbody><tr><td>trainer</td><td>total<br/>exercises</td></tr>{trainerTableRows.map(e => e)}</tbody></table>
-      </div>
-    </div>
+    return <DataSection allExercises={allExercises} tableRows={tableRows} trainerTableRows={trainerTableRows} />
   }
 
   useEffect(() => {
@@ -215,232 +211,70 @@ function App() {
         }
       }
     }, 1000)
-  }, [paused, restTime, totalTime, workTime, theTime, finished, selectedMuscleGroups])
+  }, [paused, restTime, totalTime, workTime, theTime, finished, selectedMuscleGroups]);
+
   return (
     <div className="App">
-    {fullScreenable && <button className='fullscreenButton restText' onClick={() => {
-      if (fullScreenOn && document.fullscreenElement) {
-        document.exitFullscreen()
-        setFullScreenOn(false)
-      } else {
-        document.documentElement.requestFullscreen()
-        setFullScreenOn(true)
-      }
-      }}>Full screen mode</button>
-    }
-      {!startedWorkout && <div><img className="titleImage pageTitle" src={gif} alt="It's Tabata Time!"/></div>}
-      {!startedWorkout &&
-      <div className="settingsRow">
-        <div className="row">
-          <div className="column">
-            <label>Choose your work time:</label>
-            <select className="select-css" onChange={e => {
-              setWorkTime(parseInt(e.target.value))
-            }} value={workTime}>
-              <option value="5">5 seconds</option>
-              <option value="20">20 seconds</option>
-              <option value="30">30 seconds</option>
-              <option value="45">45 seconds</option>
-              <option value="50">50 seoncds</option>
-              <option value="60">60 seconds</option>
-            </select>
-          </div>
-          <div className="column">
-            <label>Choose your rest time:</label>
-            <select className="select-css" onChange={e => setRestTime(parseInt(e.target.value))} value={restTime}>
-              <option value="3">3 seconds</option>
-              <option value="10">10 seconds</option>
-              <option value="15">15 seconds</option>
-              <option value="20">20 seconds</option>
-              <option value="25">25 seconds</option>
-              <option value="30">30 seconds</option>
-            </select>
-          </div>
-          <div className="column">
-            <label>Choose your total workout duration:</label>
-            <select className="select-css" onChange={e => setTotalTime(parseInt(e.target.value))} value={totalTime}>
-              <option value="30">30 seconds</option>
-              <option value="60">1 minute</option>
-              <option value="300">5 minutes</option>
-              <option value="600">10 minutes</option>
-              <option value="900">15 minutes</option>
-              <option value="1200">20 minutes</option>
-              <option value="1500">25 minutes</option>
-              <option value="1800">30 minutes</option>
-              <option value="2100">35 minutes</option>
-              <option value="2400">40 minutes</option>
-              <option value="2700">45 minutes</option>
-            </select>
-          </div>
-        </div>
-        <div>
-          <div className="row muscleRowTitle">
-            <label>Select the muscle groups to focus on:</label>
-          </div>
-          <div className="row muscleRow">
-              {Object.keys(exercises).map(muscle => {
-                return <div className="checkboxWrapper" key={muscle}>
-                  <label className="checkboxLabel" htmlFor={muscle}>{muscle === 'arms' ? 'ARMS + CHEST' : 'ARMS'}</label><input onChange={() => {
-                    if (selectedMuscleGroups.includes(muscle)) {
-                      setSelectedMuscleGroups(selectedMuscleGroups.filter(x => x !== muscle))
-                    } else {
-                      setSelectedMuscleGroups(selectedMuscleGroups.concat([muscle]))
-                    }
-                  }} checked={selectedMuscleGroups.includes(muscle)} id={muscle} value={muscle} type="checkbox"/><div className="fakeCheckbox">{muscle === 'arms' ? 'ARMS + CHEST' : muscle.toUpperCase()}</div>
-                </div>
-              })}
-          </div>
-        </div>
-        <div>
-          <div className="row">
-            <label>Extra options:</label>
-          </div>
-          <div className="row muscleRow">
-            <div className="checkboxWrapper"><label className="checkboxLabel" htmlFor='bodyweight'>BODYWEIGHT ONLY</label><input onChange={() => {
-              setBodyweightOnly(!bodyweightOnly);
-              setSingleWeightOnly(false);
-            }} checked={bodyweightOnly} id='bodyweight' value='Bodyweight only' type="checkbox"/><div className="fakeCheckbox">BODYWEIGHT ONLY</div></div>
-            <div className="checkboxWrapper"><label className="checkboxLabel" htmlFor='singleweight'>I ONLY HAVE 1 DUMBBELL</label><input onChange={() => {
-              setSingleWeightOnly(!singleWeightOnly);
-              setBodyweightOnly(false);
-            }} checked={singleWeightOnly} id='singleweight' value='Singleweight only' type="checkbox"/><div className="fakeCheckbox">I ONLY HAVE 1 DUMBBELL</div></div>
-            <div className="checkboxWrapper"><label className="checkboxLabel" htmlFor='lowimpact'>LOW IMPACT</label><input onChange={() => {
-              setLowImpact(!lowImpact);
-            }} checked={lowImpact} id='lowimpact' value='Low impact' type="checkbox"/><div className="fakeCheckbox">LOW IMPACT</div></div>
-          </div>
-          <div className="row">
-            <label>How many times do you want to repeat each exercise?</label>
-          </div>
-          <div className="row muscleRow">
-            <div className="column">
-              <select className='select-css' onChange={e => setSubrounds(parseInt(e.target.value))} value={subrounds}>
-                <option value="1">No Repeats!</option>
-                <option value="2">2 times</option>
-                <option value="3">3 times</option>
-                <option value="4">4 times</option>
-                <option value="5">5 times</option>
-                <option value="6">6 times</option>
-              </select>
-            </div>
-            {subrounds !== 1 && <>
-              <div className="column">
-                <div className="checkboxWrapper"><label className="checkboxLabel" htmlFor='roundRobin'>CIRCUIT STYLE</label><input onChange={() => {
-                  setAllAtOnce(!allAtOnce)
-                }} checked={!allAtOnce} id='roundRobin' value='Round robin' type="checkbox"/><div className="fakeCheckbox">CIRCUIT STYLE</div></div>
-              </div>
-              <div className='column'>
-                <div className="checkboxWrapper"><label className="checkboxLabel" htmlFor='allAtOnce'>FINISH ALL ROUNDS OF ONE EXERCISE BEFORE MOVING ONTO THE NEXT EXERCISE</label><input onChange={() => {
-                  setAllAtOnce(!allAtOnce);
-                }} checked={allAtOnce} id='allAtOnce' value='All at once' type="checkbox"/><div className="fakeCheckbox">FINISH ALL ROUNDS OF ONE EXERCISE BEFORE MOVING ONTO THE NEXT EXERCISE</div></div>
-              </div>
-            </>}
-          </div>
-          <div className="row muscleRow">
-            <label>{bodyweightOnly && "Turn up the volume and let's go!"}{singleWeightOnly && "Grab your dumbbell, turn up the volume, and let's go!"}{!bodyweightOnly && !singleWeightOnly && "Grab your dumbbells, turn up the volume, and let's go!"}</label>
-          </div>
-        </div>
-      </div>
-      }
+      {fullScreenable && <FullScreenButton
+        fullScreenOn={fullScreenOn}
+        setFullScreenOn={setFullScreenOn}
+      />}
 
-      {currentExercise.current && !finished && (
+      {!startedWorkout && <Settings
+        setWorkTime={setWorkTime} workTime={workTime}
+        setRestTime={setRestTime} restTime={restTime}
+        setTotalTime={setTotalTime} totalTime={totalTime}
+        selectedMuscleGroups={selectedMuscleGroups} setSelectedMuscleGroups={setSelectedMuscleGroups}
+        bodyweightOnly={bodyweightOnly} setBodyweightOnly={setBodyweightOnly}
+        subrounds={subrounds} setSubrounds={setSubrounds}
+        singleWeightOnly={singleWeightOnly} setSingleWeightOnly={setSingleWeightOnly}
+        allAtOnce={allAtOnce} setAllAtOnce={setAllAtOnce}
+        lowImpact={lowImpact} setLowImpact={setLowImpact}
+      />}
+
+      {currentExercise.current && !finished && <ActiveWorkoutSection
+        resting={resting}
+        currentExercise={currentExercise}
+        currentIntervalCount={currentIntervalCount}
+        theTime={theTime}
+        formatTime={formatTime}
+        restTime={restTime}
+        workTime={workTime}
+        rounds={rounds}
+        selectedMuscleGroups={selectedMuscleGroups}
+        exerciseIndex={exerciseIndex}
+      />}
+
+      {!currentExercise.current && startedWorkout && !finished &&
         <div>
           <div className="row progressRow">
             <div className="progressBar"><div className="fill" style={{width: `${parseInt(theTime / ((restTime + workTime) * rounds.current) * 100)}%`}}></div></div>
           </div>
-          <div className={resting.current ? 'restText row mainRow' : 'workText row mainRow'}>
-            <div className="column bigger">
-              <p className="exerciseTitle">{currentExercise.current && currentExercise.current['title']}</p>
-              <img src={currentExercise.current && currentExercise.current['img']} alt={currentExercise.current && currentExercise.current['title']} />
-              <p>[work your {currentExercise.current['muscle'] === 'arms' ? 'arms / chest' : selectedMuscleGroups[exerciseIndex.current]}]</p>
-            </div>
-            <div className="column smaller">
-              <div className='centerize'>
-                <p className='countdownTitle'>{resting.current ? "REST" : "WORK"}</p>
-                <p className="countdown">{currentIntervalCount.current >= 0 ? currentIntervalCount.current : ""}</p>
-              </div>
-          </div>
+          <div className="row restText mainRow"><p className="exerciseTitle centerize">Turn up the volume!<br/><br/>Let's get ready to rumble...</p></div>
         </div>
-          <div className="row">
-            <div className="column">
-              <p>Time elapsed: {formatTime(theTime)}</p>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {!currentExercise.current && startedWorkout && !finished && <div><div className="row progressRow">
-            <div className="progressBar"><div className="fill" style={{width: `${parseInt(theTime / ((restTime + workTime) * rounds.current) * 100)}%`}}></div></div>
-          </div><div className="row restText mainRow"><p className="exerciseTitle centerize">Turn up the volume!<br/><br/>Let's get ready to rumble...</p></div></div>}
-
-      {finished && <div>
-        <p className="exerciseTitle">YOU FINISHED!</p>
-        <img src="https://media.giphy.com/media/ZY8BVlXHZqMal62QS3/giphy.gif" alt="it's peanut butter jelly time" />
-        <p>Total workout time: {formatTime(theTime)}</p>
-        <p>Total exercises completed: {currentRound.current + 1}</p>
-        <p className="exerciseTitle">Look at all the exercises you did!</p>
-        <div className="row previewRow">
-          {subroundTemplate.current.map(e => {
-            return <div className="column">
-              <p>{e.title}</p>
-              <div className="previewImageWrapper">
-                <img src={e.img} alt={e.title}/>
-              </div>
-            </div>
-          })}
-        </div>
-      </div>}
-
-      {!finished &&
-      <div className="row">
-        <ReactNoSleep className="fulscreenButton">
-          {({ isOn, enable, disable }) => (
-            <button onClick={() => {
-              setPaused(!paused)
-              if (!startedWorkout) {
-                setStartedWorkout(true);
-                setTimeout(window.scroll(0, 0), 200);
-              }
-              if (!isOn) {
-                enable();
-              }
-            }} className={startedWorkout && !paused ? 'unpausedButton' : ''}>{!startedWorkout ? ("START") : (paused ? "UNPAUSE" : "PAUSE")}</button>
-          )}
-        </ReactNoSleep>
-        {!startedWorkout && <button className="previewButton" onClick={() => {
-          setShowPreview(!showPreview)
-          setShowFAQ(false)
-          if (!showPreview) setTimeout(scrollDown, 200)
-        }}>{showPreview ? 'Hide the exercises' : 'Preview the exercises'}</button>}
-        <button className="previewButton" onClick={() => {
-          setShowFAQ(!showFAQ);
-          setShowPreview(false)
-          if (!showFAQ) setTimeout(scrollDown, 200)
-        }}>{showFAQ ? 'Hide FAQ' : 'FAQ'}</button>
-      </div>
       }
+
+      {finished && <FinishedSection
+        formatTime={formatTime}
+        theTime={theTime}
+        currentRound={currentRound}
+        subroundTemplate={subroundTemplate}
+      />}
+
+      {!finished && <BigButtons
+        setPaused={setPaused}
+        paused={paused}
+        setStartedWorkout={setStartedWorkout}
+        startedWorkout={startedWorkout}
+        setShowPreview={setShowPreview}
+        showPreview={showPreview}
+        setShowFAQ={setShowFAQ}
+        showFAQ={showFAQ}
+      />}
       
-      {showPreview && !startedWorkout &&
-        <div className="row">
-          {Object.keys(exercises).map(muscle => {
-            return <div>
-              <p className="exerciseTitle">exercises for your {muscle === 'arms' ? 'arms + chest' : muscle}:</p>
-              <div className="row previewRow" id={`${muscle}-previews`}>
-              {exercises[muscle].map(exercise => {
-                return <div className="column"><p>{exercise['title']}</p><div className="previewImageWrapper">{exercise['bodyweight'] && <div className='bodyweightBanner'>Bodyweight</div>}<img src={exercise['img']} alt={exercise['title']}/></div></div>
-              })}
-              </div>
-            </div>
-          })}
-          <div>{printExerciseCounts()}</div>
-        </div>
-      }
+      {showPreview && !startedWorkout && <PreviewSection printExerciseCounts={printExerciseCounts} />}
 
-      {showFAQ && <div className="row previewRow faq">
-        <p><strong>What the squanch is tabata?</strong><br/>Tabata is a type of HIIT workout where you exercise for 20 seconds, rest for 10 seconds, then repeat until your heart falls out.</p>
-        <p><strong>Who are your trainers?</strong><br/>Mr. Poopybutthole, Mr. Meeseeks, Tina Belcher, Spongebob Squarepants, BMO, Bob Belcher, The Little Prince, Rick Sanchez, Louise Belcher, Jake the Dog, and Finn the Human are some of our distinguished trainers who will be working out with you today. Please note that their form while doing exercises is not always 100% on point so don't hurt yourself trying to copy them exactly.</p>
-        <p><strong>How does this all work?</strong><br/>Once you pick your preferred work time, rest time, and total workout duration, you can choose the muscle groups you want to focus on for your workout. Then the workout will cycle through each muscle group with a different random exercise each time until your total workout time runs out. Let's get schwifty!</p>
-        <p><strong>Who lives in a pineapple under the sea?</strong><br/>Spongebob Squarepants</p>
-      </div>}
+      {showFAQ && !finished && <FAQSection />}
     </div>
   )
 };
