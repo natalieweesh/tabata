@@ -21,7 +21,7 @@ export default class ActiveWorkoutSection extends Component {
         <div className="column bigger">
           <p className="exerciseTitle">{currentExercise.current && currentExercise.current['title']}</p>
           <img src={currentExercise.current && currentExercise.current['img']} alt={currentExercise.current && currentExercise.current['title']} />
-          <p>[work your {currentExercise.current['muscle'] === 'arms' ? 'arms / chest' : selectedMuscleGroups[exerciseIndex.current]}]</p>
+          <p>[work your {currentExercise.current['muscle'] === 'arms' ? 'arms / chest' : currentExercise.current['muscle']}]</p>
         </div>
         <div className="column smaller">
           <div className='centerize'>

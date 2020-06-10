@@ -134,7 +134,7 @@ button {
 }
 
 .mainRow {
-  min-height: 70vh;
+  min-height: 90vh;
   border-radius: 2rem;
 }
 .mainRow .column {
@@ -211,10 +211,11 @@ button {
 }
 .fullscreenButton, .fullscreenButton button {
   font-size: 0.5rem;
-  width: 4rem;
+  width: 3rem;
   position: absolute;
   top: 0;
   right: 1rem;
+  padding: 0.1rem 0;
 }
 
 .previewImageWrapper {
