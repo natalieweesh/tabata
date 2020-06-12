@@ -711,6 +711,7 @@ export const exercises = {
         img: 'https://media.giphy.com/media/IdID3LWM6nMKUuNQ9r/giphy.gif',
         character: 'jake',
         singleweight: true,
+        unilateral: true,
         lowimpact: true
       },
       {
