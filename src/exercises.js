@@ -205,6 +205,12 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'chest press jack',
+        img: 'https://media.giphy.com/media/mA1Frcn8S48kP5d2MC/giphy.gif',
+        character: 'jake',
+        singleweight: true
+      },
+      {
         title: 'staggered hand push up',
         img: 'https://media.giphy.com/media/Qx4RxMfSp4KpTo3vhi/giphy.gif',
         character: 'rick',
@@ -242,6 +248,12 @@ export const exercises = {
         title: 'reverse fly',
         img: 'https://media.giphy.com/media/TIAKIIZ3ImiD69H2oJ/giphy.gif',
         character: 'tina',
+        lowimpact: true
+      },
+      {
+        title: 'curl to reverse grip press',
+        img: 'https://media.giphy.com/media/efC2FCD0JegIvWivNT/giphy.gif',
+        character: 'meeseeks',
         lowimpact: true
       },
       {
