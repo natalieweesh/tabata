@@ -243,7 +243,11 @@ button {
   width: 90%;
   max-width: 400px;
 }
-
+@media only screen and (max-width: 1200px) {
+  .mainRow .column.bigger {
+    max-width: 500px;
+  }
+}
 @media only screen and (max-width: 888px) {
   .exerciseTitle, .countdownTitle, button {
     font-size: 1.75rem;

@@ -211,6 +211,12 @@ export const exercises = {
         singleweight: true
       },
       {
+        title: 'underhand crossbody raise',
+        img: 'https://media.giphy.com/media/H7ks0KmJZdeexBLvPG/giphy.gif',
+        character: 'tina',
+        lowimpact: true
+      },
+      {
         title: 'staggered hand push up',
         img: 'https://media.giphy.com/media/Qx4RxMfSp4KpTo3vhi/giphy.gif',
         character: 'rick',
@@ -520,6 +526,12 @@ export const exercises = {
         img: 'https://media.giphy.com/media/lTdBPZ1jmjrCnsBhS1/giphy.gif',
         character: 'meeseeks',
         bodyweight: true
+      },
+      {
+        title: 'runners lunge jump switch',
+        img: 'https://media.giphy.com/media/Kf097C33AfkTRqfN4H/giphy.gif',
+        character: 'finn',
+        bodyweight: true
       }
     ],
     butt: [
@@ -628,6 +640,14 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'single leg hip thrust',
+        img: 'https://media.giphy.com/media/d9TzOWn7dnLVL4gY17/giphy.gif',
+        character: 'finn',
+        bodyweight: true,
+        lowimpact: true,
+        unilateral: true
+      },
+      {
         title: 'side leg raise',
         img: 'https://media.giphy.com/media/L3txtROtEn80FoFrwW/giphy.gif',
         character: 'louise',
@@ -679,6 +699,12 @@ export const exercises = {
         character: 'jake',
         bodyweight: true,
         lowimpact: true
+      },
+      {
+        title: 'squat jump to sumo squat',
+        img: 'https://media.giphy.com/media/mFqh9pg2vq745AZTW3/giphy.gif',
+        character: 'finn',
+        bodyweight: true
       },
       {
         title: 'frog pump',
