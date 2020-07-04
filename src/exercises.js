@@ -1166,6 +1166,13 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'elevated mountain climber',
+        img: 'https://media.giphy.com/media/eGOJvYhVKihQoKmy4w/giphy.gif',
+        character: 'finn',
+        bodyweight: true,
+        lowimpact: true
+      },
+      {
         title: 'twisting sit up',
         img: 'https://media.giphy.com/media/XbgyHuI7cnXJfprHeL/giphy.gif',
         character: 'jake',
@@ -1273,6 +1280,14 @@ export const exercises = {
         character: 'tina',
         unilateral: true,
         singleweight: true,
+        lowimpact: true
+      },
+      {
+        title: 'side kettlebell swing',
+        img: 'https://media.giphy.com/media/cIhm4G692pT6wvsBQd/giphy.gif',
+        character: 'finn',
+        singleweight: true,
+        unilateral: true,
         lowimpact: true
       },
       {
