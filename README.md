@@ -43,10 +43,12 @@ They'll guide you through 20 seconds of work and 10 seconds of rest doing fun ex
   <tr>
     <td>Dumbbell Steering Wheels</td>
     <td>Kettlebell Swings</td>
+    <td>Shoulder Press Jacks</td>
   </tr>
   <tr>
     <td><img src="https://media.giphy.com/media/H4hIiVofPBBvKMRBpZ/giphy.gif" width="300"/></td>
     <td><img src="https://media.giphy.com/media/cj8H7bw91h5jdsT8PF/giphy.gif" width="300"/></td>
+    <td><img src="https://media.giphy.com/media/jpKBuPTZAvyAiA6nc5/giphy.gif" width="300"/></td>
   </tr>
 </table>
 
