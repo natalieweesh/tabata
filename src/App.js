@@ -126,7 +126,7 @@ function App() {
   }
 
   const printExerciseCounts = () => {
-    let TRAINERS = ['poopybutthole', 'meeseeks', 'tina', 'bmo', 'bob', 'spongebob', 'rick', 'louise', 'prince', 'finn', 'jake'];
+    let TRAINERS = ['poopybutthole', 'meeseeks', 'tina', 'bmo', 'bob', 'spongebob', 'rick', 'louise', 'prince', 'finn', 'jake', 'gene'];
     const trainerNames = {
       'poopybutthole': 'mr. poopybutthole',
       'meeseeks': 'mr. meeseeks',
@@ -138,7 +138,8 @@ function App() {
       'louise': 'louise belcher',
       'prince': 'the little prince',
       'finn': 'finn the human',
-      'jake': 'jake the dog'
+      'jake': 'jake the dog',
+      'gene': 'gene belcher'
     }
     let allExercises = []
     let tableRows = [];

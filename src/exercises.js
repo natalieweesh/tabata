@@ -20,6 +20,11 @@ export const exercises = {
         singleweight: true
       },
       {
+        title: 'shoulder press jack',
+        img: 'https://media.giphy.com/media/jpKBuPTZAvyAiA6nc5/giphy.gif',
+        character: 'gene'
+      },
+      {
         title: 'steering wheel',
         img: 'https://media.giphy.com/media/H4hIiVofPBBvKMRBpZ/giphy.gif',
         character: 'jake',
@@ -67,6 +72,13 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: '3 way press out',
+        img: 'https://media.giphy.com/media/lrUy3iooijX9pHqI3N/giphy.gif',
+        character: 'gene',
+        singleweight: true,
+        lowimpact: true
+      },
+      {
         title: 'pike pushup',
         img: 'https://media.giphy.com/media/hXDoqkszsD2e7YU15o/giphy.gif',
         character: 'tina',
@@ -99,6 +111,12 @@ export const exercises = {
         character: 'rick',
         bodyweight: true,
         unidirectional: true,
+        lowimpact: true
+      },
+      {
+        title: 'around the world',
+        img: 'https://media.giphy.com/media/geKEz8TrUUBO4nZgyG/giphy.gif',
+        character: 'gene',
         lowimpact: true
       },
       {
@@ -144,6 +162,12 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'front tricep extension',
+        img: 'https://media.giphy.com/media/hvMuvOQv8oVNgFS6ej/giphy.gif',
+        character: 'gene',
+        lowimpact: true
+      },
+      {
         title: 'shoulder press',
         img: 'https://media.giphy.com/media/Lm5MYnTZOeqVgqe1iv/giphy.gif',
         character: 'tina',
@@ -182,6 +206,12 @@ export const exercises = {
         img: 'https://media.giphy.com/media/lQCdZTKL8NbiU4OViv/giphy.gif',
         character: 'bob',
         bodyweight: true,
+        lowimpact: true
+      },
+      {
+        title: 'one and a half bicep curl',
+        img: 'https://media.giphy.com/media/VhtdR7P8dOJkcfuHD5/giphy.gif',
+        character: 'gene',
         lowimpact: true
       },
       {
@@ -328,6 +358,14 @@ export const exercises = {
 
       },
       {
+        title: 'split squat to press',
+        img: 'https://media.giphy.com/media/QxSEqMhXcPOpaV4es5/giphy.gif',
+        character: 'gene',
+        singleweight: true,
+        unilateral: true,
+        lowimpact: true
+      },
+      {
         title: 'calf raise',
         img: 'https://media.giphy.com/media/QyhLeRDWoIusTLMyNk/giphy.gif',
         character: 'bmo',
@@ -383,6 +421,12 @@ export const exercises = {
         unilateral: true
       },
       {
+        title: 'sumo squat hold + bicep curl',
+        img: 'https://media.giphy.com/media/LmZYKPC0jKVlZMAgSn/giphy.gif',
+        character: 'jake',
+        lowimpact: true
+      },
+      {
         title: 'reverse lunge',
         img: 'https://media.giphy.com/media/f7GXjiX8mN4INgTo2J/giphy.gif',
         character: 'meeseeks',
@@ -428,6 +472,14 @@ export const exercises = {
         img: 'https://media.giphy.com/media/gKNG0yGn0wGK4PVgc8/giphy.gif',
         character: 'rick',
         bodyweight: true
+      },
+      {
+        title: 'slow leg circle',
+        img: 'https://media.giphy.com/media/jnV80K0vsKedvtk5rp/giphy.gif',
+        character: 'gene',
+        unilateral: true,
+        bodyweight: true,
+        lowimpact: true
       },
       {
         title: 'bulgarian split squat',
@@ -578,6 +630,11 @@ export const exercises = {
         character: 'poopybutthole',
         bodyweight: true,
         lowimpact: true
+      },
+      {
+        title: 'squat thrust to bicep curl',
+        img: 'https://media.giphy.com/media/IhUlepWrHTkeiyTzCA/giphy.gif',
+        character: 'finn'
       },
       {
         title: 'staggered stance deadlift',
@@ -768,6 +825,12 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'alternating lunge row',
+        img: 'https://media.giphy.com/media/jVZzDMzYO4wqnF6lux/giphy.gif',
+        character: 'finn',
+        lowimpact: true
+      },
+      {
         title: 'upright row',
         img: 'https://media.giphy.com/media/USmBwshrZzL8HrgDd8/giphy.gif',
         character: 'tina',
@@ -803,11 +866,24 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'superman to push back',
+        img: 'https://media.giphy.com/media/KEeB8fCarjFAlLAmm8/giphy.gif',
+        character: 'finn',
+        bodyweight: true,
+        lowimpact: true
+      },
+      {
         title: 'tabletop bridge reach',
         img: 'https://media.giphy.com/media/RG4zta91L6MGC7fLrw/giphy.gif',
         character: 'rick',
         bodyweight: true,
         unilateral: true,
+        lowimpact: true
+      },
+      {
+        title: 'deadlift to row',
+        img: 'https://media.giphy.com/media/YRW8sVs7reRbD4T2kG/giphy.gif',
+        character: 'jake',
         lowimpact: true
       },
       {
@@ -856,6 +932,12 @@ export const exercises = {
         character: 'prince',
         unilateral: true,
         bodyweight: true,
+        lowimpact: true
+      },
+      {
+        title: 'deadlift to lat raise',
+        img: 'https://media.giphy.com/media/RlZjEGMETslMENOFJo/giphy.gif',
+        character: 'jake',
         lowimpact: true
       },
       {
@@ -930,6 +1012,14 @@ export const exercises = {
         img: 'https://media.giphy.com/media/f9f0hGMSXFx5J4UOvE/giphy.gif',
         character: 'jake',
         bodyweight: true,
+        lowimpact: true
+      },
+      {
+        title: 'side plank row',
+        img: 'https://media.giphy.com/media/YrT4xKm9imGGnl5Zhq/giphy.gif',
+        character: 'gene',
+        singleweight: true,
+        unilateral: true,
         lowimpact: true
       },
       {
@@ -1068,6 +1158,13 @@ export const exercises = {
         img: 'https://media.giphy.com/media/kyjLe0mzqUsiMtkoSM/giphy.gif',
         character: 'meeseeks',
         bodyweight: true
+      },
+      {
+        title: 'alternating leg and reach crunch',
+        img: 'https://media.giphy.com/media/JpMHA59hQ8WfMExakq/giphy.gif',
+        character: 'finn',
+        bodyweight: true,
+        lowimpact: true
       },
       {
         title: 'sit up',
