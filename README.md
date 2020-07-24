@@ -58,3 +58,20 @@ and more!
 You can customize your workout length, work time, and rest time, and muscle groups to focus on!
 
 Come have some fun!
+
+
+## to run the app locally
+
+yarn start
+
+## to deploy the app
+
+first merge your commit to master
+
+then run `yarn build` to build the code to deploy
+
+then switch to branch `gh-pages`
+
+then move everything from the `build` folder into the root and replace everything there (make sure to delete the old precache-manifest.js file and keep the new one)
+
+then push your commit to `gh-pages` to deploy and switch back to `master` branch to edit code again 
