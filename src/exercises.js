@@ -52,6 +52,12 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'high pull',
+        img: 'https://media.giphy.com/media/PmdqFPSA9dpjVSgLHd/giphy.gif',
+        character: 'gene',
+        lowimpact: true
+      },
+      {
         title: 'lateral raise',
         img: 'https://media.giphy.com/media/kHg909xvmbXF3sjfZF/giphy.gif',
         character: 'bob',
@@ -306,6 +312,12 @@ export const exercises = {
         lowimpact: true
       },
       {
+        title: 'curl to press to tricep extension',
+        img: 'https://media.giphy.com/media/kBkDXSp2lXwTDgQE1t/giphy.gif',
+        character: 'gene',
+        lowimpact: true
+      },
+      {
         title: 'power snatch',
         img: 'https://media.giphy.com/media/dCXnHt16lwAp6Z23r7/giphy.gif',
         character: 'meeseeks',
@@ -479,6 +491,12 @@ export const exercises = {
         character: 'gene',
         unilateral: true,
         bodyweight: true,
+        lowimpact: true
+      },
+      {
+        title: 'halo to side lunge',
+        img: 'https://media.giphy.com/media/YrMoVZjhBfiWoNvsfh/giphy.gif',
+        character: 'finn',
         lowimpact: true
       },
       {
@@ -705,6 +723,12 @@ export const exercises = {
         unilateral: true
       },
       {
+        title: 'sumo squat front raise to lateral raise',
+        img: 'https://media.giphy.com/media/H6zgofADb15fD9P3JY/giphy.gif',
+        character: 'bob',
+        lowimpact: true
+      },
+      {
         title: 'side leg raise',
         img: 'https://media.giphy.com/media/L3txtROtEn80FoFrwW/giphy.gif',
         character: 'louise',
@@ -796,7 +820,7 @@ export const exercises = {
       },
       {
         title: 'y-t-w',
-        img: 'https://media.giphy.com/media/KeWU4jbTWGiGDgKFxB/giphy.gif',
+        img: 'https://media.giphy.com/media/h4a9O3zkN2KfyqDOsj/giphy.gif',
         character: 'rick',
         bodyweight: true,
         lowimpact: true
@@ -1237,6 +1261,13 @@ export const exercises = {
         title: 'diagonal in and out',
         img: 'https://media.giphy.com/media/lnfwONWSHiJYLvNql5/giphy.gif',
         character: 'finn',
+        bodyweight: true,
+        lowimpact: true
+      },
+      {
+        title: 'bear plank knee taps',
+        img: 'https://media.giphy.com/media/lnOXDJIytffBIC6lkC/giphy.gif',
+        character: 'jake',
         bodyweight: true,
         lowimpact: true
       },
