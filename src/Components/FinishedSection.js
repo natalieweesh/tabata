@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import vid from '../withmusic.mp4';
+import vid from '../withmusic2smaller.mp4';
 
 export default class FinishedSection extends Component {
   render() {
