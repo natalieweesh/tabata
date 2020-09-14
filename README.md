@@ -2,6 +2,8 @@ Guess what time it is...
 
 # It's Tabata Time!
 
+http://tabata.nataliewee.com
+
 Workout with your favorite characters: Tina Belcher, Mr. Meeseeks, Mr. Poopybutthole, Rick Sanchez, Bob Belcher, Spongebob Squarepants, Louise Belcher, BMO, and the Little Prince!
 
 They'll guide you through 20 seconds of work and 10 seconds of rest doing fun exercises like...
